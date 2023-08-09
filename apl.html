@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Advanced Programming Languages (שיטות תכנות מתקדמות)</title>
+<!-- 2014-07-04 Fri 02:45 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="author" content="Mayer Goldberg"/>
+<meta name="keywords" content="functional programming, object oriented programming, lambda calculus, church numerals, lambda definability, combinatory logic, threaded code, smalltalk, scheme, ml, forth, threaded code interpreters, mayer goldberg, decompilation, compilation, interpretation, coq, proof assistants, nuprl, parsing combinators, monads"/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="shortcut icon" type="image/x-icon" href="http://www.little-lisper.org/website/favicon.ico" />
+<link rel="apple-touch-icon" type="image/x-icon" href="http://www.little-lisper.org/website/favicon.png" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012  Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Advanced Programming Languages (שיטות תכנות מתקדמות)</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Topics</a></li>
+<li><a href="#sec-2">2. Code for the APL course</a></li>
+<li><a href="#sec-3">3. Coursework</a></li>
+<li><a href="#sec-4">4. Languages used in the course</a></li>
+<li><a href="#sec-5">5. Literature</a></li>
+<li><a href="#sec-6">6. Take-home final</a></li>
+<li><a href="#sec-7">7. Attendance policy</a></li>
+<li><a href="#sec-8">8. How your grade is computed</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Topics</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Coq &#x2013; The <i>Automated Proof Assistant</i>
+</li>
+<li>The Lambda Calculus
+</li>
+<li>Functional Programming
+</li>
+<li>Object Oriented Programming
+</li>
+<li>Threaded Code
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Code for the APL course</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">&lt;2014-04-12 Sat&gt;</span></span> Examples of monads used for <a href="http://www.little-lisper.org/website/files/monad-printing.scm">printing</a>, <a href="http://www.little-lisper.org/website/files/monad-pseudo-random-numbers.scm">pseudo-random number
+generators</a>, <a href="http://www.little-lisper.org/website/files/monad-gensym.scm">gensym</a>, in Scheme 
+</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">&lt;2014-04-12 Sat&gt;</span></span> Code demonstrating that CPS is not, in itself, does not improve
+performance (<a href="http://www.little-lisper.org/website/files/cps-is-not-an-optimization.scm">sources</a>)
+</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">&lt;2014-04-12 Sat&gt;</span></span> A super-fast implementation of the Fibonacci function (<a href="http://www.little-lisper.org/website/files/fast-fib.scm">sources</a>)
+</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">&lt;2014-04-12 Sat&gt;</span></span> <a href="http://www.little-lisper.org/website/files/cps-examples.scm">Lots of examples</a> of converting Scheme functions from direct style,
+through CPS, <i>representation-independent</i> CPS, register machines,
+and stack machines 
+</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">&lt;2014-04-12 Sat&gt;</span></span> <a href="http://www.little-lisper.org/website/files/strange-fixed-point-combinators.scm">Strange fixed-point combinators</a>
+</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">&lt;2014-04-12 Sat&gt;</span></span> <a href="http://www.little-lisper.org/website/files/tic-tac-toe.scm">A game of <i>Tic-Tac-Toe</i> using functions to represent the board</a>
+</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">&lt;2014-04-12 Sat&gt;</span></span> <a href="decomp.scm">Code for the decompiler</a>
+</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">&lt;2013-06-26 Wed&gt;</span></span> Coq code on 2013-06-19 (<a href="http://www.little-lisper.org/website/files/apl-2013-06-19.v">v</a>, <a href="http://www.little-lisper.org/website/files/apl-2013-06-19.pdf">pdf</a>), Coq code on 2013-06-24 (<a href="http://www.little-lisper.org/website/files/apl-2013-06-24a.v">a.v</a>, <a href="http://www.little-lisper.org/website/files/apl-2013-06-24a.pdf">a.pdf</a>, <a href="http://www.little-lisper.org/website/files/apl-2013-06-24b.v">b.v</a>, <a href="http://www.little-lisper.org/website/files/apl-2013-06-24b.pdf">b.pdf</a>, <a href="http://www.little-lisper.org/website/files/apl-2013-06-24c.v">c.v</a>, <a href="http://www.little-lisper.org/website/files/apl-2013-06-24c.pdf">c.pdf</a>). Check out my <a href="http://coq.little-lisper.org"><i>Coq Website</i></a> for additional sample code.
+</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">&lt;2013-05-07 Tue&gt;</span></span> <a href="./pc/index.html">This is my page on <i>parsing combinators</i></a>. Please note that this is work-in-progress, and will take some time to document fully. Still, you should have enough material here to get you started.
+</li>
+<li>Code for mapping over <a href="cross.scm">cross products</a>. 
+</li>
+<li>Code demonstrating the <a href="duff-device.c">Duff Device</a>. 
+</li>
+<li><a href="http://www.little-lisper.org/website/files/threaded.scm">Threaded code embedded in Scheme</a>. 
+</li>
+<li>The input stream package (<a href="http://www.little-lisper.org/website/files/input-streams.scm">sources</a>, <a href="http://www.little-lisper.org/website/files/input-streams-examples.scm">examples</a>)
+</li>
+<li>Fixed-point combinators in the SML (<a href="http://www.little-lisper.org/website/files/y.sml">sources</a>)
+</li>
+<li>Elementary Church numeral arithmetic in Scheme (<a href="http://www.little-lisper.org/website/files/church-numeral-arithmetic.scm">source</a>, <a href="http://www.little-lisper.org/website/files/church-numeral-arithmetic-examples.scm">examples</a>)
+</li>
+<li>A parser for the lambda-calculus, in SML/NJ (<a href="http://www.little-lisper.org/website/files/lambda-calculus-parser.sml">source</a>, <a href="http://www.little-lisper.org/website/files/lambda-calculus-parser.txt">instructions</a>)
+</li>
+<li><a href="http://www.little-lisper.org/website/files/toy-interpreter-for-scheme.sml">A toy interpreter for Scheme (in SML)</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Coursework</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><a href="http://www.little-lisper.org/website/files/2014-apl-midterm.pdf">The takehome midterm</a>
+</li>
+<li>The takehome final is available <a href="https://dl.dropboxusercontent.com/u/15888960/apl-final.zip">here</a> (due: <i>TBA</i>)
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Languages used in the course</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> <a href="./coq.html">Coq</a></h3>
+</div>
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Scheme</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Scheme is the main programming language for the first part of the
+course. It is a semi-functional, late-binding, dynamically-typed,
+interactive programming language. It is the most suitable language for
+working with the untyped lambda calculus. For this course, I'm going
+to ask you to work with <a href="http://www.scheme.com/">Petite Chez Scheme</a>, which is avaiable for free
+on most common platforms. You are welcome to try out other Scheme
+systems (there are even a couple for the iPhone! 
+</p>
+&#9786;
+<p>
+), but for the purpose of the assignments, please make sure your code
+runs on Chez. <a href="./proglang/scheme.html">Click here to go to my Scheme page</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> ML</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+ML is the second language we shall be using the the first part of the
+course. It is a semi-functional, early-binding, statically-typed
+interactive programming language. We shall be using it in our
+discussions on types, and perhaps in other places as well. <a href="./proglang/ml.html">Click here
+to go to my ML page</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> Smalltalk</h3>
+</div>
+<div id="outline-container-sec-4-5" class="outline-3">
+<h3 id="sec-4-5"><span class="section-number-3">4.5</span> Forth</h3>
+</div>
+<div id="outline-container-sec-4-6" class="outline-3">
+<h3 id="sec-4-6"><span class="section-number-3">4.6</span> Erlang</h3>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Literature</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li><i>Books on Scheme</i>
+</li>
+<li><a href="./proglang/ml.html#books-on-ml"><i>Books on ML</i></a>
+</li>
+<li><i>Books on Erlang</i>
+</li>
+<li>The Lambda Calculus: Its Syntax and Semantics
+</li>
+<li>Threaded Interpretive Languages: Their Design and Implementation
+</li>
+<li>To Mock a Mockingbird
+</li>
+<li><a href="http://www.little-lisper.org/website/files/lambda-calculus-tutorial.pdf">My tutorial on the lambda-calculus</a>
+</li>
+<li><a href="http://www.little-lisper.org/website/files/tutorial-on-monads.pdf">My tutorial on monads</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Take-home final</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+The takehome final is available <a href="https://dl.dropboxusercontent.com/u/15888960/apl-final.zip">here</a> (due: <i>TBA</i>)
+</p>
+</div>
+</div>
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Attendance policy</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+<b>Attendance is mandatory in this course.</b> I realize there are often circumstances that are beyond control that may require you to skip a meeting, so you may skip two meetings during the semester without penalty. Also, we will only start to take attendance after the second week of class. Afterwards, if you need to skip a meeting for some reasonably justifiable reason (&rlm;מילואים&lrm;, illness), please contact me. Otherwise, there is a 2% penlanty to your final grade for each class you miss: If you miss <i>n</i> days, your final grade will be multiplied by 0.98<sup><i>n - 2</i></sup>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> How your grade is computed</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+The coursework shall consist of a brief assignment that will serve as a take-home midterm, and a take-home
+final. Their weights are as follows:
+</p>
+
+<ul class="org-ul">
+<li>Problem set (midterm take-home) &#x2013; 20%
+</li>
+<li>Take-home final &#x2013; 80%
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Mayer Goldberg</p>
+<p class="date">Created: 2014-07-04 Fri 02:45</p>
+<p class="xhtml-validation"><a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,1376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Assignment 2 (Due Sunday, December 8nd at 13:00)</title>
+<!-- 2013-11-26 Tue 20:19 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="author" content="Mayer Goldberg"/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="shortcut icon" type="image/x-icon" href="http://www.little-lisper.org/website/favicon.ico" />
+<link rel="apple-touch-icon" type="image/x-icon" href="http://www.little-lisper.org/website/favicon.png" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012  Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Assignment 2 (Due Sunday, December 8nd at 13:00)</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. A reader for Scheme S-exprs</a>
+<ul>
+<li><a href="#sec-1-1">1.1. Description</a></li>
+<li><a href="#sec-1-2">1.2. Comments &amp; whitespaces</a>
+<ul>
+<li><a href="#sec-1-2-1">1.2.1. Whitespaces</a></li>
+<li><a href="#sec-1-2-2">1.2.2. Line comments</a></li>
+<li><a href="#sec-1-2-3">1.2.3. Sexpr comments</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-3">1.3. The concrete syntax of sexprs</a>
+<ul>
+<li><a href="#sec-1-3-1">1.3.1. Boolean</a></li>
+<li><a href="#sec-1-3-2">1.3.2. Number</a></li>
+<li><a href="#sec-1-3-3">1.3.3. Symbol</a></li>
+<li><a href="#sec-1-3-4">1.3.4. String</a></li>
+<li><a href="#sec-1-3-5">1.3.5. Char</a></li>
+<li><a href="#sec-1-3-6">1.3.6. Nil</a></li>
+<li><a href="#sec-1-3-7">1.3.7. Pair</a></li>
+<li><a href="#sec-1-3-8">1.3.8. Vector</a></li>
+<li><a href="#sec-1-3-9">1.3.9. Quote-like forms</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-4">1.4. Classes for representing sexprs abstractly</a></li>
+<li><a href="#sec-1-5">1.5. How to test your parser</a></li>
+<li><a href="#sec-1-6">1.6. How to organize your code</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. A tag-parser for Scheme</a>
+<ul>
+<li><a href="#sec-2-1">2.1. Description</a></li>
+<li><a href="#sec-2-2">2.2. The concrete syntax of Scheme code</a>
+<ul>
+<li><a href="#sec-2-2-1">2.2.1. Core forms</a></li>
+<li><a href="#sec-2-2-2">2.2.2. Syntactic sugar</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-3">2.3. Classes representing the abstract syntax of Scheme code</a></li>
+<li><a href="#sec-2-4">2.4. Functionality</a>
+<ul>
+<li><a href="#sec-2-4-1">2.4.1. Parsing</a></li>
+<li><a href="#sec-2-4-2">2.4.2. Converting to strings</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-5">2.5. How to test your tag-parser</a></li>
+<li><a href="#sec-2-6">2.6. How to organize your code</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Generating a Scanner for a Set-based Data Structure Language</a></li>
+<li><a href="#sec-4">4. How to submit</a>
+<ul>
+<li><a href="#sec-4-1">4.1. Last minute instructions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> A reader for Scheme S-exprs</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Description</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+In this problem you will write the first stage in the pipeline of your Scheme compiler. You should keep the code for this problem, as you will continue to use it in subsequent assignments, all the way up to the final project.
+</p>
+
+<p>
+The reader is a parser for sexprs: It reads text from a string, and outputs an <i>Abstract Syntax Tree</i> for sexprs. You will need to use the <i>parsing combinators</i> package from the first assignment to write mutually-referential parsers for the various kinds of sexprs, and use these to define <code>pSexpr</code>, the parser for sexprs. As you recognize different kinds of sexprs, you will need to provide a <i>pack</i> wrapper for the parsers, that will invoke the constructors for the corresponding sexpr classes. That way, <code>pSexpr.match(str)</code> will return an AST for the sexpr the concrete syntax of which is in <code>str</code>, and any remaining characters.
+</p>
+
+<p>
+Your parser should be built up similarly to the parser you wrote for molecules, in assignment 1: It should raise a <code>NoMatch</code> exception in case it is not possible to read an sexpr from the head of the input string, and should return a pair of the expression, and the remaining string of unread characters.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Comments &amp; whitespaces</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Your sexpr may contain whitespace characters and comments. Your parser will have to know to skip over these as it constructs the AST for the sexpr it's reading.
+</p>
+</div>
+
+<div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> Whitespaces</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+As in the previous assignment, any character less than or equal to the <i>space</i> character, is considered a whitespace for the purpose of this assignment.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2"><span class="section-number-4">1.2.2</span> Line comments</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+Line comments start with the semicolon character <code>;</code> and continue until an <i>end-of-line</i> is reached. The semicolon may appear anywhere on the line, and need not be the first charcter!
+</p>
+
+<p>
+This kind of comment is used to document your code.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-2-3" class="outline-4">
+<h4 id="sec-1-2-3"><span class="section-number-4">1.2.3</span> Sexpr comments</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<p>
+Scheme includes another kind of comment, not so much to document your code as to &ldquo;hide&rdquo; the next sexpr without actually removing it from the source file. This kind of &ldquo;commenting out&rdquo; is very handy when debugging code. 
+</p>
+
+<p>
+Sexpr comments start with the characters <code>#;</code> and continue to the end of the following sexpr. There may be no space or comment between the <code>#</code> and the <code>;</code> characters. This sexpr can be any valid sexpr: A number, a Boolean, a symbol, but more often than not, a deeply-nested expression with balanced parentheses. 
+</p>
+
+<p>
+Please note that while removing comments is usually &ldquo;easy&rdquo;, sexpr comments are non-trivial, because they rely on your ability to recognize what is a valid sexpr!
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> The concrete syntax of sexprs</h3>
+<div class="outline-text-3" id="text-1-3">
+</div><div id="outline-container-sec-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1"><span class="section-number-4">1.3.1</span> Boolean</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+There are two Boolean values in Scheme: <code>#f</code> (for <i>false</i>), and <code>#t</code> (for <i>true</i>). I would like your reader to recognize these in a case-insensitive manner, so that <code>#t</code> and <code>#T</code> are one and the same, etc.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-3-2" class="outline-4">
+<h4 id="sec-1-3-2"><span class="section-number-4">1.3.2</span> Number</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<p>
+Scheme has a rich numerical tower. We will not be supporting the full numerical tower in our compiler, but we do want to experience the polymorphism of Scheme procedures, so we will support two kinds of numbers: integers &amp; fractions. 
+</p>
+</div>
+
+<ol class="org-ol"><li>Integers<br/><div class="outline-text-5" id="text-1-3-2-1">
+<p>
+Integers can be positive or negative. They may begin with any number of zeros. They may come with an optional sign, which can either be positive or negative. Here are valid numbers in our language:
+</p>
+
+<ul class="org-ul">
+<li>1234
+</li>
+<li>01234
+</li>
+<li>-1234
+</li>
+<li>-012
+</li>
+<li>-0
+</li>
+<li>+1234
+</li>
+<li>+432
+</li>
+</ul>
+
+<p>
+In standard Scheme, numbers may not start with an initial <code>+</code>, but we shall permit this here as an extension.
+</p>
+
+<p>
+Numbers (but not the sign) may be prefixed with <code>0x</code>, <code>0X</code>, <code>0h</code>, <code>0H</code>, in which case, the number is given in <i>hexadecimal</i>, or base 16. The following are valid hexadecimal numbers:
+</p>
+
+<ul class="org-ul">
+<li>0x1234
+</li>
+<li>-0H432
+</li>
+<li>+0x1234
+</li>
+<li>0H432
+</li>
+</ul>
+
+<p>
+Hexadecimal numbers include the digits <code>0</code>, … , <code>9</code>, <code>a</code>, … , <code>f</code>, either in uppercase or lowercase, with the letters <code>a</code>, … , <code>f</code> having the values:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="left"/>
+
+<col class="right"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="left"><code>a</code></td>
+<td class="right">10</td>
+</tr>
+
+<tr>
+<td class="left"><code>b</code></td>
+<td class="right">11</td>
+</tr>
+
+<tr>
+<td class="left"><code>c</code></td>
+<td class="right">12</td>
+</tr>
+
+<tr>
+<td class="left"><code>d</code></td>
+<td class="right">13</td>
+</tr>
+
+<tr>
+<td class="left"><code>e</code></td>
+<td class="right">14</td>
+</tr>
+
+<tr>
+<td class="left"><code>f</code></td>
+<td class="right">15</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Hexadecimal numbers are an extension to the Scheme standard.
+</p>
+</div>
+</li>
+<li>Fractions<br/><div class="outline-text-5" id="text-1-3-2-2">
+<p>
+Fractions are exact quantities represented using a <i>numerator</i> and a <i>denominator</i>. The numerator is an integer (either positive or negative), and the denominator is an unsigned integer. These integers can be given in the full generality of the integers in the previous section. The numerator and the denominator are separated by a <i>slash</i> character <code>/</code>. Here are some examples of fractions:
+</p>
+
+<ul class="org-ul">
+<li><code>4/5</code>
+</li>
+<li><code>-2/3</code>
+</li>
+<li><code>-0x234abc/37</code>
+</li>
+<li><code>+5/7</code>
+</li>
+</ul>
+
+<p>
+The denominator should not have the numerical value of zero. If it does, your parser should not identify it as a fraction.
+</p>
+</div>
+</li></ol>
+</div>
+<div id="outline-container-sec-1-3-3" class="outline-4">
+<h4 id="sec-1-3-3"><span class="section-number-4">1.3.3</span> Symbol</h4>
+<div class="outline-text-4" id="text-1-3-3">
+<p>
+In an interactive Scheme system, a symbol is represented internally as a <i>hashed string</i>. Our compiler, however, is not an <i>interactive</i> (or <i>online</i>) compiler, but a <i>batch</i> (or <i>offline</i>) one, so the AST for symbols will just contain the string and its length. 
+</p>
+
+<p>
+In principle, a symbol in Scheme can contain any character. This is the case for symbols that have been created <i>dynamically</i> from strings, using <code>string-&gt;symbol</code>. Constant symbols that are read in by the reader obey a stricter syntax. The characters in a symbol may include the following characters:
+</p>
+
+<ul class="org-ul">
+<li>The lowercase letters: <code>a</code>, … , <code>z</code>
+</li>
+<li>The uppercase letters: <code>A</code>, … , <code>Z</code>
+</li>
+<li>Digits: <code>0</code>, … , <code>9</code>
+</li>
+<li>Punctuation: <code>!$^*-_=+&lt;&gt;/?</code>
+</li>
+</ul>
+
+<p>
+Scheme has traditionally been <i>case-insensitive</i> with respect to symbols, although this has changed in R<sup>6</sup>RS (the 6<sup>th</sup> version of the Scheme standard). For the purpose of this course, I would like you to assume that strings are case-insensitive in the following way: Your parser should convert all symbol characters to uppercase. Hence the symbols <code>abc</code>, <code>Abc</code>, <code>aBc</code>, and <code>ABC</code> are all the same object, which is stored internally as <code>ABC</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-3-4" class="outline-4">
+<h4 id="sec-1-3-4"><span class="section-number-4">1.3.4</span> String</h4>
+<div class="outline-text-4" id="text-1-3-4">
+<p>
+Strings are monomorphic arrays of characters. Syntactically, strings in Scheme are delimited by double quote marks, may contain any character, and span across several lines. Here are some examples of strings:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-scheme">"moshe"
+
+"a string"
+
+"This is a very long
+string that spills across
+several lines."
+</pre>
+</div>
+</div>
+
+<ol class="org-ol"><li>String meta-chars<br/><div class="outline-text-5" id="text-1-3-4-1">
+<p>
+Some characters cannot appear in a string without being preceeded by a special <i>backslash</i> prefix. This is the exact same situation as in C, C++, Java, Python, and many other programming languages. The list of meta-characters you need to support are:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="left"/>
+
+<col class="left"/>
+
+<col class="left"/>
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Char</th>
+<th scope="col" class="left">ASCII/Unicode</th>
+<th scope="col" class="left">Concrete syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">newline</td>
+<td class="left">ASCII 10</td>
+<td class="left"><code>\n</code></td>
+</tr>
+
+<tr>
+<td class="left">return</td>
+<td class="left">ASCII  13</td>
+<td class="left"><code>\r</code></td>
+</tr>
+
+<tr>
+<td class="left">tab</td>
+<td class="left">ASCII 9</td>
+<td class="left"><code>\t</code></td>
+</tr>
+
+<tr>
+<td class="left">formfeed</td>
+<td class="left">ASCII 12</td>
+<td class="left"><code>\f</code></td>
+</tr>
+
+<tr>
+<td class="left">backslash</td>
+<td class="left">ASCII 93</td>
+<td class="left"><code>\\</code></td>
+</tr>
+
+<tr>
+<td class="left">double quote</td>
+<td class="left">ASCII 34</td>
+<td class="left">\"</td>
+</tr>
+
+<tr>
+<td class="left">lambda</td>
+<td class="left">UTF8 0x03bb</td>
+<td class="left"><code>\l</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>
+The last meta-character, <i>lambda</i> was added as our own extension to the language.  
+</p>
+</div>
+</li></ol>
+</div>
+<div id="outline-container-sec-1-3-5" class="outline-4">
+<h4 id="sec-1-3-5"><span class="section-number-4">1.3.5</span> Char</h4>
+<div class="outline-text-4" id="text-1-3-5">
+<p>
+Characters are denoted by the character prefix <code>#\</code>. There can be no whitespace or comments between the the <code>#</code> &amp; <code>\</code> characters. What follows the prefix falls under one of several categories:
+</p>
+</div>
+
+<ol class="org-ol"><li>Named chars<br/><div class="outline-text-5" id="text-1-3-5-1">
+<p>
+Some characters are denoted by their full name:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="left"/>
+
+<col class="left"/>
+
+<col class="left"/>
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Char</th>
+<th scope="col" class="left">ASCII/Unicode</th>
+<th scope="col" class="left">Concrete syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">newline</td>
+<td class="left">ASCII 10</td>
+<td class="left"><code>#\newline</code></td>
+</tr>
+
+<tr>
+<td class="left">return</td>
+<td class="left">ASCII  13</td>
+<td class="left"><code>#\return</code></td>
+</tr>
+
+<tr>
+<td class="left">tab</td>
+<td class="left">ASCII 9</td>
+<td class="left"><code>#\tab</code></td>
+</tr>
+
+<tr>
+<td class="left">formfeed</td>
+<td class="left">ASCII 12</td>
+<td class="left"><code>#\page</code></td>
+</tr>
+
+<tr>
+<td class="left">lambda</td>
+<td class="left">UTF8 0x03bb</td>
+<td class="left"><code>#\lambda</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>
+The last named character, <i>lambda</i> was added as our own extension to the language.
+</p>
+
+<p>
+Named characters are case insensitive, so that <code>#\page</code>, <code>#\Page</code>, and <code>#\PAGE</code> are all denote the same character.
+</p>
+</div>
+</li>
+<li>Hexadecimal chars<br/><div class="outline-text-5" id="text-1-3-5-2">
+<p>
+For some characters, their position, either in the ASCII or Unicode character sets, would be simpler to note than their name. Such characters can be entered using the hexadecimal character prefix <code>#\x</code> followed by either two or four hexadecimal digits in case-insensitive, hexadecimal notation. Here are some example:
+</p>
+
+<ul class="org-ul">
+<li><code>#\x03bb</code> is another way of writing <code>#\lambda</code> (&lambda;)
+</li>
+<li><code>#\x05D0</code> is the letter <i>alef</i> (א)
+</li>
+<li><code>#\xFDFA</code> is the Unicode Arabic glyph &lrm;ﷺ&lrm; (&rlm;صلى الله عليه وسلم&lrm;)
+</li>
+</ul>
+</div>
+</li>
+<li>Visible chars<br/><div class="outline-text-5" id="text-1-3-5-3">
+<p>
+Characters that are in the visible range (i.e., have a larger ASCII or Unicode value than 32) can be entered &ldquo;as-is&rdquo;, with the character prefix. Here are some examples:
+</p>
+
+<ul class="org-ul">
+<li><code>#\א</code>
+</li>
+<li><code>#\ༀ</code>
+</li>
+<li><code>#\☺</code>
+</li>
+<li><code>#\M</code>
+</li>
+<li><code>#\?</code>
+</li>
+</ul>
+
+<p>
+Notice that visible characters are case-sensitive, so that <code>#\a</code> &amp; <code>#\A</code> are distinct.
+</p>
+</div>
+</li></ol>
+</div>
+<div id="outline-container-sec-1-3-6" class="outline-4">
+<h4 id="sec-1-3-6"><span class="section-number-4">1.3.6</span> Nil</h4>
+<div class="outline-text-4" id="text-1-3-6">
+<p>
+Nil, or the empty list, is simply a matching pair of parentheses: <code>()</code>. These may enclose whitespaces and comments.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-3-7" class="outline-4">
+<h4 id="sec-1-3-7"><span class="section-number-4">1.3.7</span> Pair</h4>
+<div class="outline-text-4" id="text-1-3-7">
+<p>
+The concrete syntax for pairs respects the two <i>dot rules</i>, generating <i>proper lists</i> and <i>improper lists</i>. The formal grammar for these is as follows:
+</p>
+
+\begin{eqnarray*}
+\left\langle\mathrm{ProperList}\right\rangle & ::= & \mathtt{(} ~ \left\langle\mathrm{Sexpr}\right\rangle^{*} ~ \mathtt{)} \\
+\left\langle\mathrm{ImproperList}\right\rangle & ::= & \mathtt{(} ~ \left\langle\mathrm{Sexpr}\right\rangle^{+} ~ \mathtt{.} ~ \left\langle\mathrm{Sexpr}\right\rangle ~ \mathtt{)}
+\end{eqnarray*}
+
+<p>
+You will need to convert both proper and improper lists to nested instances of <code>Pair</code>. 
+</p>
+
+<p>
+This is your first production that is <i>recursive</i>: A pair is an sexpr, and can contain other sexprs, including other pairs. 
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-3-8" class="outline-4">
+<h4 id="sec-1-3-8"><span class="section-number-4">1.3.8</span> Vector</h4>
+<div class="outline-text-4" id="text-1-3-8">
+<p>
+The grammar for the concrete syntax of vectors is similar to the first production for pairs:
+</p>
+
+\begin{eqnarray*}
+\left\langle\mathrm{Vector}\right\rangle & ::= & \mathtt{\#(} ~ \left\langle\mathrm{Sexpr}\right\rangle^{*} ~ \mathtt{)}
+\end{eqnarray*}
+
+<p>
+Notice that vectors too are recursive. 
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-3-9" class="outline-4">
+<h4 id="sec-1-3-9"><span class="section-number-4">1.3.9</span> Quote-like forms</h4>
+<div class="outline-text-4" id="text-1-3-9">
+<p>
+You need to support 4 quote-like forms:
+</p>
+
+\begin{eqnarray*}
+\left\langle\mathrm{Quoted}\right\rangle & ::= & \mathtt{'} \left\langle\mathrm{Sexpr}\right\rangle \\
+\left\langle\mathrm{QQuoted}\right\rangle & ::= & \mathtt{`} \left\langle\mathrm{Sexpr}\right\rangle \\
+\left\langle\mathrm{UnquotedSpliced}\right\rangle & ::= & \mathtt{,\!\!@} \left\langle\mathrm{Sexpr}\right\rangle \\
+\left\langle\mathrm{Unquoted}\right\rangle & ::= & \mathtt{,} \left\langle\mathrm{Sexpr}\right\rangle \\
+\end{eqnarray*}
+<p>
+For these, you should generate the sexprs <code>Pair(Symbol(name), Pair(sexpr, Nil())</code>, where <code>name</code> is one of <code>quote</code>, <code>quasiquote</code>, <code>unquote-splicing</code>, and <code>unquote</code>, respectively, and <code>sexpr</code> is the sexpr that follows the quote-like tag.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> Classes for representing sexprs abstractly</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+You should represent the abstract syntax of sexprs using the following classes:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-python">class AbstractSexpr
+class Void(AbstractSexpr)   
+class Nil(AbstractSexpr) 
+class Boolean(AbstractSexpr) 
+class Char(AbstractSexpr) 
+class AbstractNumber(AbstractSexpr)
+class Integer(AbstractNumber)
+class Fraction(AbstractNumber)
+class String(AbstractSexpr)
+class Symbol(AbstractSexpr)
+class Pair(AbstractSexpr)
+class Vector(AbstractSexpr)
+</pre>
+</div>
+
+<p>
+Notice that while we haven't mentioned <i>void</i> in the discussion of the concrete syntax for sexprs, we are representing it in the abstract syntax. This is because <i>void</i> is one of the valid <i>constant data</i> in Scheme, so we need to have it along with <i>integer</i>, <i>pair</i>, etc. There is no way, however, to <i>input</i> the constant void, so it is not generated by any of the parsers for sexprs. <i>Void</i> will be used in the next problem.
+</p>
+
+<p>
+The <code>AbstractSexpr</code> class should define the <code>__str__</code> method, so that the <code>str(…)</code> procedure in Python will know how to print sexprs.
+</p>
+
+<p>
+The <code>AbstractSexpr</code> class should define the <i>static method</i> <code>readFromString</code> that takes a string, and returns a pair of an sexpr and the string of the remaining characters. 
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-5" class="outline-3">
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> How to test your parser</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+Once you have implemented <code>__str__</code>, testing the reader is simple: Apply <code>str(…)</code> to the sexpr constructed by your reader, and then compare it to the original text in the input string. Both should be <code>equal?</code> under Scheme. If they are not, then something is wrong. In other words, you can use your favourite Scheme system to check that your reader is correct.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-6" class="outline-3">
+<h3 id="sec-1-6"><span class="section-number-3">1.6</span> How to organize your code</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li>Create a directory by the name <code>scheme-compiler</code>. You will be using this directory throughout the semester, so make sure to keep it neat.
+</li>
+<li>Place the latest copy of <code>pc.py</code> in <code>scheme-compiler</code>.
+</li>
+<li>The code containing the classes for the abstract syntax of sexprs should be placed in <code>sexprs.py</code> in the <code>scheme-compiler</code> directory.
+</li>
+<li>The parser code should go into <code>reader.py</code> in the <code>scheme-compiler</code> directory.
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> A tag-parser for Scheme</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Description</h3>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> The concrete syntax of Scheme code</h3>
+<div class="outline-text-3" id="text-2-2">
+</div><div id="outline-container-sec-2-2-1" class="outline-4">
+<h4 id="sec-2-2-1"><span class="section-number-4">2.2.1</span> Core forms</h4>
+<div class="outline-text-4" id="text-2-2-1">
+</div><ol class="org-ol"><li>Constants<br/><div class="outline-text-5" id="text-2-2-1-1">
+<p>
+Constants come in two forms: <i>quoted</i> and <i>unquoted</i>. The field of any <i>quoted</i> form is a constant. <i>Self-evaluating forms</i> (Booleans, chars, numbers, strings) are constants too, even if they haven't been quoted.
+</p>
+</div>
+</li>
+
+<li>Variables<br/><div class="outline-text-5" id="text-2-2-1-2">
+<p>
+The concrete syntax of variables is given as unquoted symbols that are not reserved words. For each variable, you should generate an instance of <code>Variable</code>.
+</p>
+</div>
+</li>
+
+<li>Conditionals<br/><div class="outline-text-5" id="text-2-2-1-3">
+<p>
+You should support both the <i>if-then</i> &amp; <i>if-then-else</i> forms of conditions in Scheme. <i>If-then</i> forms expand into <i>if-then-else</i> forms, where the <i>else</i> field has the value <code>Constant(Void())</code>.
+</p>
+</div>
+</li>
+
+<li>Lambda Expressions<br/><div class="outline-text-5" id="text-2-2-1-4">
+<p>
+There are 3 kinds of &lambda;-expressions in Scheme, <i>simple</i>, which are represented using instances of <code>LambdaSimple</code>, with <i>optional arguments</i>, which are represented using instances of <code>LambdaOpt</code>, and <i>variadic</i>, which are represented using instances of <code>LambdaVar</code>.
+</p>
+</div>
+</li>
+
+<li>Applications<br/><div class="outline-text-5" id="text-2-2-1-5">
+<p>
+These are represented using instances of <code>Applic</code>.
+</p>
+</div>
+</li>
+
+<li>Disjunctions<br/><div class="outline-text-5" id="text-2-2-1-6">
+<p>
+Disjunctions are simply <code>or</code>-expressions. Recall that we shall be supporting <code>or</code>-expressions as a core form, while macro-expanding <code>and</code>-expressions.
+</p>
+</div>
+</li>
+
+<li>Definitions<br/><div class="outline-text-5" id="text-2-2-1-7">
+<p>
+There are two ways to write definitions in Scheme: The basic way, and what I call “the MIT-syntax for define”, which is used to define procedures, and which appears throughout the book <i>The Structure and Interpretation of Computer Programs</i>.
+</p>
+
+<ul class="org-ul">
+<li>Simple <code>define</code>-expressions are of the form <code>(define &lt;name&gt; &lt;expr&gt;)</code>. The <code>&lt;name&gt;</code> is the variable name, and the <code>&lt;expr&gt;</code> is the expression the value of which is to be assigned to the given variable. Both the variable name and the expression need to be parsed, giving two values that are instances of <code>AbstractSchemeExpr</code> (the first of which is always a <code>Variable</code>). These two values are packaged as an instances of <code>Def</code>.
+</li>
+<li>MIT-style <code>define</code>-expressions are of the form <code>(define(&lt;name&gt; . &lt;argl&gt;) &lt;expr&gt;)</code>, where
+<ul class="org-ul">
+<li><code>&lt;name&gt;</code> is the name of the variable 
+</li>
+<li><code>&lt;argl&gt;</code> represents the list of parameters 
+</li>
+<li><code>&lt;expr&gt;</code> is an expression.
+</li>
+</ul>
+</li>
+</ul>
+<p>
+The MIT-style <code>define</code>-expression should be macro-expanded into an ordinary <code>define</code>-expression, and then tag-parsed recursively. The above meta-expression expands into: <code>(define &lt;name&gt; (lambda &lt;argl&gt; &lt;expr&gt;))</code>.
+</p>
+
+<ul class="org-ul">
+<li>If <code>&lt;argl&gt;</code> is a symbol, then the entire &lambda;-expression is <i>variadic</i>. 
+</li>
+<li>If <code>&lt;argl&gt;</code> is a proper list, then the entire &lambda;-expression is simple. 
+</li>
+<li>If <code>&lt;argl&gt;</code> is an improper list, then the entire &lambda;-expression is one with optional arguments.
+</li>
+</ul>
+</div>
+</li></ol>
+</div>
+<div id="outline-container-sec-2-2-2" class="outline-4">
+<h4 id="sec-2-2-2"><span class="section-number-4">2.2.2</span> Syntactic sugar</h4>
+<div class="outline-text-4" id="text-2-2-2">
+</div><ol class="org-ol"><li>Quasiquoted expressions<br/><div class="outline-text-5" id="text-2-2-2-1">
+<p>
+Upon recognizing a <i>quasiquoted</i>-expression, you should expand the expression, and call the tag-parser recursively over the expanded form.
+</p>
+
+<p>
+A Scheme implementation for a <i>quasiquote</i>-expander for non-nested <i>quasiquoted</i>-expressions will be posted onto Mayer Goldberg's website, just under the assignment statement.
+</p>
+</div>
+</li>
+
+<li><code>cond</code><br/><div class="outline-text-5" id="text-2-2-2-2">
+<p>
+You should expand <code>cond</code>-expressions into nested <code>if</code>-expressions. For example, the expression
+</p>
+<div class="org-src-container">
+
+<pre class="src src-scheme">(cond (T1 E1)
+      (T2 E2)
+      (T3 E3)
+      (T4 E4)
+      (else E))
+</pre>
+</div>
+<p>
+should be expanded into:
+</p>
+<div class="org-src-container">
+
+<pre class="src src-scheme">(if T1 E1 (if T2 E2 (if T3 E3 (if T4 E4 E))))
+</pre>
+</div>
+<p>
+The tag-parser should be called recursively over the expanded form. 
+</p>
+
+<p>
+Please keep in mind that the <code>else</code> keyword is not necessary. A <code>cond</code> without an <code>else</code> returns <code>Const(Void())</code> if none of the tests match.
+</p>
+</div>
+</li>
+<li><code>let</code><br/><div class="outline-text-5" id="text-2-2-2-3">
+<p>
+Expand these into applications, and call the tag-parsed recursively.
+</p>
+</div>
+</li>
+
+<li><code>let*</code><br/><div class="outline-text-5" id="text-2-2-2-4">
+<p>
+Expand these into nested <code>let</code>-expressions, and call the tag-parser re-
+cursively.
+</p>
+</div>
+</li>
+
+<li><code>letrec</code><br/><div class="outline-text-5" id="text-2-2-2-5">
+<p>
+The <code>letrec</code> form should only be used to define <i>procedures</i>. The expression
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-scheme">(letrec ((g1 &lt;LE1&gt;)
+	 (g2 &lt;LE2&gt;)
+	 ...
+	 (gn &lt;LEn&gt;))
+  &lt;expr&gt;)
+</pre>
+</div>
+<p>
+where <code>&lt;LE1&gt;</code>, <code>&lt;LE2&gt;</code>, etc, are &lambda;-expressions, and <code>&lt;expr&gt;</code> is some instance of <code>AbstractSchemeExpr</code>, should be macro-expanded into the form:
+</p>
+<div class="org-src-container">
+
+<pre class="src src-scheme">(Yag
+ (lambda (g0 g1 g2 ... gn) &lt;expr&gt;)
+ (lambda (g0 g1 g2 ... gn) &lt;LE1&gt;)
+ (lambda (g0 g1 g2 ... gn) &lt;LE2&gt;)
+ ...
+ (lambda (g0 g1 g2 ... gn) &lt;LEn&gt;))
+</pre>
+</div>
+<p>
+where <code>g0</code> is a <i>fresh variable name</i>, and <code>Yag</code> is the name of a <i>global variable</i> the value of which you will get towards the final stage in your compiler pipeline. For the time being, it is just the global name of some semi-mysterious procedure&#x2026;
+</p>
+
+<p>
+The tag-parser should then be called recursively on the expanded form.
+</p>
+</div>
+</li>
+
+<li><code>and</code><br/><div class="outline-text-5" id="text-2-2-2-6">
+<p>
+Expand these into nested <code>if</code>-expressions, and call the tag-parsed recursively.
+</p>
+</div>
+</li></ol>
+</div>
+</div>
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Classes representing the abstract syntax of Scheme code</h3>
+<div class="outline-text-3" id="text-2-3">
+<div class="org-src-container">
+
+<pre class="src src-python">class AbstractSchemeExpr
+class Constant(AbstractSchemeExpr)
+class Variable(AbstractSchemeExpr)
+class IfThenElse(AbstractSchemeExpr)
+class AbstractLambda(AbstractSchemeExpr)
+class LambdaSimple(AbstractLambda) 
+class LambdaOpt(AbstractLambda) 
+class LambdaVar(AbstractLambda) 
+class Applic(AbstractSchemeExpr)
+class Or(AbstractSchemeExpr)
+class Def(AbstractSchemeExpr)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> Functionality</h3>
+<div class="outline-text-3" id="text-2-4">
+</div><div id="outline-container-sec-2-4-1" class="outline-4">
+<h4 id="sec-2-4-1"><span class="section-number-4">2.4.1</span> Parsing</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<p>
+The class <code>AbstractSchemeExpr</code> should have a static method <code>parse</code>, which takes a string, invokes the reader, and tag-parses the result. The <code>parse</code> method should return a pair of a parsed and macro-expanded Scheme-expression, and the remaining string of text.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-4-2" class="outline-4">
+<h4 id="sec-2-4-2"><span class="section-number-4">2.4.2</span> Converting to strings</h4>
+<div class="outline-text-4" id="text-2-4-2">
+<p>
+Concrete instances of subclasses of <code>AbstractSchemeExpr</code> should implement the <code>__str__</code> method, so that the procedure <code>str( ... )</code> will operate on Scheme expressions. The output should be a string representing the <i>concrete syntax</i> of the macro-expanded form. This means that 
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-python">&gt;&gt;&gt; expr, remaining = AbstractSchemeExpr.parse('(lambda (a b c) (a (b c))'))
+&gt;&gt;&gt; remaining
+''
+&gt;&gt;&gt; str(expr)
+'(lambda (a b c) (a (b c))'
+</pre>
+</div>
+
+<p>
+We will post additional examples later on.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> How to test your tag-parser</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+Testing your parser is actually rather simple:
+</p>
+<ol class="org-ol">
+<li>Start with a Scheme expression the value of which you know (because you can compute it in Chez Scheme).
+</li>
+<li>Call the string containing the concrete representation for the above expression by the name <i>A</i>.
+</li>
+<li>invoke the <code>AbstractSchemeExpr.parse</code> method on <i>A</i>.
+</li>
+<li>Use <code>str( ... )</code> to get a string representation of the macro-expanded &amp; parsed form. Call the resulting string <i>B</i>.
+</li>
+<li><i>A</i> &amp; <i>B</i> should give the same value when typed in the same Scheme system (where &ldquo;same&rdquo; is in the sense of <code>equal?</code> returning <code>#t</code> for both).
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-sec-2-6" class="outline-3">
+<h3 id="sec-2-6"><span class="section-number-3">2.6</span> How to organize your code</h3>
+<div class="outline-text-3" id="text-2-6">
+<ul class="org-ul">
+<li>Add the file <code>tag_parser.py</code> to the existing <code>scheme-compiler</code> directory. 
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Generating a Scanner for a Set-based Data Structure Language</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+This problem is given by Roman Manevich.
+</p>
+
+The goal of this exercise is to implement a scanner for a language called ADTL
+(for Abstract Data Type Language), which we describe next.
+
+<H3>
+Definition of ADTL
+</H3>
+
+<P>
+An ADTL program defines a data type in a similar way to a class in most object-oriented languages,
+in addition to features such as: sets are first-class types, locking statements, and path expressions.
+A variation of ADTL was <A href="http://www.cs.bgu.ac.il/~romanm/popl11.pdf">used</A> to guide an advanced static analysis in finding
+optimization opportunities for graph algorithms with optimistic parallelization.
+</P>
+
+Here is a <A href="http://www.cs.bgu.ac.il/~comp141/wiki.files/Graph.adt">link</A> to an example ADTL program, which defines a graph data type.
+
+<H4>Lexical Considerations.</H4>
+<UL>
+<LI> Identifiers start with an underscore or a letter and may continue with an underscore, letter, or a digit.
+<LI> Integer literals do not have extra leading 0's. Examples of legal literals are \0" and \-5".
+An example of an illegal literal is \007".
+<LI>  String literals may span at
+most one line and may contain escape sequences for whitespace, new line, tab,
+backslash, and quotation marks.
+<LI> ADTL supports single-line comments and multi-line comments as in other languages such as C++ and Java.
+</UL>
+
+<P>
+The following table lists all token types in ADTL, associating a (Java constant name) with a description of each one:
+</P>
+
+<TABLE  border="1">
+<TR><TD><B>Description</B></TD> <TD><B>Constant (in <tt>sym.java</tt>)</B></TD></TR>
+<TR><TD><tt>/</tt></TD>          <TD><tt>DIVIDE</tt></TD></TR>
+<TR><TD><tt>{</tt></TD>          <TD><tt>LCBR</tt></TD></TR>
+<TR><TD><tt><=</tt></TD>          <TD><tt>LTE</tt></TD></TR>
+<TR><TD><tt>rev</tt></TD>          <TD><tt>REV</tt></TD></TR>
+<TR><TD><tt>;</tt></TD>          <TD><tt>SEMI</tt></TD></TR>
+<TR><TD><tt>integer constants</tt></TD>          <TD><tt>INT</tt></TD></TR>
+<TR><TD><tt>-</tt></TD>          <TD><tt>MINUS</tt></TD></TR>
+<TR><TD><tt>assert</tt></TD>          <TD><tt>ASSERT</tt></TD></TR>
+<TR><TD><tt>|</tt></TD>          <TD><tt>BAR</tt></TD></TR>
+<TR><TD><tt>!</tt></TD>          <TD><tt>NOT</tt></TD></TR>
+<TR><TD><tt><</tt></TD>          <TD><tt>LT</tt></TD></TR>
+<TR><TD><tt>choose</tt></TD>          <TD><tt>CHOOSE</tt></TD></TR>
+<TR><TD><tt>in</tt></TD>          <TD><tt>IN</tt></TD></TR>
+<TR><TD><tt>(</tt></TD>          <TD><tt>LP</tt></TD></TR>
+<TR><TD><tt>,</tt></TD>          <TD><tt>COMMA</tt></TD></TR>
+<TR><TD><tt>lock</tt></TD>          <TD><tt>LOCK</tt></TD></TR>
+<TR><TD><tt>)</tt></TD>          <TD><tt>RP</tt></TD></TR>
+<TR><TD><tt>+</tt></TD>          <TD><tt>PLUS</tt></TD></TR>
+<TR><TD><tt>quoted strings</tt></TD>          <TD><tt>QUOTE</tt></TD></TR>
+<TR><TD><tt>=</tt></TD>          <TD><tt>ASSIGN</tt></TD></TR>
+<TR><TD><tt>if</tt></TD>          <TD><tt>IF</tt></TD></TR>
+<TR><TD><tt>identifiers</tt></TD>          <TD><tt>ID</tt></TD></TR>
+<TR><TD><tt>.</tt></TD>          <TD><tt>DOT</tt></TD></TR>
+<TR><TD><tt>}</tt></TD>          <TD><tt>RCBR</tt></TD></TR>
+<TR><TD><tt>&&</tt></TD>          <TD><tt>LAND</tt></TD></TR>
+<TR><TD><tt>return</tt></TD>          <TD><tt>RETURN</tt></TD></TR>
+<TR><TD><tt>new</tt></TD>          <TD><tt>NEW</tt></TD></TR>
+<TR><TD><tt>+=</tt></TD>          <TD><tt>ASSIGN_PLUS</tt></TD></TR>
+<TR><TD><tt>||</tt></TD>          <TD><tt>LOR</tt></TD></TR>
+<TR><TD><tt>!=</tt></TD>          <TD><tt>NEQ</tt></TD></TR>
+<TR><TD><tt>-=</tt></TD>          <TD><tt>ASSIGN_MINUS</tt></TD></TR>
+<TR><TD><tt>==</tt></TD>          <TD><tt>EQ</tt></TD></TR>
+<TR><TD><tt>=</tt></tt></TD>          <TD><tt>GTE</tt></TD></TR>
+<TR><TD><tt>*</tt></TD>          <TD><tt>TIMES</tt></TD></TR>
+<TR><TD><tt>:</tt></TD>          <TD><tt>COLON</tt></TD></TR>
+<TR><TD><tt>else</tt></TD>          <TD><tt>ELSE</tt></TD></TR>
+<TR><TD><tt>&#64;</tt></TD>          <TD><tt>AT</tt></TD></TR>
+<TR><TD><tt>></tt></TD>          <TD><tt>GT</tt></TD></TR>
+<TR><TD><tt>set</tt></TD>          <TD><tt>SET</tt></TD></TR>
+</TABLE>
+
+
+<H4>Grammatical Considerations.</H4>
+
+<P>
+Although it is not used in this assignment, the full grammar of ADTL is shown below (in the next assignment you will
+write a parser for this grammar).
+</P>
+<P>
+We use the following notational conventions:
+<UL>
+<LI> Non-terminals start with a capital letter and appear in boldface. For example: <tt><B>Stmt</B></tt>.
+<LI> Terminals appear between single quotation marks. For example <tt>'||'</tt> is the terminal used for logical or.
+<LI> The terminals for identifiers, integer constants and quoted strings appear as id, int, and quote.
+<LI> We use the Kleene star to denote possibly empty sequences. For example <tt><B>Stmt</B>*</tt> is a sequence of
+0 or more statements. Similarly, the + version is used to denote non-empty sequences. So, <tt><B>Stmt</B>+</tt> is a sequence of
+1 or more statements.
+<LI> We denote a possibly-empty sequence of elements separated by a token by the notation Element&otimes;token and
+non-empty sequences by Element&oplus;token. Examples are <tt><B>Arg</B>&otimes;','</tt>, which denotes a sequence of 0 or more
+arguments separated by commas, and <tt><B>PathElement</B>&oplus;'.'</tt>, which denotes a sequence of 1 or more path elements
+separated by dots.
+</UL>
+</P>
+ <pre>
+ id             Identifier token
+ int            Integer token
+ quote          Quoted string token
+ 
+ <B>ADT</B> &rarr; id '{' <B>Element</B>* '}'
+ <B>Element</B> &rarr; <B>FieldDef</B>';' | <B>MethodDef</B>
+<B> FieldDef</B> &rarr; id ':' <B>Type</B>
+ <B>Type</B> &rarr; id | 'set'
+<B> MethodDef</B> &rarr; id '(' <B>Arg</B>&otimes;',' ')' '{' <B>Stmt</B>* '}'
+ <B>Arg</B> &rarr; id ':' <B>Type</B>
+
+<B>Stmt</B> &rarr; 'return' <B>Expr</B>';'
+        | <B>Assign</B>
+        | 'if' '('<B>Expr</B>')' <B>SingleOrBlockStmt</B>
+        | 'if' '('<B>Expr</B>')' <B>SingleOrBlockStmt</B> 'else' <B>SingleOrBlockStmt</B>
+        | 'assert' <B>Expr</B>';'
+        | 'assert' <B>Expr</B> ':' quote';'
+        | 'lock' <B>PathExpr</B>';'
+        
+<B>Assign</B> &rarr; <B>PathExpr</B> '=' <B>Expr</B>
+<B>Assign</B> &rarr; <B>PathExpr</B> '+=' <B>Expr</B>
+<B>Assign</B> &rarr; <B>PathExpr</B> '-=' <B>Expr</B>
+<B>SingleOrBlockStmt</B> &rarr; <B>Stmt</B> | '{' <B>Stmt</B>+ '}'
+
+<B>Expr</B> &rarr; 'choose' <B>Expr</B>
+        | int
+        | '|' <B>Expr</B> '|'
+        | 'new' <B>Type</B> '(' <B>Assign</B>ed<B>Arg</B>* ')'
+        | '-' <B>Expr</B>
+        | <B>Expr</B> '+' <B>Expr</B>
+        | <B>Expr</B> '*' <B>Expr</B>
+        | <B>Expr</B> '-' <B>Expr</B>
+        | <B>Expr</B> '/' <B>Expr</B>                        
+        | <B>Expr</B> '<' <B>Expr</B>
+        | <B>Expr</B> '<=' <B>Expr</B>
+        | <B>Expr</B> '>' <B>Expr</B>
+        | <B>Expr</B> '>=' <B>Expr</B>
+        | <B>Expr</B> '==' <B>Expr</B>
+        | <B>Expr</B> '!=' <B>Expr</B>
+        | '!' <B>Expr</B>
+        | <B>Expr</B> '&&' <B>Expr</B>
+        | <B>Expr</B> '||' <B>Expr</B>
+        | <B>Expr</B> 'in' <B>Expr</B>
+        | <B>PathExpr</B>
+        | '(' <B>Expr</B> ')'
+
+<B>Assign</B>ed<B>Arg</B> &rarr; id '=' <B>Expr</B>
+        
+<B>PathExpr</B> &rarr;<B>PathElement</B>&oplus;'.'
+<B>PathElement</B> &rarr; id ['@'] | 'rev' '(' id ['@'] ')'
+ </pre>
+
+<H3>
+What to Implement
+</H3>
+
+<P>
+You will implement the scanner using the <A jref="http://jflex.de/">JFlex</A> scanner generation tool.
+</P>
+
+<P>
+As part of this exercise, you are given a skeleton implementation, which
+already contains classes that implement the following: lexical error exceptions;
+a token class; a driver class for running the scanner on input files; and an
+<A href="http://ant.apache.org/">Ant</A> <tt>build.xml</tt> file to help you automate tasks such as generating the scanner,
+compiling the sources, cleaning, etc. Using the build file and Ant is completely
+optional and up to you (we will not consider it part of your submission).
+</P>
+
+<P>
+The <tt>lib</tt> sub-directory already contains the <tt>JFlex.jar</tt>, which you can use to
+generate the scanner.
+</P>
+
+<P>
+You should complete the <tt>ADTL.lex</tt> file with all the token definitions and other
+necessary content in order to implement the scanner for ADTL. 
+You should also include one constant per token type in <tt>sym.java</tt>.
+</P>
+
+<P>
+Running JFlex on <tt>ADTL.lex</tt> should generate a file <tt>Lexer.java</tt>, which should be compiled with
+the rest of the sources. The <tt>Main.java</tt> class uses the scanner to read an ADTL
+input file and print out the tokens appearing there, one token per line. It should be
+invoked using the following format: <tt>java ADTL.Main -tokens file-name</tt>
+where <tt>file-name</tt> is the name of the input ADTL file.
+</P>
+
+<P>
+Your scanner should also detect and report any lexical analysis errors it may encounter. Whenever the program encounters a lexical
+error, the scanner must throw a <tt>LexicalError</tt> exception with a meaningful description of the error (the existing implementation already
+adds the fact that this is a lexical error and the line number and text). Your program must always report the first lexical error
+in the file.
+</P>
+
+<P>
+The <tt>test</tt> sub-directory of the code given to you contains an example of an input and corresponding output of the scanner.
+</P>
+
+<P>
+<B>Testing the Scanner.</B>
+We expect you to perform your own testing of the
+scanner. You should develop a thorough test suite that tests all legal tokens
+and as many lexical errors as you can think of. We will test your scanner
+against our own test cases, including programs that are lexically correct, and
+also programs that contain lexical errors. You may find it useful to go over
+the <A href="http://en.wikipedia.org/wiki/ASCII">ASCII table</A> to make sure your scanner doesn't miss cases. Make sure you
+handle comments, quoted strings, and escape sequences appropriately.
+</P>
+
+<P>
+<B>Other Tools.</B>
+You may consider the automation of this process using make files,
+shell scripts, or other similar tools. We recommend using the <A href="http://ant.apache.org/">Apache Ant</A> tool,
+which is a kind of a platform-independent make utility (JFlex and JavaCup come with Ant tasks).
+
+We highly recommend using the <A href="http://www.eclipse.org/">Eclipse IDE</A>. Eclipse has many useful features such as code navigation, text completion, unit testing, and debugging. All
+of these can significantly help increase your productivity in this project.
+</P>
+
+<H3>
+What to Turn In
+</H3>
+
+<P>
+You should submit your <tt>ADTL.lex</tt> file. You should also submit the test suite
+programs you used to test your scanner on.
+</P>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> How to submit</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>You should submit a <i>zip</i> file <code>hw2.zip</code> that creates a directory <code>hw2</code> containing:
+</li>
+<li><code>scheme-compiler</code>
+<ul class="org-ul">
+<li><code>pc.py</code>
+</li>
+<li><code>sexprs.py</code>
+</li>
+<li><code>reader.py</code>
+</li>
+<li><code>tag_parser.py</code>
+</li>
+</ul>
+</li>
+<li><code>problem-3</code>
+<ul class="org-ul">
+<li><code>ADTL.lex</code>
+</li>
+<li>Any additional test suite programs you used to test your scanner on.
+</li>
+</ul>
+</li>
+<li>A file <code>readme.txt</code> that contains the names, IDs, and email addresses of all group members (you may either work alone, or with a single partner), as well as the following statement:
+</li>
+</ul>
+<blockquote>
+<p>
+I(We), &lt;fill in your name(s)&gt;, declare the following to be true:
+</p>
+<ul class="org-ul">
+<li>We worked on this assignment alone. We did not consult with others about this assignment, other than the teaching staff for this course.
+</li>
+<li>We did not copy code either from other students or from the internet.
+</li>
+<li>We did not make available this code to other students taking this course.
+</li>
+<li>We are aware of the University, faculty (as specified in the &rlm;שנתון&lrm;), departmental, and course policies (as specified in the syllabus) on academic dishonesty: We realize that if we are found to have committed academic dishonesty that we shall be sent before the disciplinary committee (&rlm;ועדת משמעת&lrm;), fail the course, and possibly incur other penalties as decided by the disciplinary committee. 
+</li>
+</ul>
+</blockquote>
+
+<p>
+We will not grade any work submitted that does not include the above statement. Please do not forget to include it, with your names spelled out. If you do not do this, for any reason, then at the very least, you will incur the 5% per diem late penalty (as specified in the course syllabus). 
+</p>
+</div>
+
+<div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Last minute instructions</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>Unlike the first assignment, we are now asking you to include the parsing combinators package <code>pc.py</code> with your work. 
+</li>
+<li><b>PLEASE</b> do make sure that your work runs on the departmental Linux machines. It will save you much grief later on!
+</li>
+<li><b>PLEASE</b> do go over the submission instructions carefully, and make sure you did not leave out anything. 
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Mayer Goldberg</p>
+<p class="date">Created: 2013-11-26 Tue 20:19</p>
+<p class="xhtml-validation"><a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a></p>
+</div>
+</body>
+</html>

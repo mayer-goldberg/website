@@ -1,0 +1,213 @@
+#+title: Individual Programming Languages
+#+author: Mayer Goldberg
+#+email: gmayer@little-lisper.org
+#+options: creator:nil
+#+keywords: Mayer Goldberg, programming languages, computing, history of computing, logic programming, functional programming, object-oriented programming, programming paradigms
+
+* Categories of programming languages
+
+** Functional (and semi-functional) languages
+
+- [[#Erlang][Erlang]]
+- [[Haskell]]
+- [[LISP]]
+- [[Miranda]]
+- [[./ml.html][ML]]
+- [[Nil]]
+- [[./scheme.html][Scheme]]
+- [[T]]
+
+** Logic languages
+
+- [[Prolog]]
+
+** Array languages
+
+- [[APL]]
+- [[J]]
+
+** Database languages
+
+- [[SQL]]
+
+** List-processing languages
+
+- [[L6]]
+- [[LISP]]
+- [[./scheme.html][Scheme]]
+
+** Languages for typesetting & DTP
+
+- [[LaTeX]]
+- [[Postscript]]
+- [[roff]]
+- [[TeX]]
+
+** Languages for symbolic computations
+- Macsyma
+- Maple
+- Mathematica
+- Maxima
+- Reduce
+** Languages for numerical computations
+
+** Languages for statistical computations
+
+** Discrete simulation languages
+
+- Simscript
+- Simula
+
+** Scripting languages
+
+** Threaded languages
+
+- Forth
+- Postscript
+
+** Algol-descendent languages
+
+- [[#Algol 60][Algol 60]]
+
+** Object-oriented languages
+
+- C++
+- Java
+- Ruby
+- Self
+- Smalltalk
+
+** Procedural languages
+
+** Low-level languages
+
+* Complete list of programming languages (with which I am at least somewhat familiar)
+- <<Algol>>
+  - [[./algol60.html][Algol 60]]
+  - <<Algol 68>>
+- <<APL>>
+- /Assembly Languages/
+  - /Real architectures/
+  - /Virtual architectures/
+- <<B>>
+- <<Basic>>
+- <<bc>>
+- <<Beta>>
+- <<BitC>>
+- <<Bondi>>
+- <<Brainfuck>>
+- <<C>>
+- <<C#>>
+- <<C++>>
+- <<COBOL>>
+- <<Coq>> -- interactive proof assistant
+  - [[http://coq.inria.fr/][Main site]]
+  - [[../coq.html][My page on Coq]]
+- <<CPL>>
+- <<Cryptol>>, by Galois
+- <<dc>>
+- <<Dylan>>
+- <<Erlang>>
+  - [[http://www.erlang.org/][Main site]]
+  - [[http://code.google.com/p/distel/][Distle]] -- [[http://www.gnu.org/software/emacs/][Emacs]] support for Erlang
+    - [[http://bc.tech.coop/blog/070528.html][A blog discussing Distle]]
+  - Erlang Tutorials
+    - [[http://erlang.org/course/course.html][An Erlang course from /Erlang University/]]
+  - Web programming in Erlang
+    - [[http://nitrogenproject.com/][Nitrogen]]
+    - [[http://yaws.hyber.org/][Yaws]]
+    - [[http://erlyweb.org/][Erlyweb]]
+  - Books on Erlang
+    - [[http://www.amazon.com/Erlang-Web-Applications-Problem-Solutions/dp/0470743840/ref=sr_1_3?ie=UTF8&s=books&qid=1251268766&sr=8-3][Erlang Web Applications]]
+  - Erlang Community
+    - [[http://www.trapexit.org/][Trapexit: The Erlang Community Site]]
+- <<F#>>
+- <<Forth>>
+- <<Fortran>>
+- <<Go>> (an experiment by Google)
+- <<Haskell>>
+- <<Hecl>> -- scripting languages for...
+- <<Intercal>>
+- <<J>>
+- <<JCL>>
+- <<Java>>
+- <<Javascript>>
+- <<Jovial>>
+- <<Juk>> (ג'וק)
+- <<L6>>
+- <<LaTeX>>
+- <<LISP>>
+  - Dialects
+    - Clojure
+      - [[http://www.clojure.org/][Homepage]]
+      - [[http://clojuredocs.org/][Clojure Documents]]
+      - [[http://java.ociweb.com/mark/clojure/article.html][Mark Volkman's tutorial]]
+      - [[http://www.4clojure.com/problems][Learning Clojure by solving simple problems]]
+    - Common LISP
+    - MacLISP
+    - Franz LISP
+    - Star LISP
+    - Interlisp
+    - XLISP
+    - T
+    - NIL
+    - Zetalisp
+    - elisp
+- <<Logo>>
+  - [[http://logo.twentygototen.org/][Logo in the website]]
+  - [[http://www.alancsmith.co.uk/][ACS Logo (for Mac/OSX)]]
+- <<LSL>>
+- <<M4>>
+- <<Macsyma>>
+- <<Malbolge>>
+- <<Maple>>
+- <<Mathematica>>
+- <<Matlab>>
+- <<Maude>>
+- <<Maxima>>
+- <<Miranda>>
+- [[./ml.html][ML]]
+- <<Modula 2>>
+- <<Newspeak>>
+- <<Nu>>
+- <<Oberon>>
+- <<Objective-C>>
+- <<Octave>>
+- <<PHP>>
+- <<PL/I>>
+- <<Pascal>>
+- <<Perl>>
+- <<Poplog>>
+- <<Prolog>>
+  - Tutorials
+  - Books
+  - Implementations
+    - [[http://www.sics.se/isl/quintus/][Quintus Prolog]]
+    - [[http://www.sics.se/isl/sicstuswww/site/index.html][Sicstus Prolog]]
+    - [[http://www.swi-prolog.org/][SWI Prolog]]
+    - [[http://www.gprolog.org/][GNU Prolog]]
+    - [[http://www.visual-prolog.com/][Visual Prolog]]
+  - Prolog Community
+    - 
+- <<Python>>
+- <<RATFOR>>
+- <<Reduce>>
+- <<REXX>>
+- <<Ruby>>
+- <<S-Lang>>
+- <<SAS>>
+- <<Scratch>> -- 
+  - [[http://scratch.mit.edu/][Main Site]]
+  - [[http://www.scratch.org.il/][Israeli Site]]
+  - [[http://en.wikipedia.org/wiki/Scratch_(programming_language)][Wikipedia entry]]
+- <<SPSS>>
+- <<SQL>>
+- <<Scala>>
+- [[./scheme.html][Scheme]]
+- <<Self>>
+- <<Simscript>>
+- <<Simula>>
+- <<Smalltalk>>
+- <<Snobol>>
+- <<TCL>>
+- <<TeX>>

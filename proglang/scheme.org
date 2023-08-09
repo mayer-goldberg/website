@@ -1,0 +1,85 @@
+#+title: The Scheme Programming Language
+#+author: Mayer Goldberg
+#+email: gmayer@little-lisper.org
+#+options: creator:nil
+
+* What is Scheme
+
+* Why Scheme?
+
+* Resources on Scheme
+
+** Books on Scheme 
+
+# <<books-on-scheme>>
+PLEASE read the following [[./disclaimer-on-books.html][disclaimer]]
+
+- 
+
+** Online resources
+
+- [[http://en.wikipedia.org/wiki/Scheme_(programming_language)][Scheme at the Wikipedia]]
+- [[http://www.r6rs.org/][The Scheme standard (R^{6}RS)]]
+- The USENET newsgroup [[http://groups.google.com/group/comp.lang.scheme/topics][=comp.lang.scheme=]] (via [[http://groups.google.com/][Google Groups]])
+
+* Dialects of Scheme
+
+- Bigloo
+- Chez Scheme
+- Dr Scheme
+- Geneva Scheme
+- Guile
+- Kawa
+- MacScheme
+- MIT Scheme
+- SCM
+- Stklos
+- TI Scheme
+- UCB Schdeme (modified STk)
+- Wraith Scheme
+
+* My FAQ about Scheme
+
+- Changing the case of chars, strings, symbols
+
+- How to debug Scheme programs
+
+- How to see what symbols are in the symbol table
+
+- How to use the read-eval-print loop
+
+- Redefining keywords in Scheme
+
+- Working with characters
+
+- Working with dotted pairs
+
+- Working with files
+
+- Working with Numbers
+
+- Working with sexprs
+
+- Working with strings
+
+- Working with symbols
+
+- Working with vectors
+
+- Working with the backquote mechanism
+
+* IDEs for Scheme
+
+* Scheme tutorials
+
+* My tutorial on the lambda calculus
+
+* My Scheme programs
+
+* Programs that have no straightforward equivalent in ML
+
+* Useful Scheme packages I had written
+
+
+
+

@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Sharp PC-G850</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="Sharp PC-G850"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-05-23T23:26+0300"/>
+<meta name="author" content="Mayer Goldberg"/>
+<meta name="description" content="This page is devoted to the Sharp PC-G850 handheld computer, its use and programming. Since this calculator is often sold "ask is", without its manual, and since the manual is in Japanese, the more interesting functions of this computer may be inaccessible to most users. This is where I hope this website will prove useful."/>
+<meta name="keywords" content="sharp pc-g850, programmable calculator, handheld computer, sharp, basic, casl, c, z80, assembly language, comet, Mayer Goldberg, Ben-Gurion University"/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012  Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Sharp PC-G850</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Using the Sharp PC-G850 as a calculator</a></li>
+<li><a href="#sec-2">2 Text editing on the Sharp PC-G850</a>
+<ul>
+<li><a href="#sec-2-1">2.1 Creating files</a></li>
+<li><a href="#sec-2-2">2.2 Editing files</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 Programming the Sharp PC-G850</a>
+<ul>
+<li><a href="#sec-3-1">3.1 BASIC</a></li>
+<li><a href="#sec-3-2">3.2 C</a></li>
+<li><a href="#sec-3-3">3.3 CASL</a></li>
+<li><a href="#sec-3-4">3.4 Z80 Assembly</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Using the Sharp PC-G850 as a calculator</h2>
+<div class="outline-text-2" id="text-1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Text editing on the Sharp PC-G850</h2>
+<div class="outline-text-2" id="text-2">
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Creating files</h3>
+<div class="outline-text-3" id="text-2-1">
+
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Editing files</h3>
+<div class="outline-text-3" id="text-2-2">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Programming the Sharp PC-G850</h2>
+<div class="outline-text-2" id="text-3">
+
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> BASIC</h3>
+<div class="outline-text-3" id="text-3-1">
+
+
+<ol>
+<li><code>&amp;H</code>
+</li>
+<li><code>?</code>
+</li>
+<li><code>^</code>
+</li>
+<li><code>ACS</code>
+</li>
+<li><code>AHC</code>
+</li>
+<li><code>AHS</code>
+</li>
+<li><code>AHT</code>
+</li>
+<li><code>AND</code>
+</li>
+<li><code>ASC</code>
+</li>
+<li><code>ASN</code>
+</li>
+<li><code>ATN</code>
+</li>
+<li><code>AUTO</code>
+</li>
+<li><code>BEEP</code>
+</li>
+<li><code>BLOAD</code>
+</li>
+<li><code>BLOAD</code>
+</li>
+<li><code>BLOAD</code>
+</li>
+<li><code>BSAVE</code>
+</li>
+<li><code>BSAVE</code>
+</li>
+<li><code>CALL</code>
+</li>
+<li><code>CALL</code>
+</li>
+<li><code>CHR$</code>
+</li>
+<li><code>CIRCLE</code>
+</li>
+<li><code>CLEAR</code>
+</li>
+<li><code>CLOSE</code>
+</li>
+<li><code>CLS</code>
+</li>
+<li><code>CONT</code>
+</li>
+<li><code>COS</code>
+</li>
+<li><code>CUB</code>
+</li>
+<li><code>CUR</code>
+</li>
+<li><code>DATA</code>
+</li>
+<li><code>DEG</code>
+</li>
+<li><code>DEGREE</code>
+</li>
+<li><code>DELETE</code>
+</li>
+<li><code>DIGIT</code>
+</li>
+<li><code>DIM</code>
+</li>
+<li><code>DMS$</code>
+</li>
+<li><code>DMS</code>
+</li>
+<li><code>ELSE</code>
+</li>
+<li><code>END</code>
+</li>
+<li><code>ENDIF</code>
+</li>
+<li><code>EOF</code>
+</li>
+<li><code>ERASE</code>
+</li>
+<li><code>EXP</code>
+</li>
+<li><code>FACT</code>
+</li>
+<li><code>FILES</code>
+</li>
+<li><code>FIX</code>
+</li>
+<li><code>FOR</code>
+</li>
+<li><code>FRE</code>
+</li>
+<li><code>GCURSOR</code>
+</li>
+<li><code>GOSUB</code>
+</li>
+<li><code>GOSUB</code>
+</li>
+<li><code>GOTO</code>
+</li>
+<li><code>GOTO</code>
+</li>
+<li><code>GPRINT</code>
+</li>
+<li><code>GRAD</code>
+</li>
+<li><code>HCS</code>
+</li>
+<li><code>HEX$</code>
+</li>
+<li><code>HSN</code>
+</li>
+<li><code>HTN</code>
+</li>
+<li><code>IF</code>
+</li>
+<li><code>IF~THEN~ELSE</code>
+</li>
+<li><code>IMP</code>
+</li>
+<li><code>IMP</code>
+</li>
+<li><code>INKEY$</code>
+</li>
+<li><code>INP</code>
+</li>
+<li><code>INPUT#</code>
+</li>
+<li><code>INPUT</code>
+</li>
+<li><code>INT</code>
+</li>
+<li><code>KILL</code>
+</li>
+<li><code>LCOPY</code>
+</li>
+<li><code>LEFT$</code>
+</li>
+<li><code>LEN</code>
+</li>
+<li><code>LET</code>
+</li>
+<li><code>LFILES</code>
+</li>
+<li><code>LINE</code>
+</li>
+<li><code>LIST</code>
+</li>
+<li><code>LLIST</code>
+</li>
+<li><code>LN</code>
+</li>
+<li><code>LNINPUT#</code>
+</li>
+<li><code>LOAD</code>
+</li>
+<li><code>LOCATE</code>
+</li>
+<li><code>LOF</code>
+</li>
+<li><code>LOG</code>
+</li>
+<li><code>LPRINT</code>
+</li>
+<li><code>M</code>
+</li>
+<li><code>M</code>
+</li>
+<li><code>MDF</code>
+</li>
+<li><code>MID$</code>
+</li>
+<li><code>MON</code>
+</li>
+<li><code>NCR</code>
+</li>
+<li><code>NEW</code>
+</li>
+<li><code>NEXT</code>
+</li>
+<li><code>NOT</code>
+</li>
+<li><code>NPR</code>
+</li>
+<li><code>ON</code>
+</li>
+<li><code>ON</code>
+</li>
+<li><code>OPEN</code>
+</li>
+<li><code>OR</code>
+</li>
+<li><code>OUT</code>
+</li>
+<li><code>OUT</code>
+</li>
+<li><code>PAINT</code>
+</li>
+<li><code>PASS</code>
+</li>
+<li><code>PEEK</code>
+</li>
+<li><code>PEEK</code>
+</li>
+<li><code>PI</code>
+</li>
+<li><code>PIOGET</code>
+</li>
+<li><code>PIOPUT</code>
+</li>
+<li><code>POINT</code>
+</li>
+<li><code>POKE</code>
+</li>
+<li><code>POKE</code>
+</li>
+<li><code>POL</code>
+</li>
+<li><code>PRESET</code>
+</li>
+<li><code>PRINT#</code>
+</li>
+<li><code>PRINT</code>
+</li>
+<li><code>PRINT‐&gt;LPRINT</code>
+</li>
+<li><code>PSET</code>
+</li>
+<li><code>RADIAN</code>
+</li>
+<li><code>RANDOMIZE</code>
+</li>
+<li><code>RCP</code>
+</li>
+<li><code>READ</code>
+</li>
+<li><code>REC</code>
+</li>
+<li><code>REM</code>
+</li>
+<li><code>RENUM</code>
+</li>
+<li><code>REPEAT~UNTIL</code>
+</li>
+<li><code>RESERVED</code>
+</li>
+<li><code>RESTORE</code>
+</li>
+<li><code>RETURN</code>
+</li>
+<li><code>RIGHT$</code>
+</li>
+<li><code>RND</code>
+</li>
+<li><code>RUN</code>
+</li>
+<li><code>SAVE</code>
+</li>
+<li><code>SGN</code>
+</li>
+<li><code>SIN</code>
+</li>
+<li><code>SQR</code>
+</li>
+<li><code>SQU</code>
+</li>
+<li><code>STEP</code>
+</li>
+<li><code>STOP</code>
+</li>
+<li><code>STR</code>
+</li>
+<li><code>SWITCH~CASE~DEFAULT~ENDSWITCH</code>
+</li>
+<li><code>TAN</code>
+</li>
+<li><code>TEN</code>
+</li>
+<li><code>THEN</code>
+</li>
+<li><code>TROFF</code>
+</li>
+<li><code>TRON</code>
+</li>
+<li><code>USING</code>
+</li>
+<li><code>VAL</code>
+</li>
+<li><code>VDEG</code>
+</li>
+<li><code>WAIT</code>
+</li>
+<li><code>WHILE~WEND</code>
+</li>
+<li><code>XOR</code>
+</li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> C</h3>
+<div class="outline-text-3" id="text-3-2">
+
+
+<ol>
+<li><code>!</code>
+</li>
+<li><code>#define</code>
+</li>
+<li><code>#ifdef</code>
+</li>
+<li><code>#if~$ elid~# else~$ endif</code>
+</li>
+<li><code>#include</code>
+</li>
+<li><code>&amp;&amp;</code>
+</li>
+<li><code>&amp;</code>
+</li>
+<li><code>++</code>
+</li>
+<li><code>&lt;&lt;</code>
+</li>
+<li><code>&gt;&gt;</code>
+</li>
+<li><code>?</code>
+</li>
+<li><code>^</code>
+</li>
+<li><code>abort</code>
+</li>
+<li><code>abs</code>
+</li>
+<li><code>acos</code>
+</li>
+<li><code>acosh</code>
+</li>
+<li><code>angle</code>
+</li>
+<li><code>asin</code>
+</li>
+<li><code>asinh</code>
+</li>
+<li><code>atan</code>
+</li>
+<li><code>atanh</code>
+</li>
+<li><code>auto</code>
+</li>
+<li><code>beep</code>
+</li>
+<li><code>break</code>
+</li>
+<li><code>breakpt</code>
+</li>
+<li><code>call</code>
+</li>
+<li><code>calloc</code>
+</li>
+<li><code>char</code>
+</li>
+<li><code>circle</code>
+</li>
+<li><code>clearerr</code>
+</li>
+<li><code>clrscr</code>
+</li>
+<li><code>const</code>
+</li>
+<li><code>continue</code>
+</li>
+<li><code>cos</code>
+</li>
+<li><code>cosh</code>
+</li>
+<li><code>do</code>
+</li>
+<li><code>double</code>
+</li>
+<li><code>else</code>
+</li>
+<li><code>enum</code>
+</li>
+<li><code>exit</code>
+</li>
+<li><code>exp</code>
+</li>
+<li><code>extern</code>
+</li>
+<li><code>fclose</code>
+</li>
+<li><code>fclose</code>
+</li>
+<li><code>feof</code>
+</li>
+<li><code>fflush</code>
+</li>
+<li><code>fgetc</code>
+</li>
+<li><code>fgets</code>
+</li>
+<li><code>float</code>
+</li>
+<li><code>flof</code>
+</li>
+<li><code>fopen</code>
+</li>
+<li><code>for</code>
+</li>
+<li><code>fprintf</code>
+</li>
+<li><code>fputc</code>
+</li>
+<li><code>fputs</code>
+</li>
+<li><code>free</code>
+</li>
+<li><code>fscanf</code>
+</li>
+<li><code>gcursor</code>
+</li>
+<li><code>getc</code>
+</li>
+<li><code>getchar</code>
+</li>
+<li><code>getchr</code>
+</li>
+<li><code>gets</code>
+</li>
+<li><code>goto</code>
+</li>
+<li><code>gotoxy</code>
+</li>
+<li><code>gprint</code>
+</li>
+<li><code>if</code>
+</li>
+<li><code>ifndef</code>
+</li>
+<li><code>inport</code>
+</li>
+<li><code>int</code>
+</li>
+<li><code>isalnum</code>
+</li>
+<li><code>isalpha</code>
+</li>
+<li><code>iscntrl</code>
+</li>
+<li><code>isdigit</code>
+</li>
+<li><code>isgraph</code>
+</li>
+<li><code>islower</code>
+</li>
+<li><code>islower</code>
+</li>
+<li><code>isprint</code>
+</li>
+<li><code>ispunct</code>
+</li>
+<li><code>issapace</code>
+</li>
+<li><code>isupper</code>
+</li>
+<li><code>isxdigit</code>
+</li>
+<li><code>kbhit</code>
+</li>
+<li><code>line</code>
+</li>
+<li><code>log10</code>
+</li>
+<li><code>log</code>
+</li>
+<li><code>long</code>
+</li>
+<li><code>main</code>
+</li>
+<li><code>malloc</code>
+</li>
+<li><code>miniget</code>
+</li>
+<li><code>miniput</code>
+</li>
+<li><code>outport</code>
+</li>
+<li><code>paint</code>
+</li>
+<li><code>peek</code>
+</li>
+<li><code>pioget</code>
+</li>
+<li><code>pioput</code>
+</li>
+<li><code>pioset</code>
+</li>
+<li><code>point</code>
+</li>
+<li><code>poke</code>
+</li>
+<li><code>pow</code>
+</li>
+<li><code>preset</code>
+</li>
+<li><code>printf</code>
+</li>
+<li><code>pset</code>
+</li>
+<li><code>put</code>
+</li>
+<li><code>putchar</code>
+</li>
+<li><code>puts</code>
+</li>
+<li><code>register</code>
+</li>
+<li><code>return</code>
+</li>
+<li><code>scanf</code>
+</li>
+<li><code>signed</code>
+</li>
+<li><code>sin</code>
+</li>
+<li><code>sinh</code>
+</li>
+<li><code>sizeof</code>
+</li>
+<li><code>sprintf</code>
+</li>
+<li><code>sqrt</code>
+</li>
+<li><code>sscanf</code>
+</li>
+<li><code>static</code>
+</li>
+<li><code>strcat</code>
+</li>
+<li><code>strchr</code>
+</li>
+<li><code>strcmp</code>
+</li>
+<li><code>strcpy</code>
+</li>
+<li><code>strlen</code>
+</li>
+<li><code>struct</code>
+</li>
+<li><code>switch~case~default~break</code>
+</li>
+<li><code>tan</code>
+</li>
+<li><code>tanh</code>
+</li>
+<li><code>tolower</code>
+</li>
+<li><code>toupper</code>
+</li>
+<li><code>typedef</code>
+</li>
+<li><code>union</code>
+</li>
+<li><code>unsigned</code>
+</li>
+<li><code>void</code>
+</li>
+<li><code>volatile</code>
+</li>
+<li><code>while</code>
+</li>
+<li><code>while</code>
+</li>
+<li><code>|</code>
+</li>
+<li><code>||</code>
+</li>
+<li><code>~</code>
+</li>
+<li><code>‐‐</code>
+</li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> CASL</h3>
+<div class="outline-text-3" id="text-3-3">
+
+
+</div>
+
+<div id="outline-container-3-3-1" class="outline-4">
+<h4 id="sec-3-3-1"><span class="section-number-4">3.3.1</span> Instruction Set</h4>
+<div class="outline-text-4" id="text-3-3-1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3-2" class="outline-4">
+<h4 id="sec-3-3-2"><span class="section-number-4">3.3.2</span> Op Codes</h4>
+<div class="outline-text-4" id="text-3-3-2">
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3-3" class="outline-4">
+<h4 id="sec-3-3-3"><span class="section-number-4">3.3.3</span> CASL source file format</h4>
+<div class="outline-text-4" id="text-3-3-3">
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3-4" class="outline-4">
+<h4 id="sec-3-3-4"><span class="section-number-4">3.3.4</span> Sample code</h4>
+<div class="outline-text-4" id="text-3-3-4">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> Z80 Assembly</h3>
+<div class="outline-text-3" id="text-3-4">
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2013-05-23T23:26+0300</p>
+<p class="author">Author: Mayer Goldberg</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+#+title: How to Debug Programs
+#+author: Mayer Goldberg
+#+email: gmayer@little-lisper.org
+#+style: <link rel="icon" type="image/x-icon" href="http://www.little-lisper.org/website/favicon.ico" />
+#+style: <link rel="apple-touch-icon" type="image/x-icon" href="http://www.little-lisper.org/website/favicon.png" />
+#+options: @:t creator:nil
+
+* Debuggers are almost always bad
+
+Debugging programs using a debugger is almost always the wrong thing. 
+
+- Debuggers allow you to trace or step through your program, check various variables, etc. 
+- Most debuggers are not very convenient when chansing pointers (traversing a complex data structure with pointers going from one structure to the next), or examining the activation frames on the stack, or debugging different threads or processes.
+- Debuggers do not understand your algorithms & data structures. Their concept of a \ldquo{}bug\rdquo{} is limited to some exceptional circumstance that that triggers their invocation. This is hardly ever the right level to be debugging your code. It fails to capture what a \ldquo{}bug\rdquo{} means for /your/ specific application:
+  - What situations are problematic
+  - What happens to your data structures in these problematic situations
+  - What happens to the control of your program in these problematic situations
+- Some common errors do not occur when the program is run within the debugger. 
+- Rather than focusing on their bugs, programmers waste time trying to reach strange places in the control and data of their program from inside the debugger. They spend a lot of time trying to recreate the circumstances that trigger the bug (before they understand the bug and therefore, what are the relevant circumstances to re-create it). One obvious problem with this approach is that bugs can be created in one place in the code and manifest themselves much later, in another place in the code. The most you can see in the debugger is the damage left by something that happened some time and many source lines ago.
+
+* Program with debugging in mind
+
+The easiest way to program
+
+* Think carefully about your data
+
+Testing is a very powerful tool. It is so powerful, that if you don't choose your inputs carefully the results can very easily mislead you. 
+
+A student in the compilers course sent me the following session in Scheme:
+
+#+begin_example
+> (define f 
+    (lambda (x)
+      (lambda (y)
+        (+ x y))))
+> (((f 1) 2) 3)
+
+Exception: attempt to apply non-procedure 3
+Type (debug) to enter the debugger.
+#+end_example
+
+He was trying to figure out what went wrong in his compiler: Why was the third argument being applied?
+
+In fact, there was nothing wrong with his compiler, and the third "argument" wasn't being applied. A different choice of inputs would have uncovered the problem immediately:
+
+#+begin_example
+> (((f 1) 2) 4)
+
+Exception: attempt to apply non-procedure 3
+Type (debug) to enter the debugger.
+#+end_example
+
+The =3= that was being applied here was the result of adding =1= and =2=, and not the third argument... The student's error came from mis-applying a Curried, two-variable function to three arguments, so that the sum of =(+ x y)= got applied to the "third argument", and not vice versa. The poor choice of inputs carefully masked the real issue, by falsely implying that the third argument got applied somehow. 
+
+
+* Don't remove the scaffolding (פיגומים)
+
+Programmers are ashamed of debug statements. Especially if they were added haphazardly, as an after-thought. They are all too eager to declare the program correct, and remove those shameful reminders of past mistakes. [[http://en.wikipedia.org/wiki/Murphy%27s_law][Murphy's Law]] dictates, however, that as soon as you remove your debugging statements, new bugs are discovered, and you end up having to re-write your debugging code /again/. And then /again/. And then some. So by God, never remove the debugging code! Organize it, improve it, re-factor it, make it less intrusive, but keep it in place, because you /shall/ need it some day.

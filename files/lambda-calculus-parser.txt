@@ -1,0 +1,137 @@
+The parser is invoked by calling Parser.line, that is the
+line procedure in the Parser structure.
+
+Variables are recognized:
+
+- Parser.line "a";
+val it = VarExpr "a" : LCExpr
+
+Applications are recognized:
+
+- Parser.line "(a b)";
+val it = ApplicExpr (VarExpr "a",VarExpr "b") : LCExpr
+
+Parenthesis are only needed to disambiguate. In this case, we can do
+without them:
+
+- Parser.line "a b";
+val it = ApplicExpr (VarExpr "a",VarExpr "b") : LCExpr
+
+Applications are left-associative by default:
+
+- Parser.line "a b c";
+val it = ApplicExpr (ApplicExpr (VarExpr "a",VarExpr "b"),VarExpr "c")
+  : LCExpr
+
+You only need parenthesis to group. Here is a right-associated
+application:
+
+- Parser.line "a (b c)";
+val it = ApplicExpr (VarExpr "a",ApplicExpr (VarExpr "b",VarExpr "c"))
+  : LCExpr
+
+Lambdas are denoted by a single backslash: \. Remember, though, that
+backslashes are meta-characters inside strings, so we need to use a
+double backslash here:
+
+- Parser.line "\\a . a";
+val it = LambdaExpr ("a",VarExpr "a") : LCExpr
+
+If you load lambda-expressions from a file, though, you will not need
+a double backslash!
+
+Lambda expressions are automatically curried:
+
+- Parser.line "\\x y z.x z(y z)";
+val it =
+  LambdaExpr
+    ("x",
+     LambdaExpr
+       ("y",
+        LambdaExpr
+          ("z",
+           ApplicExpr
+             (ApplicExpr (VarExpr "x",VarExpr "z"),
+              ApplicExpr (VarExpr "y",VarExpr "z"))))) : LCExpr
+
+The scope of the "dot" corresponds to the standard notation in
+Church'41:
+
+- Parser.line "\\x.x(\\y.y)x";
+val it =
+  LambdaExpr
+    ("x",
+     ApplicExpr
+       (ApplicExpr (VarExpr "x",LambdaExpr ("y",VarExpr "y")),VarExpr "x"))
+  : LCExpr
+
+The parser recognizes some "built-in" abbreviations.
+
+Chrch numerals can be entered simply by typing a number. The numbers
+are "expanded" into the appropriate definition:
+
+- Parser.line "3";
+val it =
+  LambdaExpr
+    ("s",
+     LambdaExpr
+       ("z",
+        ApplicExpr
+          (VarExpr "s",
+           ApplicExpr (VarExpr "s",ApplicExpr (VarExpr "s",VarExpr "z")))))
+  : LCExpr
+
+The usual definition for ordered n-tuples is supported. The standard
+definition for [a, b, c] is (\a b c x.x a b c), where x is a fresh
+variable. For reasons of lexical hygiene, I preferred to have the
+expression [E1, ..., En] expand into an application of the ordered
+n-tuple maker to E1, ... En. This leads to a slightly more complicated
+expression, but on the other hand, it is hygienic and makes no use of
+"gensym"-like devices for variable generation.
+
+- Parser.line "[a, b]";
+val it =
+  ApplicExpr
+    (ApplicExpr
+       (LambdaExpr
+          ("x1",
+           LambdaExpr
+             ("x2",
+              LambdaExpr
+                ("y",
+                 ApplicExpr
+                   (ApplicExpr (VarExpr "y",VarExpr "x1"),VarExpr "x2")))),
+        VarExpr "a"),VarExpr "b") : LCExpr
+
+Here is a more complicated example of parsing an order-pair correctly:
+
+- Parser.line "[a b c, d]";
+val it =
+  ApplicExpr
+    (ApplicExpr
+       (LambdaExpr
+          ("x1",
+           LambdaExpr
+             ("x2",
+              LambdaExpr
+                ("y",
+                 ApplicExpr
+                   (ApplicExpr (VarExpr "y",VarExpr "x1"),VarExpr "x2")))),
+        ApplicExpr (ApplicExpr (VarExpr "a",VarExpr "b"),VarExpr "c")),
+     VarExpr "d") : LCExpr
+
+The projections are also supported. The parser uses the original
+notation in Church'41: n_k stands for pi_k^n, where n, k are
+constants:
+
+- Parser.line "2_1";
+val it = LambdaExpr ("x1",LambdaExpr ("x2",VarExpr "x1")) : LCExpr
+
+- Parser.line "3_2";
+val it = LambdaExpr ("x1",LambdaExpr ("x2",LambdaExpr ("x3",VarExpr "x2")))
+  : LCExpr
+
+You may use these for any values of n, k.
+
+Comments begin with ; and go on to the end of the line -- just as in Scheme.
+

@@ -1,0 +1,47 @@
+#+title: Teaching Committee
+#+author: Mayer Goldberg
+#+email: gmayer@little-lisper.org
+#+options: creator:nil, toc:nil
+#+keywords: Mayer Goldberg, Teaching Committee, Department of Computer Science, Ben-Gurion University, israel
+
+* Synopsis
+
+I serve as the undergraduate advisor and head of teaching committee for years 2--4 ({{{rtl(יועץ לתואר ראשון\, ויו"ר ועדת הוראה לשנים ב–ד)}}}) at the [[Http://www.cs.bgu.ac.il/][/Department of Computer Science/]] at [[http://www.bgu.ac.il/][/Ben-Gurion University/]]. 
+
+* How to contact me
+
+| Name                      | Mayer Goldberg                                            |
+| Email                     | [[mailto:gmayer@little-lisper.org][gmayer@little-lisper.org]]                                  |
+| Office                    | Building 37 (Alon, {{{rtl(אלון)}}}), room 106, mailbox 44 |
+| Office hours (semester א) | Mondays, 19:00--21:00                                     |
+| Telephones                | Voice 08-647-7873, FAX 08-647-7650                        |
+
+* General guidelines
+
+Please understand that:
+- No decisions are made {{{quote(on the spot)}}}, regardless of what you tell me
+- All decisions are taken offline, after deliberation with other members of the department and the relevant faculty (either Natural Sciences of Engineering, depending on what program you are in), with all relevant documentation at hand, and in particular, with your academic transcript before us
+- You are welcome to come to my office hours, or to send me an email, but please keep in mind that on most academic matters, I shall probably direct you to the [[https://cs-sr.cs.bgu.ac.il/][/Student Request Form/ ({{{rtl(מערכת פניות הסטודנטים)}}})]]
+
+* Issues that come up frequently
+
+- If you *seek authorization for a course*, or *{{{rtl(מועד מיוחד)}}} in a course you took*, please go to the [[https://cs-sr.cs.bgu.ac.il/][Student Request Form ({{{rtl(מערכת פניות הסטודנטים)}}})]], and fill and submit the appropriate form. You should support & substantiate any claims you make with appropriate documentation, and include those with your form. There is no need to speak with me in advance. 
+- If you are continuing your studies at our department, you have already been admitted, and *would like to get an exemption (\rlm{}פטור\lrm{}) from various courses in your program*, on the strength of courses you took elsewhere, as part of another program, then you need to do the following:
+  - Download the a request \rlm{}להכרה בקורסים\lrm{} from the website of the Faculty of Natural Sciences.
+  - Fill in the form, listing the courses you took on the strength of which you are asking for the exemption, the syllabus for each such course, and the courses from which you are asking for an exemption.
+  - Submit the form, including the syllabi, to the undergraduate secretariat.
+- If you are unhappy about the grade you received in a course, you need to take this matter with your instructor. Unless your instructor is in blatant, obvious violation of the regulations of the university & faculty, we cannot interfere with the grading policies in your courses
+- If you are falling behind in your courses, please contact  [[http://in.bgu.ac.il/Dekanat/Pages/default.aspx][{{{rtl(דיקנאט הסטודנטים)}}}]], and join {{{rtl(התוכנית למניעת נשירה)}}}. From what we hear, their program is effective in helping students get back on track.
+- If you suffer from disabilities that hamper your academic work (be they learning disabilities, physical, psychological, etc), please contact {{{rtl(המדור לקידום סטודנטים)}}} at the [[http://in.bgu.ac.il/Dekanat/Pages/default.aspx][{{{rtl(דיקנאט הסטודנטים)}}}]]. They have a wide range of programs to help you make the most of your academic experience at BGU
+  - Keep in mind that assessment of medical or learning disabilities takes time to complete, and many of the benefits to which you may be entitled will be predicated on the results of this assessment
+  - If you know you are going to require their help, please start the process as soon as possible
+  - Only {{{rtl(דיקנאט הסטודנטים)}}} is authorized to grant {{{rtl(התאמות)}}} for your exams!
+- Information concerning {{{rtl(מועדים מיוחדים)}}}:
+  - {{{rtl(מועדים מיוחדים)}}} are granted for the conditions specified in {{{rtl(תקנון הבחינות)}}}. Exceptions to {{{rtl(תקנון הבחינות)}}} /will only be entertained/ in situations that /greatly resemble/ the conditions specified in {{{rtl(תקנון הבחינות)}}}
+  - If you've taken /both/ {{{rtl(מועד א')}}} and {{{rtl(מועד ב')}}} in a course, then /under no circumstances/ will you receive {{{rtl(מועד ג')}}}
+  - The authority to grant {{{rtl(מועדים מיוחדים)}}} lies solely with the teaching committee, and not with the instructor of the course
+    - Decisions on {{{rtl(מועדים מיוחדים)}}} are made on the merits of the case, and not on the request or recommendation of the instructor
+
+For all other matters, please fill in the [[https://cs-sr.cs.bgu.ac.il/][/Student Request Form/ ({{{rtl(מערכת פניות הסטודנטים)}}})]]
+
+

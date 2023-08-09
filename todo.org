@@ -1,0 +1,17 @@
+#+title: Open issues in website
+#+author: Mayer Goldberg
+#+email: gmayer@little-lisper.org
+
+* Pages to add to new website
+
+* Modifications
+- Work on programming languages page
+- Add more programs to code for the APL class
+- Add programs to list of my ML programs
+- Add programs in Scheme to code for the APL class
+- Add programs to list of my Scheme programs
+- See what else is missing from APL page
+- Add more interlinear translations to Latin page
+
+* The Orthodoxy
+- <2011-05-04 Wed> [[http://www.ynet.co.il/articles/0,7340,L-4064417,00.html][Head Custodian at a Yeshivah charged with sodomising children]]

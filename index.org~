@@ -1,0 +1,75 @@
+#+title: Mayer Goldberg's Homepage ({{{rtl(מֵאִיר גּוֹלְדְּבֵּרְג)}}})
+#+author: Mayer Goldberg ({{{rtl(מֵאִיר גּוֹלְדְּבֵּרְג)}}})
+#+email: gmayer@little-lisper.org
+#+options: creator:nil
+#+options: h:1
+#+keywords: Mayer Goldberg, Department of Computer Science, Ben-Gurion University, lambda calculus, combinatory logic, pi-calculus, functional programming, coq, proof assistant, nuprl, object-oriented programming, Scheme, ML, Erlang, Lua, Smalltalk, continuations, interpreters, compilers, decompilation, compilation, code obfuscation, programming languages, semantics, threaded code, forth, latin, israel, israeli police, lying cops, israeli police lying
+
+#+begin_quote
+Everybody seems to understand that astronomers do astronomy because
+astronomy is interesting. Why don't they understand that I do computer
+science because computer science is interesting? And that I'd do it
+regardless of whether or not it made money for anybody? 
+
+--- /Donald E. Knuth/
+#+end_quote
+
+* Contact Information
+
+- Email: [[mailto:gmayer@little-lisper.org][gmayer@little-lisper.org]]. All email, from all other accounts,
+  gets forwarded to this account.
+- Office: Building 37 (Alon, {{{rtl(אלון)}}}) room 106, mailbox 44
+- Office hours (for the Spring Semester 2021)
+  - For my /functional programming course/: Mondays, 14-16
+  - For the [[./tc.html][/Teaching Committee/ ({{{rtl(ועדת הוראה\, שנים ב–ד)}}})]]: Mondays, 19-21
+- Telephones: Voice (+972)(0)8-647-7873, FAX (+972)(0)8-647-7650
+- Professional mailing address: [[mailto:gmayer@little-lisper.org][Mayer Goldberg]], [[http://www.cs.bgu.ac.il/][Department of Computer
+  Science]], [[http://www.bgu.ac.il/][Ben Gurion University]], PO Box 653, Beer Sheva 84105,
+  Israel. 
+- Personal mailing address: Mayer & Sharon Goldberg, PO Box 15161,
+  Beer Sheva, 84121, Israel
+
+* Research
+** Research Interests
+- The Lambda Calculus
+- Programming Languages
+- Functional Programming
+- Object-Oriented Programming
+- Computational Reflection
+- Continuations & Control
+- Interpretation & Compilation
+- Automated theorem proving ([[./coq.html][Coq]], [[http://www.nuprl.org/][NuPRL]], etc)
+** Research Students
+*** Present research students
+- Lior Zur-Lotan (MSc, 2021)
+*** Past research students
+- Valery Frolov (MSc, 2012)
+- Guy Wiener (PhD, 2012)
+- Sonia Margulis (MSc, 2011)
+- Avi Shefi (MSc, 2009)
+- Yelena Lev (MSc, 2008)
+- Yigal Greenshpun (MSc, 2007)
+- Guy Wiener (MSc, 2007)
+- Assaf Shemesh (MSc, 2006)
+    
+* Teaching
+- Introduction to Functional Programming, Spring 2021
+- Introduction to Compiler Construction, Fall 2020
+- [[./tutorials.html][My tutorials]]
+- [[./special.html][My policies on extensions, exemptions & special requests]]
+- [[./projects.html][Undergraduate projects I am offering ({{{rtl(פרוייקטים לתואר ראשון)}}})]]
+
+* Departmental duties
+- [[./tc.html][Freshman teaching committee]]
+* Personal Interests
+- [[./proglang/proglang.html][Learning interesting programming languages]]
+- [[./personal/books.html][Books]]
+- Languages
+  - [[./personal/arabic.html][Arabic]]
+  - [[./personal/latin.html][Latin]]
+
+* /A website that is seriously out-of-date.../
+
+My apologies!
+
+Since around 2014, I was having difficulties updating and managing my website. A combination of technical difficulties, changing platforms, and lack of time, all prevented me from keeping my website up-to-date. Anyway, I think I managed to solve many of the old problems, and get my website up and running again. I'm updating it continuously. So please stay turned! \smiley

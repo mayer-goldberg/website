@@ -1,0 +1,54 @@
+#+title: Policy on Extra-Ordinary Treatment
+#+author: Mayer Goldberg
+#+email: gmayer@little-lisper.org
+#+options: creator:nil
+#+keywords: Mayer Goldberg, Department of Computer Science, Ben-Gurion University, Software Engineering, courses, compiler construction, advanced programming languages, principles of programming languages, APL, PPL
+
+* General policy
+
+There are no extensions, exemptions, or extra-ordinary treatment in my
+courses, for any circumstances other than mandated by the university
+or by the head of the teaching committee. I expect all coursework to
+be handed in by the deadline. There is a late penalty of 5% per day,
+compounded daily, for late work. This is the in-class remedy for all
+your special circumstances: You are responsible for deciding how much
+of this late-penalty you can afford. I repeat: This penalty covers /all/
+extra-ordinary situations that are not mandated by the university or
+the head of the teaching committee.
+
+* Circumstances recognized by the university
+
+- The university recognizes precisely two situations for which an
+  exemption (פטור) from homework is given: A medical condition that
+  requires hospitalization, and reserve duty (מילואים). If this is
+  your situation, you must submit official documentation to that
+  effect, listing the dates you were hospitalized or served in the
+  reserve. The preferred way to notify us is to scan your supporting
+  documentation, and mail it to your TA. 
+
+- If your hospitalization or reserve duty take place during a quiz,
+  you should provide documentation, as above, to your TA.
+- If your hospitalization or reserve duty take place during the final project, then -
+  - If you are a student in the /Computer Science/ (CS) program, then
+    you should [[mailme][contact me via email]] as soon as you can,
+    with scans of your supporting documentation, and we shall notify
+    you of any extensions you may receive.
+  - If you are a student in the /Software Engineering/ (SE) program,
+    then you must contact the chairperson of the SE teaching committee
+    with your documentation, and they shall notify us of any
+    extensions you may receive.
+
+If you receive an exemption, your final grade shall be computed using
+the remaining components of your coursework out of the remaining
+number of points. For example, if you become exempt from a component
+that carries a weight of 20 points of your final grade, then the
+remaining components shall maintain their weight out of a total of 80
+points.
+
+* Extensions or exemptions for any other reasons
+
+If the university does not recognize your specific circumstances as
+meriting special treatment, than neither do I. Please do not explain
+your special circumstances to me, but rather appeal to the head of the
+teaching committee, and we shall, of course, abide by his or her
+decision.

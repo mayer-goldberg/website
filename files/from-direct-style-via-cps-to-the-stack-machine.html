@@ -1,0 +1,1502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>From direct style, via CPS, to the stack machine</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="From direct style, via CPS, to the stack machine"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2012-01-11 17:38:00 IST"/>
+<meta name="author" content="Mayer Goldberg"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">From direct style, via CPS, to the stack machine</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Factorial</a>
+<ul>
+<li><a href="#sec-1-1">1.1 Direct Style</a></li>
+<li><a href="#sec-1-2">1.2 CPS</a></li>
+<li><a href="#sec-1-3">1.3 Representation-Independent (RI) with respect to the continuation</a></li>
+<li><a href="#sec-1-4">1.4 RI &amp; defunctionalized</a></li>
+<li><a href="#sec-1-5">1.5 RI, defunctionalized, flattened</a></li>
+<li><a href="#sec-1-6">1.6 The stack machine</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 Fibonacci (naïve, recursive)</a>
+<ul>
+<li><a href="#sec-2-1">2.1 Direct Style</a></li>
+<li><a href="#sec-2-2">2.2 CPS</a></li>
+<li><a href="#sec-2-3">2.3 Representation-Independent (RI) with respect to the continuation</a></li>
+<li><a href="#sec-2-4">2.4 RI &amp; defunctionalized</a></li>
+<li><a href="#sec-2-5">2.5 The stack machine</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 Fibonacci (efficient, recursive)</a>
+<ul>
+<li><a href="#sec-3-1">3.1 Direct Style</a></li>
+<li><a href="#sec-3-2">3.2 CPS</a></li>
+<li><a href="#sec-3-3">3.3 Representation-Independent (RI) with respect to the continuation</a></li>
+<li><a href="#sec-3-4">3.4 RI &amp; defunctionalized</a></li>
+<li><a href="#sec-3-5">3.5 The stack machine</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 Ackermann</a>
+<ul>
+<li><a href="#sec-4-1">4.1 Direct Style</a></li>
+<li><a href="#sec-4-2">4.2 CPS</a></li>
+<li><a href="#sec-4-3">4.3 Representation-Independent (RI) with respect to the continuation</a></li>
+<li><a href="#sec-4-4">4.4 RI &amp; defunctionalized</a></li>
+<li><a href="#sec-4-5">4.5 The stack machine</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Factorial</h2>
+<div class="outline-text-2" id="text-1">
+
+
+<p>
+This is the known and much-loved <i>factorial</i> function:
+</p>
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Direct Style</h3>
+<div class="outline-text-3" id="text-1-1">
+
+
+
+
+
+<pre class="example">(define fact
+  (lambda (n)
+    (if (zero? n)
+        1
+        (* n (fact (- n 1))))))
+</pre>
+
+
+<p>
+And here is a sample interaction with <code>fact</code>:
+</p>
+
+
+<pre class="example">&gt; (fact 0)
+1
+&gt; (fact 5)
+120
+&gt; (fact 10)
+3628800
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> CPS</h3>
+<div class="outline-text-3" id="text-1-2">
+
+
+<p>
+Converting factorial to CPS is straightforward: The standard recursive factorial contains exactly one recursive call, which is not in tail position, so one continuation needs to be constructed aside from the initial continuation: 
+</p>
+
+
+
+<pre class="example">(define fact
+  (lambda (n k)
+    (if (zero? n)
+        (k 1)
+        (fact (- n 1)
+              (lambda (x)
+                (k (* n x)))))))
+</pre>
+
+
+<p>
+Here is a sample interaction with the CPS version of <code>fact</code>:
+</p>
+
+
+
+
+<pre class="example">&gt; (fact 5 (lambda (x) x))
+120
+&gt; (fact 5 (lambda (x) `(the result is ,x)))
+(the result is 120)
+</pre>
+
+
+<p>
+Notice that you have a lot of freedom in selecting the initial continuation, and of course, this effects the final result.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Representation-Independent (RI) with respect to the continuation</h3>
+<div class="outline-text-3" id="text-1-3">
+
+
+<p>
+To make the CPS version RI, we need to abstract over the creation and application of the closure. This means that every place where a continuation is applied, we're going to use the <code>ak</code> procedure (short for <i>apply-continuation</i>), and every place where a continuation is created, we're going to use a constructor procedure <code>^k-&lt;something&gt;</code>. Whatever <i>state</i> the original continuation (that is represented as a <i>closure</i>) contains, needs to be passed onto the constructor. In the case of factorial, we shall be passing <code>n</code> and <code>k</code>:
+</p>
+
+
+
+<pre class="example">(define fact
+  (lambda (n k)
+    (if (zero? n)
+        (ak 1 k)
+        (fact (- n 1)
+              (^k-fact n k)))))
+
+(define ^k-init
+  (lambda ()
+    (lambda (x) x)))
+
+(define ^k-fact
+  (lambda (n k)
+    (lambda (x)
+      (ak (* n x) k))))
+
+(define ak
+  (lambda (x k)
+    (k x)))
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> RI &amp; defunctionalized</h3>
+<div class="outline-text-3" id="text-1-4">
+
+
+
+
+
+<pre class="example">(define with (lambda (s f) (apply f s)))
+
+(define fact
+  (lambda (n k)
+    (if (zero? n)
+        (ak 1 k)
+        (fact (- n 1)
+              (^k-fact n k)))))
+
+(define ^k-init
+  (lambda ()
+    `(k-init)))
+
+(define ^k-fact
+  (lambda (n k)
+    `(k-fact ,n ,k)))
+
+(define ak
+  (lambda (x k)
+    (cond ((eq? (car k) 'k-init) x)
+          ((eq? (car k) 'k-fact)
+           (with k
+             (lambda (_ n k)
+               (ak (* n x) k))))
+          (else (error 'ak "I don't recognize this continuation")))))
+</pre>
+
+
+<p>
+Sample run:
+</p>
+
+
+
+<pre class="example">&gt; (fact 0 (^k-init))
+1
+&gt; (fact 5 (^k-init))
+120
+&gt; (fact 20 (^k-init))
+2432902008176640000
+</pre>
+
+
+<p>
+If we examine the kind of continuations we create using nested
+records, we see
+</p>
+
+
+
+<pre class="example">&gt; (^k-fact 1 (^k-fact 2 (^k-fact 3 (^k-fact 4 (^k-fact 5 (^k-init))))))
+(k-fact 1 (k-fact 2 (k-fact 3 (k-fact 4 (k-fact 5 (k-init))))))
+</pre>
+
+
+<p>
+What we would like to do now is to <i>flatten</i> this representation, by
+exploiting the <i>right-associativity</i> of the continuation data
+structure. This associativity is induced by the fact that the
+continuation is always the <i>last</i> field in any continuation.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-5" class="outline-3">
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> RI, defunctionalized, flattened</h3>
+<div class="outline-text-3" id="text-1-5">
+
+
+
+
+
+<pre class="example">(define with (lambda (s f) (apply f s)))
+
+(define fact
+  (lambda (n k)
+    (if (zero? n)
+        (ak 1 k)
+        (fact (- n 1)
+              (^k-fact n k)))))
+
+(define ^k-init
+  (lambda ()
+    `(k-init)))
+
+(define ^k-fact
+  (lambda (n k)
+    `(k-fact ,n ,@k)))
+
+(define ak
+  (lambda (x k)
+    (cond ((eq? (car k) 'k-init) x)
+          ((eq? (car k) 'k-fact)
+           (with k
+             (lambda (_ n . k)
+               (ak (* n x) k))))
+          (else (error 'ak "I don't recognize this continuation")))))
+</pre>
+
+
+<p>
+Sample run:
+</p>
+
+
+
+<pre class="example">&gt; (fact 0 (^k-init))
+1
+&gt; (fact 5 (^k-init))
+120
+&gt; (fact 20 (^k-init))
+2432902008176640000
+</pre>
+
+
+<p>
+In contrast to the previous representation of continuations, as nested
+records, these continuations are flat:
+</p>
+
+
+
+<pre class="example">&gt; (^k-fact 1 (^k-fact 2 (^k-fact 3 (^k-fact 4 (^k-fact 5 (^k-init))))))
+(k-fact 1 k-fact 2 k-fact 3 k-fact 4 k-fact 5 k-init)
+</pre>
+
+
+<p>
+The fact that the continuation is now a flat structure, and that all
+procedure calls that are not built-in are in tail-position, implies that
+we can implement the continuations using a flat LIFO data structure: A
+stack. 
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-6" class="outline-3">
+<h3 id="sec-1-6"><span class="section-number-3">1.6</span> The stack machine</h3>
+<div class="outline-text-3" id="text-1-6">
+
+
+
+
+
+<pre class="example">(define with (lambda (s f) (apply f s)))
+
+(define n #f)
+(define x #f)
+(define k #f)
+
+(define *stack* '())
+
+(define clear-stack
+  (lambda ()
+    (set! *stack* '())))
+
+(define push
+  (lambda (x)
+    (set! *stack*
+      (cons x *stack*))))
+
+(define pop
+  (lambda ()
+    (with *stack*
+      (lambda (x . s)
+        (set! *stack* s)
+        x))))
+
+(define fact
+  (lambda (nn)
+    (set! n nn)
+    (clear-stack)
+    (push 'k-init)
+    (fact-sm)))
+
+(define fact-sm
+  (lambda ()
+    (if (zero? n)
+        (begin
+          (set! x 1)
+          (ak))
+        (begin
+          (push n)
+          (push 'k-fact)
+          (set! n (- n 1))
+          (fact-sm)))))
+
+(define ak
+  (lambda ()
+    (set! k (pop))
+    (cond ((eq? k 'k-init) x)
+          ((eq? k 'k-fact)
+           (set! n (pop))
+           (set! x (* n x))
+           (ak))
+          (else (error 'ak "I don't recognize this continuation")))))
+</pre>
+
+
+<p>
+Sample interaction:
+</p>
+
+
+
+<pre class="example">&gt; (fact 0)
+1
+&gt; (fact 5)
+120
+&gt; (fact 10)
+3628800
+</pre>
+
+
+<p>
+A lightly-hacked version of <code>ak</code> for tracing the stack upon return:
+</p>
+
+
+
+<pre class="example">&gt; (fact 0)
+About to return from the top frame:(k-init)
+1
+&gt; (fact 3)
+About to return from the top frame:(k-fact 1 k-fact 2 k-fact 3 k-init)
+About to return from the top frame:(k-fact 2 k-fact 3 k-init)
+About to return from the top frame:(k-fact 3 k-init)
+About to return from the top frame:(k-init)
+6
+</pre>
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Fibonacci (naïve, recursive)</h2>
+<div class="outline-text-2" id="text-2">
+
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Direct Style</h3>
+<div class="outline-text-3" id="text-2-1">
+
+
+
+
+
+<pre class="example">(define fib
+  (lambda (n)
+    (if (&lt; n 2)
+        n
+        (+ (fib (- n 1))
+           (fib (- n 2))))))
+</pre>
+
+
+<p>
+Sample interaction:
+</p>
+
+
+
+<pre class="example">&gt; (fib 0)
+0
+&gt; (fib 1)
+1
+&gt; (fib 10)
+55
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> CPS</h3>
+<div class="outline-text-3" id="text-2-2">
+
+
+
+
+
+<pre class="example">(define fib
+  (lambda (n k)
+    (if (&lt; n 2)
+        (k n)
+        (fib (- n 2)
+             (lambda (x2)
+               (fib (- n 1)
+                    (lambda (x1)
+                      (k (+ x1 x2)))))))))
+</pre>
+
+
+
+<pre class="example">&gt; (fib 0 (lambda (x) x))
+0
+&gt; (fib 0 (lambda (x) x))
+0
+&gt; (fib 1 (lambda (x) x))
+1
+&gt; (fib 5 (lambda (x) x))
+5
+&gt; (fib 10 (lambda (x) x))
+55
+&gt; (fib 10 (lambda (x) `((fib 10) =&gt; ,x)))
+((fib 10) =&gt; 55)
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Representation-Independent (RI) with respect to the continuation</h3>
+<div class="outline-text-3" id="text-2-3">
+
+
+
+
+
+<pre class="example">(define fib
+  (lambda (n k)
+    (if (&lt; n 2)
+        (ak n k)
+        (fib (- n 2)
+             (^k-fib1 n k)))))
+
+(define ^k-init
+  (lambda ()
+    (lambda (x) x)))
+
+(define ^k-fib1
+  (lambda (n k)
+    (lambda (x2)
+      (fib (- n 1)
+           (^k-fib2 x2 k)))))
+
+(define ^k-fib2
+  (lambda (x2 k)
+    (lambda (x)
+      (ak (+ x x2) k))))
+
+(define ak
+  (lambda (x k)
+    (k x)))
+</pre>
+
+
+<p>
+Sample interaction:
+</p>
+
+
+
+<pre class="example">&gt; (fib 0 (^k-init))
+0
+&gt; (fib 1 (^k-init))
+1
+&gt; (fib 3 (^k-init))
+2
+&gt; (fib 10 (^k-init))
+55
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> RI &amp; defunctionalized</h3>
+<div class="outline-text-3" id="text-2-4">
+
+
+
+
+
+<pre class="example">(define fib
+  (lambda (n k)
+    (if (&lt; n 2)
+        (ak n k)
+        (fib (- n 2)
+             (^k-fib1 n k)))))
+
+(define ak
+  (lambda (x k)
+    (cond ((eq? (car k) 'k-init) x)
+          ((eq? (car k) 'k-fib1)
+           (with k
+             (lambda (_ n k)
+               (fib (- n 1)
+                    (^k-fib2 x k)))))
+          ((eq? (car k) 'k-fib2)
+           (with k
+             (lambda (_ x2 k)
+               (ak (+ x x2) k))))
+          (else (error 'ak "I don't recognize this continuation")))))
+
+(define ^k-init
+  (lambda ()
+    `(k-init)))
+
+(define ^k-fib1
+  (lambda (n k)
+    `(k-fib1 ,n ,k)))
+
+(define ^k-fib2
+  (lambda (x2 k)
+    `(k-fib2 ,x2 ,k)))
+</pre>
+
+
+<p>
+Sample interaction:
+</p>
+
+
+
+<pre class="example">&gt; (fib 0 (^k-init))
+0
+&gt; (fib 1 (^k-init))
+1
+&gt; (fib 10 (^k-init))
+55
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> The stack machine</h3>
+<div class="outline-text-3" id="text-2-5">
+
+
+
+
+
+<pre class="example">(define with (lambda (s f) (apply f s)))
+
+(define n #f)
+(define x #f)
+(define x2 #f)
+(define k #f)
+
+(define *stack* '())
+
+(define clear-stack
+  (lambda ()
+    (set! *stack* '())))
+
+(define push
+  (lambda (x)
+    (set! *stack*
+      (cons x *stack*))))
+
+(define pop
+  (lambda ()
+    (with *stack*
+      (lambda (x . s)
+        (set! *stack* s)
+        x))))
+
+(define fib
+  (lambda (nn)
+    (set! n nn)
+    (clear-stack)
+    (push 'k-init)
+    (fib-sm)))
+
+(define fib-sm
+  (lambda ()
+    (if (&lt; n 2)
+        (begin
+          (set! x n)
+          (ak))
+        (begin
+          (push n)
+          (push 'k-fib1)
+          (set! n (- n 2))
+          (fib-sm)))))
+
+(define ak
+  (lambda ()
+   (set! k (pop))
+    (cond ((eq? k 'k-init) x)
+          ((eq? k 'k-fib1)
+           (set! n (pop))
+           (push x)
+           (push 'k-fib2)
+           (set! n (- n 1))
+           (fib-sm))
+          ((eq? k 'k-fib2)
+           (set! x2 (pop))
+           (set! x (+ x x2))
+           (ak))
+          (else (error 'ak "I don't recognize this continuation")))))
+</pre>
+
+
+<p>
+Sample interaction:
+</p>
+
+
+
+<pre class="example">&gt; (fib 8)
+21
+&gt; (fib 9)
+34
+&gt; (fib 10)
+55
+</pre>
+
+
+<p>
+A lightly-hacked version of <code>ak</code> for tracing the stack upon return:
+</p>
+
+
+
+<pre class="example">&gt; (fib 4)
+About to return from the top frame:(k-fib1 2 k-fib1 4 k-init)
+About to return from the top frame:(k-fib2 0 k-fib1 4 k-init)
+About to return from the top frame:(k-fib1 4 k-init)
+About to return from the top frame:(k-fib1 3 k-fib2 1 k-init)
+About to return from the top frame:(k-fib1 2 k-fib2 1 k-fib2 1 k-init)
+About to return from the top frame:(k-fib2 0 k-fib2 1 k-fib2 1 k-init)
+About to return from the top frame:(k-fib2 1 k-fib2 1 k-init)
+About to return from the top frame:(k-fib2 1 k-init)
+About to return from the top frame:(k-init)
+3
+&gt; (fib 6)
+About to return from the top frame:(k-fib1 2 k-fib1 4 k-fib1 6 k-init)
+About to return from the top frame:(k-fib2 0 k-fib1 4 k-fib1 6 k-init)
+About to return from the top frame:(k-fib1 4 k-fib1 6 k-init)
+About to return from the top frame:(k-fib1 3 k-fib2 1 k-fib1 6 k-init)
+About to return from the top frame:(k-fib1 2 k-fib2 1 k-fib2 1 k-fib1 6 k-init)
+About to return from the top frame:(k-fib2 0 k-fib2 1 k-fib2 1 k-fib1 6 k-init)
+About to return from the top frame:(k-fib2 1 k-fib2 1 k-fib1 6 k-init)
+About to return from the top frame:(k-fib2 1 k-fib1 6 k-init)
+About to return from the top frame:(k-fib1 6 k-init)
+About to return from the top frame:(k-fib1 3 k-fib1 5 k-fib2 3 k-init)
+About to return from the top frame:(k-fib1 2 k-fib2 1 k-fib1 5 k-fib2 3 k-init)
+About to return from the top frame:(k-fib2 0 k-fib2 1 k-fib1 5 k-fib2 3 k-init)
+About to return from the top frame:(k-fib2 1 k-fib1 5 k-fib2 3 k-init)
+About to return from the top frame:(k-fib1 5 k-fib2 3 k-init)
+About to return from the top frame:(k-fib1 2 k-fib1 4 k-fib2 2 k-fib2 3 k-init)
+About to return from the top frame:(k-fib2 0 k-fib1 4 k-fib2 2 k-fib2 3 k-init)
+About to return from the top frame:(k-fib1 4 k-fib2 2 k-fib2 3 k-init)
+About to return from the top frame:(k-fib1 3 k-fib2 1 k-fib2 2 k-fib2 3 k-init)
+About to return from the top frame:(k-fib1 2 k-fib2 1 k-fib2 1 k-fib2 2 k-fib2 3 k-init)
+About to return from the top frame:(k-fib2 0 k-fib2 1 k-fib2 1 k-fib2 2 k-fib2 3 k-init)
+About to return from the top frame:(k-fib2 1 k-fib2 1 k-fib2 2 k-fib2 3 k-init)
+About to return from the top frame:(k-fib2 1 k-fib2 2 k-fib2 3 k-init)
+About to return from the top frame:(k-fib2 2 k-fib2 3 k-init)
+About to return from the top frame:(k-fib2 3 k-init)
+About to return from the top frame:(k-init)
+8
+</pre>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Fibonacci (efficient, recursive)</h2>
+<div class="outline-text-2" id="text-3">
+
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Direct Style</h3>
+<div class="outline-text-3" id="text-3-1">
+
+
+
+
+
+<pre class="example">(define fib
+  (lambda (n)
+    (run n (lambda (x1 x2 x3 x4) x3))))
+
+(define run
+  (lambda (n k)
+    (cond ((= n 0) (k 1 0 0 1)) 
+          ((= n 1) (k 1 1 1 0)) 
+          (else (run (quotient n 2)
+                     (lambda (x1 x2 x3 x4)
+                       (let ((*x2x3 (* x2 x3)))
+                         (let ((z1 (+ (* x1 x1) *x2x3))
+                               (z2 (+ (* x1 x3) (* x3 x4)))
+                               (z3 (+ (* x1 x2) (* x2 x4)))
+                               (z4 (+ *x2x3 (* x4 x4))))
+                           (if (even? n) (k z1 z2 z3 z4)
+                               (k (+ z1 z2) (+ z3 z4) z1 z3))))))))))
+</pre>
+
+
+<p>
+Sample interaction:
+</p>
+
+
+
+<pre class="example">&gt; (fib 0)
+0
+&gt; (fib 1)
+1
+&gt; (fib 2)
+1
+&gt; (fib 3)
+2
+&gt; (fib 5)
+5
+&gt; (fib 10)
+55
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> CPS</h3>
+<div class="outline-text-3" id="text-3-2">
+
+
+
+
+
+<pre class="example">(define fib
+  (lambda (n)
+    (run n (lambda (x1 x2 x3 x4) x3))))
+
+(define run
+  (lambda (n k)
+    (cond ((= n 0) (ak 1 0 0 1 k))
+          ((= n 1) (ak 1 1 1 0 k))
+          (else (run (quotient n 2)
+                     (lambda (x1 x2 x3 x4)
+                       (let ((*x2x3 (* x2 x3)))
+                         (let ((z1 (+ (* x1 x1) *x2x3))
+                               (z2 (+ (* x1 x3) (* x3 x4)))
+                               (z3 (+ (* x1 x2) (* x2 x4)))
+                               (z4 (+ *x2x3 (* x4 x4))))
+                           (if (even? n)
+                               (ak z1 z2 z3 z4 k)
+                               (ak (+ z1 z2) (+ z3 z4) z1 z3 k))))))))))
+</pre>
+
+
+<p>
+Sample interaction:
+</p>
+
+
+
+<pre class="example">&gt; (fib 10)
+55
+&gt; (fib 11)
+89
+&gt; (fib 12)
+144
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Representation-Independent (RI) with respect to the continuation</h3>
+<div class="outline-text-3" id="text-3-3">
+
+
+
+
+
+<pre class="example">(define fib
+  (lambda (n)
+    (run n (^k-init))))
+
+(define run
+  (lambda (n k)
+    (cond ((= n 0) (ak 1 0 0 1 k))
+          ((= n 1) (ak 1 1 1 0 k))
+          (else (run (quotient n 2)
+                     (^k-fib n k))))))
+
+(define ^k-init
+  (lambda ()
+    (lambda (x1 x2 x3 x4) x3)))
+
+(define ^k-fib
+  (lambda (n k)
+    (lambda (x1 x2 x3 x4)
+      (let ((*x2x3 (* x2 x3)))
+        (let ((z1 (+ (* x1 x1) *x2x3))
+              (z2 (+ (* x1 x3) (* x3 x4)))
+              (z3 (+ (* x1 x2) (* x2 x4)))
+              (z4 (+ *x2x3 (* x4 x4))))
+          (if (even? n)
+              (ak z1 z2 z3 z4 k)
+              (ak (+ z1 z2) (+ z3 z4) z1 z3 k)))))))
+
+(define ak
+  (lambda (x1 x2 x3 x4 k)
+    (k x1 x2 x3 x4)))
+</pre>
+
+
+<p>
+Sample interaction
+</p>
+
+
+
+<pre class="example">&gt; (fib 10)
+55
+&gt; (fib 11)
+89
+&gt; (fib 12)
+144
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> RI &amp; defunctionalized</h3>
+<div class="outline-text-3" id="text-3-4">
+
+
+
+
+
+<pre class="example">(define fib
+  (lambda (n)
+    (run n (^k-init))))
+
+(define run
+  (lambda (n k)
+    (cond ((= n 0) (ak 1 0 0 1 k))
+          ((= n 1) (ak 1 1 1 0 k))
+          (else (run (quotient n 2)
+                     (^k-fib n k))))))
+
+(define ^k-init
+  (lambda ()
+    `(k-init)))
+
+(define ^k-fib
+  (lambda (n k)
+    `(k-fib ,n ,k)))
+
+(define ak
+  (lambda (x1 x2 x3 x4 k)
+    (cond ((eq? (car k) 'k-init) x3)
+          ((eq? (car k) 'k-fib)
+           (with k
+             (lambda (_ n k)
+               (let ((*x2x3 (* x2 x3)))
+                 (let ((z1 (+ (* x1 x1) *x2x3))
+                       (z2 (+ (* x1 x3) (* x3 x4)))
+                       (z3 (+ (* x1 x2) (* x2 x4)))
+                       (z4 (+ *x2x3 (* x4 x4))))
+                   (if (even? n)
+                       (ak z1 z2 z3 z4 k)
+                       (ak (+ z1 z2) (+ z3 z4) z1 z3 k)))))))
+             (else (error 'ak "I don't recognize this continuation")))))
+</pre>
+
+
+<p>
+Sample interaction:
+</p>
+
+
+
+<pre class="example">&gt; (fib 3)
+2
+&gt; (fib 4)
+3
+&gt; (fib 5)
+5
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-5" class="outline-3">
+<h3 id="sec-3-5"><span class="section-number-3">3.5</span> The stack machine</h3>
+<div class="outline-text-3" id="text-3-5">
+
+
+
+
+
+<pre class="example">(define with (lambda (s f) (apply f s)))
+
+(define n #f)
+(define x1 #f)
+(define x2 #f)
+(define x3 #f)
+(define x4 #f)
+(define z1 #f)
+(define z2 #f)
+(define z3 #f)
+(define z4 #f)
+(define *x2x3 #f)
+(define k #f)
+
+(define *stack* '())
+
+(define clear-stack
+  (lambda ()
+    (set! *stack* '())))
+
+(define push
+  (lambda (x)
+    (set! *stack*
+      (cons x *stack*))))
+
+(define pop
+  (lambda ()
+    (with *stack*
+      (lambda (x . s)
+        (set! *stack* s)
+        x))))
+
+(define fib
+  (lambda (nn)
+    (set! n nn)
+    (clear-stack)
+    (push 'k-init)
+    (run-sm)))
+
+(define run-sm
+  (lambda ()
+    (cond ((= n 0)
+           (set! x1 1) (set! x2 0)
+           (set! x3 0) (set! x4 1)
+           (ak))
+          ((= n 1)
+           (set! x1 1) (set! x2 1)
+           (set! x3 1) (set! x4 0)
+           (ak))
+          (else (push n)
+                (push 'k-fib)
+                (set! n (quotient n 2))
+                (run-sm)))))
+
+(define ak
+  (lambda ()
+    (set! k (pop))
+    (cond ((eq? k 'k-init) x3)
+          ((eq? k 'k-fib)
+           (set! n (pop))
+           (set! *x2x3 (* x2 x3))
+           (set! z1 (+ (* x1 x1) *x2x3))
+           (set! z2 (+ (* x1 x3) (* x3 x4)))
+           (set! z3 (+ (* x1 x2) (* x2 x4)))
+           (set! z4 (+ *x2x3 (* x4 x4)))
+           (if (even? n)
+                (begin
+                  (set! x1 z1) (set! x2 z2)
+                  (set! x3 z3) (set! x4 z4)
+                  (ak))
+                (begin
+                  (set! x1 (+ z1 z2)) (set! x2 (+ z3 z4))
+                  (set! x3 z1) (set! x4 z3)
+                  (ak))))
+          (else (error 'ak "I don't recognize this continuation")))))
+</pre>
+
+
+<p>
+Sample interaction:
+</p>
+
+
+
+<pre class="example">&gt; (fib 6)
+8
+&gt; (fib 7)
+13
+&gt; (fib 8)
+21
+</pre>
+
+
+<p>
+A lightly-hacked version of <code>ak</code> for tracing the stack upon return:
+</p>
+
+
+
+<pre class="example">&gt; (fib 10)
+About to return from the top frame:(k-fib 2 k-fib 5 k-fib 10 k-init)
+About to return from the top frame:(k-fib 5 k-fib 10 k-init)
+About to return from the top frame:(k-fib 10 k-init)
+About to return from the top frame:(k-init)
+55
+</pre>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Ackermann</h2>
+<div class="outline-text-2" id="text-4">
+
+
+
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Direct Style</h3>
+<div class="outline-text-3" id="text-4-1">
+
+
+
+
+
+<pre class="example">(define ack
+  (lambda (a b)
+    (cond ((zero? a) (+ b 1))
+          ((zero? b) (ack (- a 1) 1))
+          (else (ack (- a 1)
+                     (ack a (- b 1)))))))
+</pre>
+
+
+
+<pre class="example">&gt; (ack 0 1)
+2
+&gt; (ack 2 2)
+7
+&gt; (ack 3 3)
+61
+&gt; (ack 3 10)
+8189
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> CPS</h3>
+<div class="outline-text-3" id="text-4-2">
+
+
+
+
+
+<pre class="example">(define ack
+  (lambda (a b k)
+    (cond ((zero? a) (k (+ b 1)))
+          ((zero? b) (ack (- a 1) 1 k))
+          (else (ack a (- b 1)
+                     (lambda (x)
+                       (ack (- a 1) x k)))))))
+</pre>
+
+
+<p>
+Sample interaction:
+</p>
+
+
+
+<pre class="example">&gt; (ack 2 2 (lambda (x) x))
+7
+&gt; (ack 3 3 (lambda (x) `((ack 3 3) =&gt; ,x)))
+((ack 3 3) =&gt; 61)
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Representation-Independent (RI) with respect to the continuation</h3>
+<div class="outline-text-3" id="text-4-3">
+
+
+
+
+
+<pre class="example">(define ack
+  (lambda (a b k)
+    (cond ((zero? a) (ak (+ b 1) k))
+          ((zero? b) (ack (- a 1) 1 k))
+          (else (ack a (- b 1)
+                     (^k-ack a k))))))
+
+(define ^k-init
+  (lambda ()
+    (lambda (x) x)))
+
+(define ^k-ack
+  (lambda (a k)
+    (lambda (x)
+      (ack (- a 1) x k))))
+
+(define ak
+  (lambda (x k)
+    (k x)))
+</pre>
+
+
+<p>
+Sample interaction:
+</p>
+
+
+
+<pre class="example">&gt; (ack 2 2 (^k-init))
+7
+&gt; (ack 3 3 (^k-init))
+61
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> RI &amp; defunctionalized</h3>
+<div class="outline-text-3" id="text-4-4">
+
+
+
+
+
+<pre class="example">(define with (lambda (s f) (apply f s)))
+
+(define ack
+  (lambda (a b k)
+    (cond ((zero? a) (ak (+ b 1) k))
+          ((zero? b) (ack (- a 1) 1 k))
+          (else (ack a (- b 1)
+                     (^k-ack a k))))))
+
+(define ^k-init
+  (lambda ()
+    `(k-init)))
+
+(define ^k-ack
+  (lambda (a k)
+    `(k-ack ,a ,k)))
+
+(define ak
+  (lambda (x k)
+    (cond ((eq? (car k) 'k-init) x)
+          ((eq? (car k) 'k-ack)
+           (with k
+             (lambda (_ a k)
+               (ack (- a 1) x k))))
+          (else (error 'ak "I don't recognize this continuation")))))
+</pre>
+
+
+<p>
+Sample interaction:
+</p>
+
+
+
+<pre class="example">&gt; (ack 2 2 (^k-init))
+7
+&gt; (ack 3 3 (^k-init))
+61
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-5" class="outline-3">
+<h3 id="sec-4-5"><span class="section-number-3">4.5</span> The stack machine</h3>
+<div class="outline-text-3" id="text-4-5">
+
+
+
+
+
+<pre class="example">(define with (lambda (s f) (apply f s)))
+
+(define a #f)
+(define b #f)
+(define x #f)
+(define k #f)
+
+(define *stack* '())
+
+(define clear-stack
+  (lambda ()
+    (set! *stack* '())))
+
+(define push
+  (lambda (x)
+    (set! *stack*
+      (cons x *stack*))))
+
+(define pop
+  (lambda ()
+    (with *stack*
+      (lambda (x . s)
+        (set! *stack* s)
+        x))))
+
+(define ack
+  (lambda (aa bb)
+    (set! a aa)
+    (set! b bb)
+    (clear-stack)
+    (push 'k-init)
+    (ack-sm)))
+
+(define ack-sm
+  (lambda ()
+    (cond ((zero? a)
+           (set! x (+ b 1))
+           (ak))
+          ((zero? b)
+           (set! b 1)
+           (set! a (- a 1))
+           (ack-sm))
+          (else (push a)
+                (push 'k-ack)
+                (set! b (- b 1))
+                (ack-sm)))))
+
+(define ak
+  (lambda ()
+    (set! k (pop))
+    (cond ((eq? k 'k-init) x)
+          ((eq? k 'k-ack)
+           (set! a (pop))
+           (set! b x)
+           (set! a (- a 1))
+           (ack-sm))
+          (else (error 'ak "I don't recognize this continuation")))))
+</pre>
+
+
+<p>
+Sample interaction:
+</p>
+
+
+
+<pre class="example">&gt; (ack 0 2)
+3
+&gt; (ack 2 2)
+7
+&gt; (ack 3 4)
+125
+</pre>
+
+
+<p>
+A lightly-hacked version of <code>ak</code> for tracing the stack upon return:
+</p>
+
+
+
+<pre class="example">&gt; (ack 2 2)
+About to return from the top frame:(k-ack 1 k-ack 2 k-ack 2 k-init)
+About to return from the top frame:(k-ack 2 k-ack 2 k-init)
+About to return from the top frame:(k-ack 1 k-ack 1 k-ack 1 k-ack 2 k-init)
+About to return from the top frame:(k-ack 1 k-ack 1 k-ack 2 k-init)
+About to return from the top frame:(k-ack 1 k-ack 2 k-init)
+About to return from the top frame:(k-ack 2 k-init)
+About to return from the top frame:(k-ack 1 k-ack 1 k-ack 1 k-ack 1 k-ack 1 k-init)
+About to return from the top frame:(k-ack 1 k-ack 1 k-ack 1 k-ack 1 k-init)
+About to return from the top frame:(k-ack 1 k-ack 1 k-ack 1 k-init)
+About to return from the top frame:(k-ack 1 k-ack 1 k-init)
+About to return from the top frame:(k-ack 1 k-init)
+About to return from the top frame:(k-init)
+7
+</pre>
+
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2012-01-11 17:38:00 IST</p>
+<p class="author">Author: Mayer Goldberg</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

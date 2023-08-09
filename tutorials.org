@@ -1,0 +1,18 @@
+#+title: Tutorials I had written
+#+author: Mayer Goldberg
+#+email: gmayer@little-lisper.org
+#+options: creator:nil
+#+options: h:1
+#+keywords: Mayer Goldberg, tutorials, lambda calculus, Scheme, ML, continuations, threaded code
+
+All the tutorials are /work-in-progress/. None are complete. I add to each of these as ideas come to me. The early tutorials are written in $\LaTeX$, and made available in PDF. Later, I learned how to use HTML more productively to create the tutorials, so some of the later ones are in HTML. If you notice any errors or omissions, [[mailto:gmayer@little-lisper.org][please email me]]. 
+
+- [[./files/lambda-calculus-tutorial.pdf][My tutorial on the lambda-calculus]]
+- [[./files/jukim-tutorial.pdf][My tutorial on the /juk/ language]]
+- [[./files/compiler-construction-tutorial.pdf][My tutorial on /compiler construction/]]
+- [[./debugging.html][My tutorial on debugging]]
+- My tutorial on the Scheme programming language (/forthcoming/)
+- My tutorial on the ML programming language (/forthcoming/)
+- My tutorial on threaded code (/forthcoming/)
+- My tutorial on CPS (/forthcoming/)
+- My tutorial on fixed points (/forthcoming/)

@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Assignment 3 (Due: Thursday, December 26, 2013)</title>
+<!-- 2013-12-17 Tue 21:53 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="author" content="Mayer Goldberg"/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="shortcut icon" type="image/x-icon" href="http://www.little-lisper.org/website/favicon.ico" />
+<link rel="apple-touch-icon" type="image/x-icon" href="http://www.little-lisper.org/website/favicon.png" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012  Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Assignment 3 (Due: Thursday, December 26, 2013)</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Overview</a></li>
+<li><a href="#sec-2">2. Computing the lexical address</a></li>
+<li><a href="#sec-3">3. Annotating tail calls</a></li>
+<li><a href="#sec-4">4. Generating a Parser for a Set-based Data Structure Language</a></li>
+<li><a href="#sec-5">5. How to submit</a>
+<ul>
+<li><a href="#sec-5-1">5.1. Last minute instructions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Overview</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This assignment builds on top of the previous one. This means that if your solutions to the first two questions in assignment #2 do not work properly, you will have to fix them by the time you submit assignment #3, lest your code fail to run as expected.
+</p>
+
+<p>
+This assignment is concerned with the <i>semantic analysis</i> of the Scheme code. Both problem #1 &amp; #2 require that you modify <code>scheme-compiler/tag_parser.py</code>.
+</p>
+
+<p>
+You will need to extend the abstract syntax tree for Scheme expressions. If you have made use of the <i>visitor pattern</i> to traverse your AST, then you will need to make some minor adjustments to your <i>visitors</i> as well. 
+</p>
+
+<p>
+The substance of assignment #3 is to compute the <i>lexical address</i> for each variable occurrence, as well as annotate all applications in tail position. If you have used visitors for assignment #2, each of these problems can be handled by adding a new visitor; Otherwise, you need to add two methods to each of the classes that inherit from <code>AbstractSchemeExpr</code>. 
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Computing the lexical address</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+For this problem, you need to implement code for computing the <i>lexical address</i> of each variable occurrence in your abstract syntax trees:
+</p>
+
+<ul class="org-ul">
+<li>Define three new classes: <code>VarFree(Variable)</code>, <code>VarParam(Variable)</code>, <code>VarBound(Variable)</code>.
+<ul class="org-ul">
+<li><code>VarFree(Variable)</code> needs no new state.
+</li>
+<li><code>VarParam(Variable)</code> should have the field: <code>minor</code>.
+</li>
+<li><code>VarBound(Variable)</code> should have the two fields: <code>major</code>, <code>minor</code>.
+</li>
+</ul>
+</li>
+<li>The constructors for these classes should call the superclass.
+</li>
+<li>If you used visitors, make sure to add the above classes to your abstract visitor class.
+</li>
+<li>Make sure the <code>str()</code> procedure works properly with these new classes. The string representation should be the same as for <code>Variable</code>.
+</li>
+<li>Define the instance method <code>debruijn(self)</code> in <code>AbstractSchemeExpr</code>, so that when invoked from a Scheme expression <code>e</code>, returns an expression similar to <code>e</code>, in which each <code>Variable</code> object has been replaced with the corresponding <code>VarFree</code>, <code>VarParam</code>, or <code>VarBound</code>, as appropriate, and all the lexical addresses computed accordingly.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Annotating tail calls</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+For this problem, you need to implement code for annotating applications in tail position: 
+</p>
+<ul class="org-ul">
+<li>Define a new class: <code>ApplicTP(Applic)</code>.
+</li>
+<li>The constructor for this class should class the superclass.
+</li>
+<li>If you used visitors, make sure to add <code>ApplicTP</code> to your abstract visitor class.
+</li>
+<li>Make sure the <code>str()</code> procedure works properly with instances of <code>ApplicTP</code>. The string representation should be the same as for <code>Applic</code>.
+</li>
+<li>Define the instance method <code>annotateTC(self)</code> in <code>AbstractSchemeExpr</code>, so that when invoked from a Scheme expression <code>e</code>, returns an expression similar to <code>e</code>, in which applic <code>Applic</code> records that are in tail position have been replaced by corresponding instances of <code>ApplicTP</code>. 
+</li>
+</ul>
+
+<p>
+You should define an instance method <code>semantic_analysis(self)</code> in <code>AbstractSchemeExpr</code> as follows:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-python">def semantic_analysis(self):
+    return self.debruijn().annotateTC()
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Generating a Parser for a Set-based Data Structure Language</h2>
+<div class="outline-text-2" id="text-4">
+The goal of this exercise is to implement a parser for a language called ADTL
+(for Abstract Data Type Language), which we describe next, using the CUP LALR parser generator.
+
+<h3>
+Definition of ADTL
+</h3>
+
+<p>
+An ADTL program defines a data type in a similar way to a class in most object-oriented languages,
+in addition to features such as: sets are first-class types, locking statements, and path expressions.
+A variation of ADTL was used in a <a href="http://www.cs.bgu.ac.il/~romanm/popl11.pdf">paper</a> to guide an advanced static analysis in finding
+optimization opportunities for graph algorithms with optimistic parallelization.
+</p>
+
+Here is a <a href="http://www.cs.bgu.ac.il/~comp141/wiki.files/Graph.adt">link</a> to an example ADTL program, which defines a graph data type.
+
+<h4>Lexical Considerations.</h4>
+<ul>
+<li> Identifiers start with an underscore or a letter and may continue with an underscore, letter, or a digit.
+</li><li> Integer literals do not have extra leading 0's. Examples of legal literals are \0" and \-5".
+An example of an illegal literal is \007".
+</li><li>  String literals may span at
+most one line and may contain escape sequences for whitespace, new line, tab,
+backslash, and quotation marks.
+</li><li> ADTL supports single-line comments and multi-line comments as in other languages such as C++ and Java.
+</li></ul>
+
+<p>
+The following table lists all token types in ADTL, associating a (Java constant name) with a description of each one:
+</p>
+
+<table border="1">
+<tbody><tr><td><b>Description</b></td> <td><b>Constant (in <tt>sym.java</tt>)</b></td></tr>
+<tr><td><tt>/</tt></td>          <td><tt>DIVIDE</tt></td></tr>
+<tr><td><tt>{</tt></td>          <td><tt>LCBR</tt></td></tr>
+<tr><td><tt>&lt;=</tt></td>          <td><tt>LTE</tt></td></tr>
+<tr><td><tt>rev</tt></td>          <td><tt>REV</tt></td></tr>
+<tr><td><tt>;</tt></td>          <td><tt>SEMI</tt></td></tr>
+<tr><td><tt>integer constants</tt></td>          <td><tt>INT</tt></td></tr>
+<tr><td><tt>-</tt></td>          <td><tt>MINUS</tt></td></tr>
+<tr><td><tt>assert</tt></td>          <td><tt>ASSERT</tt></td></tr>
+<tr><td><tt>|</tt></td>          <td><tt>BAR</tt></td></tr>
+<tr><td><tt>!</tt></td>          <td><tt>NOT</tt></td></tr>
+<tr><td><tt>&lt;</tt></td>          <td><tt>LT</tt></td></tr>
+<tr><td><tt>choose</tt></td>          <td><tt>CHOOSE</tt></td></tr>
+<tr><td><tt>in</tt></td>          <td><tt>IN</tt></td></tr>
+<tr><td><tt>(</tt></td>          <td><tt>LP</tt></td></tr>
+<tr><td><tt>,</tt></td>          <td><tt>COMMA</tt></td></tr>
+<tr><td><tt>lock</tt></td>          <td><tt>LOCK</tt></td></tr>
+<tr><td><tt>)</tt></td>          <td><tt>RP</tt></td></tr>
+<tr><td><tt>+</tt></td>          <td><tt>PLUS</tt></td></tr>
+<tr><td><tt>quoted strings</tt></td>          <td><tt>QUOTE</tt></td></tr>
+<tr><td><tt>=</tt></td>          <td><tt>ASSIGN</tt></td></tr>
+<tr><td><tt>if</tt></td>          <td><tt>IF</tt></td></tr>
+<tr><td><tt>identifiers</tt></td>          <td><tt>ID</tt></td></tr>
+<tr><td><tt>.</tt></td>          <td><tt>DOT</tt></td></tr>
+<tr><td><tt>}</tt></td>          <td><tt>RCBR</tt></td></tr>
+<tr><td><tt>&amp;&amp;</tt></td>          <td><tt>LAND</tt></td></tr>
+<tr><td><tt>return</tt></td>          <td><tt>RETURN</tt></td></tr>
+<tr><td><tt>new</tt></td>          <td><tt>NEW</tt></td></tr>
+<tr><td><tt>+=</tt></td>          <td><tt>ASSIGN_PLUS</tt></td></tr>
+<tr><td><tt>||</tt></td>          <td><tt>LOR</tt></td></tr>
+<tr><td><tt>!=</tt></td>          <td><tt>NEQ</tt></td></tr>
+<tr><td><tt>-=</tt></td>          <td><tt>ASSIGN_MINUS</tt></td></tr>
+<tr><td><tt>==</tt></td>          <td><tt>EQ</tt></td></tr>
+<tr><td><tt>&gt;=</tt></td>          <td><tt>GTE</tt></td></tr>
+<tr><td><tt>*</tt></td>          <td><tt>TIMES</tt></td></tr>
+<tr><td><tt>:</tt></td>          <td><tt>COLON</tt></td></tr>
+<tr><td><tt>else</tt></td>          <td><tt>ELSE</tt></td></tr>
+<tr><td><tt>@</tt></td>          <td><tt>AT</tt></td></tr>
+<tr><td><tt>&gt;</tt></td>          <td><tt>GT</tt></td></tr>
+<tr><td><tt>set</tt></td>          <td><tt>SET</tt></td></tr>
+</tbody></table>
+
+
+<h4>Grammatical Considerations.</h4>
+
+<p>
+The full grammar of ADTL is shown below.
+</p>
+<p>
+We use the following notational conventions:
+</p><ul>
+<li> Non-terminals start with a capital letter and appear in boldface. For example: <tt><b>Stmt</b></tt>.
+</li><li> Terminals appear between single quotation marks. For example <tt>'||'</tt> is the terminal used for logical or.
+</li><li> The terminals for identifiers, integer constants and quoted strings appear as id, int, and quote.
+</li><li> We use the Kleene star to denote possibly empty sequences. For example <tt><b>Stmt</b>*</tt> is a sequence of
+0 or more statements. Similarly, the + version is used to denote non-empty sequences. So, <tt><b>Stmt</b>+</tt> is a sequence of
+1 or more statements.
+</li><li> We denote a possibly-empty sequence of elements separated by a token by the notation Element⊗token and
+non-empty sequences by Element⊕token. Examples are <tt><b>Arg</b>⊗','</tt>, which denotes a sequence of 0 or more
+arguments separated by commas, and <tt><b>PathElement</b>⊕'.'</tt>, which denotes a sequence of 1 or more path elements
+separated by dots.
+</li><li> We write <tt>[X]</tt> to denote that X is optional (used for <tt>PathElement</tt>).
+</li>
+</ul>
+<p></p>
+ <pre> id             Identifier token
+ int            Integer token
+ quote          Quoted string token
+ 
+ <b>ADT</b> → id '{' <b>Element</b>* '}'
+ <b>Element</b> → <b>FieldDef</b> | <b>MethodDef</b>
+<b> FieldDef</b> → id ':' <b>Type</b>';'
+ <b>Type</b> → id | 'set'
+<b> MethodDef</b> → id '(' <b>Arg</b>⊗',' ')' '{' <b>Stmt</b>* '}'
+ <b>Arg</b> → id ':' <b>Type</b>
+
+<b>Stmt</b> → 'return' <b>Expr</b>';'
+        | <b>Assign</b>';'
+        | 'if' '('<b>Expr</b>')' <b>SingleOrBlockStmt</b>
+        | 'if' '('<b>Expr</b>')' <b>SingleOrBlockStmt</b> 'else' <b>SingleOrBlockStmt</b>
+        | 'assert' <b>Expr</b>';'
+        | 'assert' <b>Expr</b> ':' quote';'
+        | 'lock' <b>PathExpr</b>';'
+        
+<b>Assign</b> → <b>PathExpr</b> '=' <b>Expr</b>
+<b>Assign</b> → <b>PathExpr</b> '+=' <b>Expr</b>
+<b>Assign</b> → <b>PathExpr</b> '-=' <b>Expr</b>
+<b>SingleOrBlockStmt</b> → <b>Stmt</b> | '{' <b>Stmt</b>+ '}'
+
+<b>Expr</b> → 'choose' <b>Expr</b>
+        | int
+        | '|' <b>Expr</b> '|'
+        | 'new' <b>Type</b> '(' <b>Assign</b>ed<b>Arg</b>⊗',' ')'
+        | '-' <b>Expr</b>
+        | <b>Expr</b> '+' <b>Expr</b>
+        | <b>Expr</b> '*' <b>Expr</b>
+        | <b>Expr</b> '-' <b>Expr</b>
+        | <b>Expr</b> '/' <b>Expr</b>                        
+        | <b>Expr</b> '&lt;' <b>Expr</b>
+        | <b>Expr</b> '&lt;=' <b>Expr</b>
+        | <b>Expr</b> '&gt;' <b>Expr</b>
+        | <b>Expr</b> '&gt;=' <b>Expr</b>
+        | <b>Expr</b> '==' <b>Expr</b>
+        | <b>Expr</b> '!=' <b>Expr</b>
+        | '!' <b>Expr</b>
+        | <b>Expr</b> '&amp;&amp;' <b>Expr</b>
+        | <b>Expr</b> '||' <b>Expr</b>
+        | <b>Expr</b> 'in' <b>Expr</b>
+        | <b>PathExpr</b>
+        | '(' <b>Expr</b> ')'
+
+<b>Assign</b>ed<b>Arg</b> → id '=' <b>Expr</b>
+        
+<b>PathExpr</b> →<b>PathElement</b>⊕'.'
+<b>PathElement</b> → id ['@'] | 'rev' '(' id ')' ['@']
+ </pre>
+
+<h3>
+What to Implement
+</h3>
+
+<p>
+You will implement the parser using the <a href="http://www2.cs.tum.edu/projects/cup/">CUP</a> LALR parser generation tool.
+You will add semantic actions to
+the grammar productions in order to construct the abstract syntax tree (AST).
+The rest of the job - traversing the generated AST and pretty-printing - is
+done by code given to you. This code includes:
+<UL>
+<LI> <b>AST</b> The adtl.ast package contains a class hierarchy for the abstract syntax tree node types;
+<LI> <b>Printing Visitor</b> A visitor (<tt>ASTToString</tt>) that traverses a given tree and handles the printing for each node type;
+<LI> <b>String Templates</b> The file <tt>ASTToString.stg</tt> contains templates that handle the formatting using the <A href="http://www.stringtemplate.org/">string template</A> library.
+<LI> <b>Driver Program</b> The <tt>Main</tt> class handles parsing the command-line arguments, reading the input files, running the parser, and finally printing to the output file (or console,
+if no file is specified).
+</UL>
+</p>
+
+<p>
+Please read the code and make sure you understand it.
+</p>
+
+<p>
+Running <tt>java adtl.Main -format tests/Graph.adt</tt> (assuming the CLASSPATH contains the <tt>build</tt> sub-directory and references to
+<tt>antlr-4.1-complete.jar</tt>, <tt>java-cup-11a.jar</tt>, and <tt>java-cup-11a-runtime.jar</tt>)
+ results in printing the text shown below.
+</p>
+
+<pre>
+Graph {
+  ns : set;
+
+  es : set;
+
+  getNeighbors(n : Node) {
+    lock n.rev(src).dst;
+    lock n.rev(dst).src;
+    assert (n in ns) : "Attempt to get neighbors of a node that is not contained in the graph!";
+    nghbors = (n.rev(src).dst + n.rev(dst).src);
+    return new Set(content=nghbrs);
+  }
+
+  addEdge(f : Node, t : Node, d : ED) {
+    lock f;
+    lock t;
+    lock f.rev(src).dst.t;
+    lock t.rev(dst).src.f;
+    eft = f.rev(src)@.dst.t;
+    etf = t.rev(dst)@.src.f;
+    assert (eft == etf) : "Graph is not undirected: detected a directed edge!";
+    assert (|eft| == 1) : "Detected parallel edges!";
+    if ((eft in es)) {
+      ne = (new Edge(src=f, dst=t, ed=d) + new Edge(src=t, dst=f, ed=d));
+      es = (es + ne);
+    }
+
+  }
+
+  addNode(n : Node) {
+    lock n;
+    assert !(n in ns) : "Attempt to add a node already contained in the graph!";
+    ns = (ns + n);
+  }
+
+  removeNode(n : Node) {
+    lock n.rev(src).dst;
+    lock n.rev(dst).src;
+    if ((n in ns)) {
+      es = (es - (n.rev(src) + n.rev(dst)));
+      ns = (ns - n);
+    }
+
+  }
+
+  removeEdge(f : Node, t : Node) {
+    lock f.rev(src).dst.t;
+    lock t.rev(dst).src.f;
+    eft = f.rev(src)@.dst.t;
+    etf = t.rev(dst)@.src.f;
+    assert (eft == etf) : "Graph is not undirected: detected a directed edge!";
+    if ((eft in es)) {
+      es = (es - (eft + etf));
+    }
+
+  }
+
+  getNodeData(n : Node) {
+    lock n;
+    return n.nd;
+  }
+
+  getEdgeData(e : Edge) {
+    lock e;
+    lock e.src;
+    lock e.dst;
+    return e.ed;
+  }
+
+  setEdgeData(e : Edge, d : ED) {
+    lock e;
+    lock e.src;
+    lock e.dst;
+    e.ed = d;
+  }
+}
+</pre>
+
+<p>
+You are also given an <A href="http://ant.apache.org/">Ant</A> <tt>build.xml</tt> file to help you automate tasks such
+as generating the parser, compiling the sources, cleaning, etc. Using the build
+file and Ant is completely optional and up to you (we will not consider it part
+of your submission).
+</p>
+
+<p>
+The <tt>lib</tt> sub-directory already contains the <tt>java-cup-11a.ja</tt>r, which you
+should use to generate the parser and <tt>java-cup-11a-runtime.jar</tt>, which you
+should use for compiling the sources and running the program (should be available on the <tt>CLASSPATH</tt>). It also contains the <tt>antlr-4.1-complete.jar</tt>, which
+is used to format the output (should also be available on the <tt>CLASSPATH</tt>).
+</p>
+
+<p>
+You should complete the <tt>ADTL.cup</tt> file with all the terminal and non terminal definitions, production definitions, any precedence directives that may be
+needed, semantic actions for building the abstract syntax tree, and any other
+content necessary to achieve the assignment. Running CUP on this file should
+generate the files <tt>Parser.java</tt> and <tt>sym.java</tt>, which should be placed under the <tt>adtl</tt>
+package and compiled with the rest of the sources (the ANT file does this automatically).
+</p>
+
+<p>
+The program should be invoked using the following format:<br>
+<tt>java adtl.Main -format &lt;file.adt&gt; &lt;file.out.adt&gt;</tt>
+</p>
+where <tt>&lt;file.adt&gt;</tt> is the name of the input file and <tt>&lt;file.out.adt&gt;</tt> is the name
+of the output file. Use the <tt>-help</tt> option to view all command-line options.
+
+<h3>
+Testing the Parser
+</h3>
+We expect you to perform your own testing of the parser.
+You should develop a thorough test suite that exercises all productions and as
+many syntax errors as you can think of. We will test your parser against our
+own test cases, including programs that are syntactically correct, and also
+programs that contain syntax errors.
+
+<h3>
+Pitfalls and Suggestions
+</h3>
+<p>
+We suggest that you start by first building your parser without adding the
+semantic actions to build the AST. This would let you first handle issues related
+to LR parsing such as shift/reduce and reduce/reduce conflicts. You can use the
+<tt>-parse</tt> command-line option to invoke the parser on inputs and check whether
+it accepts/rejects them as you expect. If the parser does not behave as you
+expect it, you can use the <tt>-debug parse</tt> option to have the parser print extra
+information during its operations. Once you gain confidence in your parser
+you can start adding the semantic actions. You will sometimes meet compiler
+errors in <tt>Parser.java</tt>. Recall that any changes you make to that code will be
+over-written next time you generate the parser code.
+</p>
+
+<p>
+Make sure you understand how the AST classes correspond to the grammar
+non-terminals. Notice that there are no corresponding AST node for accumulating assignments (e.g., a += b). You should figure out how to use the existing
+classes to represent such assignments.
+</p>
+
+<h3>
+What to Turn In
+</h3>
+
+<p>
+You should submit your <tt>ADTL.cup</tt> file. You should also submit the test suite
+programs you used to test your parser on (input text files).
+</p>
+
+<p>
+Please use the following naming convention for your test suite programs:
+<tt>file-name.adt</tt> and <tt>file-name.formatted.adt</tt> for syntactically-correct inputs
+and result of formatting, and <tt>error_description.adt</tt> for inputs containing
+syntax error where error_description is a short description of the type of syntactic
+error contained in the file (for example, <tt>error_empty_file.adt</tt> for a program
+with an empty list of elements).
+</p>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> How to submit</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>You should submit a <i>zip</i> file <code>hw3.zip</code> that creates a directory <code>hw3</code> containing:
+</li>
+<li><code>scheme-compiler</code>
+<ul class="org-ul">
+<li><code>pc.py</code>
+</li>
+<li><code>sexprs.py</code>
+</li>
+<li><code>reader.py</code>
+</li>
+<li><code>tag_parser.py</code>
+</li>
+</ul>
+</li>
+<li><code>problem-3</code>
+<ul class="org-ul">
+<li>See list of files &amp; specific instructions in the statement of the problem.
+</li>
+</ul>
+</li>
+<li>A file <code>readme.txt</code> that contains the names, IDs, and email addresses of all group members (you may either work alone, or with a single partner), as well as the following statement:
+</li>
+</ul>
+<blockquote>
+<p>
+I(We), &lt;fill in your name(s)&gt;, declare the following to be true:
+</p>
+<ul class="org-ul">
+<li>We worked on this assignment alone. We did not consult with others about this assignment, other than the teaching staff for this course.
+</li>
+<li>We did not copy code either from other students or from the internet.
+</li>
+<li>We did not make available this code to other students taking this course.
+</li>
+<li>We are aware of the University, faculty (as specified in the &rlm;שנתון&lrm;), departmental, and course policies (as specified in the syllabus) on academic dishonesty: We realize that if we are found to have committed academic dishonesty that we shall be sent before the disciplinary committee (&rlm;ועדת משמעת&lrm;), fail the course, and possibly incur other penalties as decided by the disciplinary committee. 
+</li>
+</ul>
+</blockquote>
+
+<p>
+We will not grade any work submitted that does not include the above statement. Please do not forget to include it, with your names spelled out. If you do not do this, for any reason, then at the very least, you will incur the 5% per diem late penalty (as specified in the course syllabus). 
+</p>
+</div>
+
+<div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Last minute instructions</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Unlike the first assignment, we are now asking you to include the parsing combinators package <code>pc.py</code> with your work. 
+</li>
+<li><b>PLEASE</b> do make sure that your work runs on the departmental Linux machines. It will save you much grief later on!
+</li>
+<li><b>PLEASE</b> do go over the submission instructions carefully, and make sure you did not leave out anything. 
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Mayer Goldberg</p>
+<p class="date">Created: 2013-12-17 Tue 21:53</p>
+<p class="xhtml-validation"><a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a></p>
+</div>
+</body>
+</html>

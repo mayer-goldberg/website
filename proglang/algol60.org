@@ -1,0 +1,37 @@
+#+title: The Algol 60 Programming Language
+#+author: Mayer Goldberg
+#+email: gmayer@little-lisper.org
+#+options: creator:nil, toc:1
+#+keywords: Mayer Goldberg, programming languages, algol, algol60, algol 60, call-by-name, cbn, history of programming languages
+
+* Why Algol 60?
+
+Programming language researchers have a soft spot for Algol 60. When you first take a look at Algol 60, it will probably not impress you. It's an old, obsolete programming language, with no facility for defining user-defined types, no standard IO library, a very weak static type system, and numerous other limitations. It has no mechanism for allocating memory at run-time; Not even equivalent of the =malloc= function in C... In many ways, it's more limiting than COBOL (another dead language). And yet, 
+
+** Call-by-Name
+
+** Why program in Algol 60 today?
+
+The answer is simple: Algol 60 is the only [once] generally-known programming language available today that will let you experience what it is like to program with the /call-by-name/ parameter-passing mechanism.
+
+/Lapidem quem reprobaverunt \aelig{}dificantes hic factus est in caput anguli/
+
+* Algol 60 compilers
+** [[http://www.gnu.org/software/marst/][GNU Marst]]
+
+/Marst/ is a full implementation of Algol 60. The language is implemented as an Algol-to-C compiler, and the resulting code is then compiled using /gcc/, linking both to an Algol library as well as the C math library. Compiling to C is a great choice in this case, because it means that Marst is effortlessly portable to many operating systems. I automate the compilation of algol code by using /GNU Make/, and teaching it the following rule:
+
+#+begin_example
+.SUFFIXES:	.a60
+%:	%.a60
+	marst $*.a60 -o $*.c
+	gcc $*.c -lalgol -lm -o $*
+#+end_example
+
+The standard suffix for Algol 60 source files seems to be =.alg=, but since I tinker, on occasion with Algol 68, which is quite different from Algol 60, I prefer to use =.a60= to distinguish source files in the two languages. If you prefer the =.alg= suffix, then simply change the =.a60= strings in the above /makefile/ to =.alg=. 
+
+** PLT +Dr Scheme+ Racket
+
+/Racket/ is a dialect of LISP that developed from a compiler and IDE for Scheme that went by the name of /Dr Scheme/. Racket comes with what its authors call \ldquo{}experimental languages\rdquo, which include an implementation of Algol 60. While Racket seems to be developing rapidly, the Algol implementation appears to lag behind: It is convenient to use, thoughlimited, and suffers from bugs that have not been fixed in years. for these reasons I do not recommend it unless you absolutely cannot use /Marst/.
+
+* Examples of Algol 60 code

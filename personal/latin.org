@@ -1,0 +1,15 @@
+#+title: Latin, an immortal language
+#+author: Mayer Goldberg
+#+email: gmayer@little-lisper.org
+#+options: creator:nil
+#+options: h:7
+#+keywords: Mayer Goldberg, Latin, lingua latina, Rome, Roman Empire, Catholic Church, Middle Ages, Renaissance, Neo-Latin
+
+* Why Latin?
+* Online Resources
+* Books
+* Software
+* My own contributions
+- [[../files/latin-grammar.html][A Brief Morphology of Latin (conjugating verbs, declining nouns)]]
+- Interlinear translations
+  - [[../files/harrius-potter-et-philosophi-lapis.html][/Harrius Potter et Philosophi Lapis/]]

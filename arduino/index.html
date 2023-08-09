@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Arduino Notes</title>
+<!-- 2013-08-08 Thu 17:18 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="author" content="Mayer Goldberg"/>
+<meta name="keywords" content="Mayer Goldberg, Department of Computer Science, Ben-Gurion University, Arduino, AVR, C, C++, C/C++, embedded computers, embedded systems, microcomputers, threaded code"/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="icon" type="image/x-icon" href="http://www.little-lisper.org/website/favicon.ico" />
+<link rel="apple-touch-icon" type="image/x-icon" href="http://www.little-lisper.org/website/favicon.png" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012  Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Arduino Notes</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Introduction</a></li>
+<li><a href="#sec-2">2. Software</a></li>
+<li><a href="#sec-3">3. Basic language reference</a></li>
+<li><a href="#sec-4">4. Hardware</a>
+<ul>
+<li><a href="#sec-4-1">4.1. The AVR Microarchitecture</a></li>
+<li><a href="#sec-4-2">4.2. Arduino Compatible Duemilanove Mega AVR ATmega1280-16AU USB Board</a></li>
+<li><a href="#sec-4-3">4.3. LCD Keypad Shield for Arduino Duemilanove &amp; LCD 1602</a>
+<ul>
+<li><a href="#sec-4-3-1">4.3.1. Rationale for getting it</a></li>
+<li><a href="#sec-4-3-2">4.3.2. Programming the LCD Keypad</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-4">4.4. Arduino Compatible Passive Speaker Buzzer Module - Black</a></li>
+<li><a href="#sec-4-5">4.5. Arduino Compatible 1.6" LCD Nokia 5110 LCD Module with White Backlit - Red + Silver</a></li>
+<li><a href="#sec-4-6">4.6. MCU Extension 4 x 4 16-Key Matrix Keyboard Module for Arduino - Green</a></li>
+<li><a href="#sec-4-7">4.7. SD Card Reading Writing Module for Arduino</a>
+<ul>
+<li><a href="#sec-4-7-1">4.7.1. Rationale for getting it</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-8">4.8. DS1302 Real Time Clock Module with Battery CR2032</a>
+<ul>
+<li><a href="#sec-4-8-1">4.8.1. Rationale for getting it</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-9">4.9. 5V 3.2" LCD12864 Screen Module with Backlit (Yellow &amp; Green Screen/English Word Stock)</a></li>
+<li><a href="#sec-4-10">4.10. TM1638 LED Button(8-Bit Digital Tube+8 LED+8 Key) For Arduino ARM STM32 A104</a></li>
+<li><a href="#sec-4-11">4.11. Cables, Connectors, etc.</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Hardware I need to get</a></li>
+<li><a href="#sec-6">6. Miscellaneous, unsorted, open questions</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+The point of this page is to list all the information &amp; material I accumulated over the course of working with Arduino. Ideally, this would include code snippets for all the hardware I worked with, so that it would be easier to get started on new projects
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Software</h2>
+<div class="outline-text-2" id="text-2">
+<ol class="org-ol">
+<li>The official Arduino software is located <a href="http://arduino.cc/">here</a>. It consists of a Java application that includes a compiler for the Arduino platform, a simple IDE, and some functionality for transferring the compiled code to the Arduino board.
+</li>
+<li>I'm using Mac OSX 10.6.8. The Arduino board was mis-identified as a
+</li>
+</ol>
+
+<pre class="example">
+FT232R USB UART:
+
+  Product ID:	0x6001
+  Vendor ID:	0x0403  (Future Technology Devices International Limited)
+  Version:	 6.00
+  Serial Number:	A1024896
+  Speed:	Up to 12 Mb/sec
+  Manufacturer:	FTDI
+  Location ID:	0x1d100000 / 3
+  Current Available (mA):	500
+  Current Required (mA):	90
+</pre>
+
+<p>
+It turns out that I was missing an FTDI driver for emulating a COM port using a USB port. The drivers are available <a href="http://www.ftdichip.com/FTDrivers.htm">here</a>. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Basic language reference</h2>
+<div class="outline-text-2" id="text-3">
+<ol class="org-ol">
+<li>The official language reference is located <a href="http://arduino.cc/en/Reference/HomePage">here</a>. This includes the basic functions that are available on any Arduino board.
+</li>
+
+<li>Every C/C++ program for the Arduino includes two procedures: <code>void setup();</code> which runs once, upon startup, and <code>void loop();</code> which runs repeatedly.
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Hardware</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> The AVR Microarchitecture</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>The AVR microarchitecture is developed by the <a href="http://www.atmel.com/">Atmel</a> corporation. All schematics &amp; data sheets are available through their website.
+</li>
+<li>A tutorial on how to program the Arduino in assembly langauge, using the standard <i>gcc</i> is available <a href="http://www.nongnu.org/avr-libc/user-manual/inline_asm.html">here</a>. A post on the same subject can be found <a href="http://blog.threebytesfull.com/post/6475041619/arduino-avr-assembly-language">here</a>.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> <a href="http://dx.com/p/arduino-duemilanove-mega-avr-atmega1280-16au-usb-board-118042">Arduino Compatible Duemilanove Mega AVR ATmega1280-16AU USB Board</a></h3>
+<div class="outline-text-3" id="text-4-2">
+
+<div class="figure">
+<p><img src="./files/sku_118042_1.jpg" width="40%" alt="sku_118042_1.jpg"/></p>
+</div>
+
+
+<ul class="org-ul">
+<li></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> <a href="http://dx.com/p/lcd-keypad-shield-for-arduino-duemilanove-lcd-1602-118059">LCD Keypad Shield for Arduino Duemilanove &amp; LCD 1602</a></h3>
+<div class="outline-text-3" id="text-4-3">
+
+<div class="figure">
+<p><img src="./files/sku_118059_1.jpg" width="40%" alt="sku_118059_1.jpg"/></p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-3-1" class="outline-4">
+<h4 id="sec-4-3-1"><span class="section-number-4">4.3.1</span> Rationale for getting it</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<p>
+This is a simple display and some buttons. Enough to display output, read input from the buttons. Can be used to scroll through menu options, etc.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-3-2" class="outline-4">
+<h4 id="sec-4-3-2"><span class="section-number-4">4.3.2</span> Programming the LCD Keypad</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<ul class="org-ul">
+<li><a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_LCD_KeyPad_Shield_(SKU:_DFR0009)">Manufacturer &amp; data</a>
+</li>
+<li>It was kind of disappointing to learn that the LCD Keypad only permits 8 glyphs to be defined (0-7), so that the full range of Hebrew cannot be defined. Clearly, someone has already thought of this possibility, since the LiquidCrystal library supports writing in either <i>left-to-right</i> or <i>right-to-left</i>, controllable via the <code>lcd.leftToRight();</code> and <code>lcd.rightToLeft();</code> commands.
+</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="./files/lcd-rtl.jpg" width="40% wrap" alt="lcd-rtl.jpg"/></p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> <a href="http://dx.com/p/arduino-diy-part-buzzer-module-black-138322">Arduino Compatible Passive Speaker Buzzer Module - Black</a></h3>
+<div class="outline-text-3" id="text-4-4">
+
+<div class="figure">
+<p><img src="./files/sku_138322_1.jpg" width="40% wrap" alt="sku_138322_1.jpg"/></p>
+</div>
+
+<ul class="org-ul">
+<li>The buzzer comes with 3 pins, whereas most buzzers I see on various Arduino tutorials come with only two. I have no idea what the third pin is like. One of the pins is marked with a minus sign '<b>-</b>', so it is plugged into <b>GND</b> on the Arduino board. This makes the second (middle) pin fit into <b>13</b>, and the third pin fit into <b>12</b>. Attempts to use <b>13</b> failed. Attempts to use <b>12</b> succeeded beautifully.
+</li>
+<li>To operate the buzzer, the <code>void init();</code> function must contain an initialization to the buzzer output pin, which in this case is <b>12</b>. Ideally, this should be set using a C macro to abstract the number of the pin: <code>pinMode(BUZZER_OUTPUT, OUTPUT);</code>. The <code>void loop();</code> function should contain 
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-4-5" class="outline-3">
+<h3 id="sec-4-5"><span class="section-number-3">4.5</span> <a href="http://dx.com/p/arduino-1-6-lcd-display-screen-for-nokia-5110-red-silver-140226">Arduino Compatible 1.6" LCD Nokia 5110 LCD Module with White Backlit - Red + Silver</a></h3>
+<div class="outline-text-3" id="text-4-5">
+
+<div class="figure">
+<p><img src="./files/sku_140226_1.jpg" width="40% wrap" alt="sku_140226_1.jpg"/></p>
+</div>
+
+<ul class="org-ul">
+<li>Spec &amp; technical details are <a href="https://www.sparkfun.com/products/10168">here</a>.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-4-6" class="outline-3">
+<h3 id="sec-4-6"><span class="section-number-3">4.6</span> <a href="http://dx.com/p/mcu-extension-4-x-4-16-key-matrix-keyboard-module-for-arduino-green-147734">MCU Extension 4 x 4 16-Key Matrix Keyboard Module for Arduino - Green</a></h3>
+<div class="outline-text-3" id="text-4-6">
+
+<div class="figure">
+<p><img src="./files/sku_147734_1.jpg" width="40% wrap" alt="sku_147734_1.jpg"/></p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4-7" class="outline-3">
+<h3 id="sec-4-7"><span class="section-number-3">4.7</span> <a href="http://dx.com/p/sd-card-reading-writing-module-for-arduino-148784">SD Card Reading Writing Module for Arduino</a></h3>
+<div class="outline-text-3" id="text-4-7">
+
+<div class="figure">
+<p><img src="./files/sku_148784_1.jpg" width="40% wrap" alt="sku_148784_1.jpg"/></p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-7-1" class="outline-4">
+<h4 id="sec-4-7-1"><span class="section-number-4">4.7.1</span> Rationale for getting it</h4>
+<div class="outline-text-4" id="text-4-7-1">
+<p>
+The SD card is an inexpensive (US$2.70) way of storing information for or by the Arduino. This memory is non-volatile, and the API for the SD card comes with functions for creating directories, reading, writing, and deleting files, etc.
+</p>
+
+<p>
+Because memory is scarce on the Arduino, large amounts of data, structured or unstructured, can be stored on an SD card and used by Arduino programs. 
+</p>
+
+<p>
+For <i>threaded code</i>, this offers a simple and effective way to store code &amp; data, so that the only native code need be the <i>address interpreter</i>. The <i>control stack</i>, the <i>data stack</i>, the <i>dictionary</i>, etc, can all reside as files on the SD card, and accessed via random-access IO operations.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4-8" class="outline-3">
+<h3 id="sec-4-8"><span class="section-number-3">4.8</span> <a href="http://dx.com/p/ds1302-real-time-clock-module-with-battery-cr2032-126453">DS1302 Real Time Clock Module with Battery CR2032</a></h3>
+<div class="outline-text-3" id="text-4-8">
+
+<div class="figure">
+<p><img src="./files/sku_126453_2.jpg" width="40% wrap" alt="sku_126453_2.jpg"/></p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-8-1" class="outline-4">
+<h4 id="sec-4-8-1"><span class="section-number-4">4.8.1</span> Rationale for getting it</h4>
+<div class="outline-text-4" id="text-4-8-1">
+<p>
+The Arduino does not come with a built-in, real-time clock (!). This means that it cannot tell time. For any project that requires keeping time (alarm clock, etc) you want to get a real time clock shield. The beauty of this unit is that it has a very simple API for setting &amp; getting the time, and the battery will let it keep the time for several years, independently of the power supply to the main board.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4-9" class="outline-3">
+<h3 id="sec-4-9"><span class="section-number-3">4.9</span> <a href="http://dx.com/p/5v-3-2-lcd12864-screen-module-with-backlit-yellow-green-screen-english-word-stock-121820">5V 3.2" LCD12864 Screen Module with Backlit (Yellow &amp; Green Screen/English Word Stock)</a></h3>
+<div class="outline-text-3" id="text-4-9">
+
+<div class="figure">
+<p><img src="./files/sku_121820_1.jpg" width="40% wrap" alt="sku_121820_1.jpg"/></p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4-10" class="outline-3">
+<h3 id="sec-4-10"><span class="section-number-3">4.10</span> TM1638 LED Button(8-Bit Digital Tube+8 LED+8 Key) For Arduino ARM STM32 A104</h3>
+<div class="outline-text-3" id="text-4-10">
+
+<div class="figure">
+<p><img src="./files/led-shield.jpg" width="40% wrap" alt="led-shield.jpg"/></p>
+</div>
+
+<ul class="org-ul">
+<li>Specs in English can be found <a href="http://tronixstuff.wordpress.com/2012/03/11/arduino-and-tm1638-led-display-modules/">here</a>.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-4-11" class="outline-3">
+<h3 id="sec-4-11"><span class="section-number-3">4.11</span> Cables, Connectors, etc.</h3>
+<div class="outline-text-3" id="text-4-11">
+<p>
+The wires that are used to connect pins on PCB are called <i>Dupont jumper wires</i>. The pins are called <i>pin headers</i>. 
+</p>
+
+<ul class="org-ul">
+<li>General: <a href="http://dx.com/s/electronic+pins.html?category=410&PageSize=60">Pins</a>
+</li>
+<li><a href="http://dx.com/p/male-to-female-dupont-breadboard-jumper-wires-for-arduino-40-piece-pack-20cm-length-146935">Male-to-female jumper wires</a>
+</li>
+<li><a href="http://dx.com/p/arduino-compatible-breadboard-jumper-wires-8-20cm-68-cable-pack-142221">Male-to-male jumper wires</a>
+</li>
+<li><a href="http://dx.com/p/arduino-dupont-4-pin-female-to-female-extension-wire-cable-40cm-10-piece-pack-140526">Female-to-female jumper wires</a>
+</li>
+<li><a href="http://dx.com/p/single-row-40-pin-2-00mm-pitch-pin-headers-200-piece-pack-139825">Pin headers</a> for soldering to a PCB
+</li>
+<li><a href="http://dx.com/p/840-point-solderless-breadboard-118355">840-pin solderless breadboard</a>. Comes with notches and grooves on the side, so that any number of similar breadboards can be fitten to form a longer and wider work area.
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Hardware I need to get</h2>
+<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li>A GPS fence
+</li>
+<li>A touch screen
+</li>
+<li>Connectors to connect shields to the main board
+</li>
+<li>A bluetooth shield
+</li>
+<li>An FM radio shield
+</li>
+<li><a href="http://dx.com/p/new-version-pro-mini-atmega328p-microcontroller-board-white-173878">New Version Pro Mini Atmega328P Microcontroller Board - White</a>
+</li>
+<li><a href="http://dx.com/p/efcom-pro-wireless-850-900-1800-1900mhz-gprs-gsm-module-w-antenna-white-173749">EFCom Pro Wireless 850/900/1800/1900MHz GPRS/GSM Module w/ Antenna - White</a>
+</li>
+<li><a href="http://dx.com/p/jy-mcu-arduino-bluetooth-wireless-serial-port-module-104299">JY-MCU Arduino Bluetooth Wireless Serial Port Module</a>
+</li>
+<li><a href="http://dx.com/p/usb-host-shield-2-0-board-166217">USB Host Shield 2.0 Board</a>
+</li>
+<li><a href="http://dx.com/p/2-4ghz-nrf24l01-wireless-communication-module-for-arduino-green-2-pcs-149255">2.4GHz NRF24L01+ Wireless Communication Module for Arduino - Green (2 PCS)</a>
+</li>
+<li><a href="http://dx.com/p/diy-colorful-lcd-shield-nokia-6100-expansion-board-white-171914">DIY Color LCD Shield Nokia 6100 Expansion Board - White</a>
+</li>
+<li><a href="http://www.ebay.com/itm/130839929399?ssPageName=STRK:MEWNX:IT&_trksid=p3984.m1497.l2649">New Version Pro Mini Atmega328P Microcontroller Board - White</a>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Miscellaneous, unsorted, open questions</h2>
+<div class="outline-text-2" id="text-6">
+<ol class="org-ol">
+<li>Connecting the Arduino board
+<ol class="org-ol">
+<li>What buttons are on the board, and which ones can I control?
+</li>
+<li>How do I write to the equivalent of the console? &#x2014; something that can be recognized from the Arduino IDE.
+</li>
+</ol>
+</li>
+<li>Connecting the LCD keypad
+<ol class="org-ol">
+<li>Recognising the buttons for press &amp; release
+</li>
+<li>Writing bitmaps to the LCD
+</li>
+</ol>
+</li>
+<li>Connecting to the SD card
+<ol class="org-ol">
+<li>What is the max file size?
+</li>
+<li>How many open files can one have simultaneously?
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Mayer Goldberg</p>
+<p class="date">Created: 2013-08-08 Thu 17:18</p>
+<p class="xhtml-validation"><a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a></p>
+</div>
+</body>
+</html>

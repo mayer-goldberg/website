@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>The Algol 60 Programming Language</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="The Algol 60 Programming Language"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2012-02-18 01:13:03 IST"/>
+<meta name="author" content="Mayer Goldberg"/>
+<meta name="description" content=""/>
+<meta name="keywords" content="Mayer Goldberg, programming languages, algol, algol60, algol 60, call-by-name, cbn, history of programming languages"/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">The Algol 60 Programming Language</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Why Algol 60?</a></li>
+<li><a href="#sec-2">2 Algol 60 compilers</a></li>
+<li><a href="#sec-3">3 Examples of Algol 60 code</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Why Algol 60?</h2>
+<div class="outline-text-2" id="text-1">
+
+
+<p>
+Programming language researchers have a soft spot for Algol 60. When you first take a look at Algol 60, it will probably not impress you. It's an old, obsolete programming language, with no facility for defining user-defined types, no standard IO library, a very weak static type system, and numerous other limitations. It has no mechanism for allocating memory at run-time; Not even equivalent of the <code>malloc</code> function in C&hellip; In many ways, it's more limiting than COBOL (another dead language). And yet, 
+</p>
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Call-by-Name</h3>
+<div class="outline-text-3" id="text-1-1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Why program in Algol 60 today?</h3>
+<div class="outline-text-3" id="text-1-2">
+
+
+<p>
+The answer is simple: Algol 60 is the only [once] generally-known programming language available today that will let you experience what it is like to program with the <i>call-by-name</i> parameter-passing mechanism.
+</p>
+<p>
+<i>Lapidem quem reprobaverunt &aelig;dificantes hic factus est in caput anguli</i>
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Algol 60 compilers</h2>
+<div class="outline-text-2" id="text-2">
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> <a href="http://www.gnu.org/software/marst/">GNU Marst</a></h3>
+<div class="outline-text-3" id="text-2-1">
+
+
+<p>
+<i>Marst</i> is a full implementation of Algol 60. The language is implemented as an Algol-to-C compiler, and the resulting code is then compiled using <i>gcc</i>, linking both to an Algol library as well as the C math library. Compiling to C is a great choice in this case, because it means that Marst is effortlessly portable to many operating systems. I automate the compilation of algol code by using <i>GNU Make</i>, and teaching it the following rule:
+</p>
+
+
+
+<pre class="example">.SUFFIXES:      .a60
+%:      %.a60
+        marst $*.a60 -o $*.c
+        gcc $*.c -lalgol -lm -o $*
+</pre>
+
+
+<p>
+The standard suffix for Algol 60 source files seems to be <code>.alg</code>, but since I tinker, on occasion with Algol 68, which is quite different from Algol 60, I prefer to use <code>.a60</code> to distinguish source files in the two languages. If you prefer the <code>.alg</code> suffix, then simply change the <code>.a60</code> strings in the above <i>makefile</i> to <code>.alg</code>. 
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> PLT <del>Dr Scheme</del> Racket</h3>
+<div class="outline-text-3" id="text-2-2">
+
+
+<p>
+<i>Racket</i> is a dialect of LISP that developed from a compiler and IDE for Scheme that went by the name of <i>Dr Scheme</i>. Racket comes with what its authors call &ldquo;experimental languages&rdquo;, which include an implementation of Algol 60. While Racket seems to be developing rapidly, the Algol implementation appears to lag behind: It is convenient to use, thoughlimited, and suffers from bugs that have not been fixed in years. for these reasons I do not recommend it unless you absolutely cannot use <i>Marst</i>.
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Examples of Algol 60 code</h2>
+<div class="outline-text-2" id="text-3">
+
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2012-02-18 01:13:03 IST</p>
+<p class="author">Author: Mayer Goldberg</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

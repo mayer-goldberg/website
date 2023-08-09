@@ -1,0 +1,96 @@
+#+title: Advanced Programming Languages (שיטות תכנות מתקדמות)
+#+author: Mayer Goldberg
+#+email: gmayer@little-lisper.org
+#+style: <link rel="icon" type="image/x-icon" href="http://www.little-lisper.org/website/favicon.ico" />
+#+style: <link rel="apple-touch-icon" type="image/x-icon" href="http://www.little-lisper.org/website/favicon.png" />
+
+#+options: creator:nil, h:2, toc:1
+# #+options: LaTeX:dvipng
+#+keywords: functional programming, object oriented programming, lambda calculus, church numerals, lambda definability, combinatory logic, threaded code, smalltalk, scheme, ml, forth, threaded code interpreters, mayer goldberg, decompilation, compilation, interpretation, coq, proof assistants, nuprl, parsing combinators, monads
+
+* Topics
+- Coq -- The /Automated Proof Assistant/
+- The Lambda Calculus
+- Functional Programming
+- Object Oriented Programming
+- Threaded Code
+* Code for the APL course
+- <2014-04-12 Sat> Examples of monads used for [[ws-file:monad-printing.scm][printing]], [[ws-file:monad-pseudo-random-numbers.scm][pseudo-random number
+  generators]], [[ws-file:monad-gensym.scm][gensym]], in Scheme 
+- <2014-04-12 Sat> Code demonstrating that CPS is not, in itself, does not improve
+  performance ([[ws-file:cps-is-not-an-optimization.scm][sources]])
+- <2014-04-12 Sat> A super-fast implementation of the Fibonacci function ([[ws-file:fast-fib.scm][sources]])
+- <2014-04-12 Sat> [[ws-file:cps-examples.scm][Lots of examples]] of converting Scheme functions from direct style,
+  through CPS, /representation-independent/ CPS, register machines,
+  and stack machines 
+- <2014-04-12 Sat> [[ws-file:strange-fixed-point-combinators.scm][Strange fixed-point combinators]]
+- <2014-04-12 Sat> [[ws-file:tic-tac-toe.scm][A game of /Tic-Tac-Toe/ using functions to represent the board]]
+- <2014-04-12 Sat> [[ws_file:decomp.scm][Code for the decompiler]]
+- <2013-06-26 Wed> Coq code on 2013-06-19 ([[ws-file:apl-2013-06-19.v][v]], [[ws-file:apl-2013-06-19.pdf][pdf]]), Coq code on 2013-06-24 ([[ws-file:apl-2013-06-24a.v][a.v]], [[ws-file:apl-2013-06-24a.pdf][a.pdf]], [[ws-file:apl-2013-06-24b.v][b.v]], [[ws-file:apl-2013-06-24b.pdf][b.pdf]], [[ws-file:apl-2013-06-24c.v][c.v]], [[ws-file:apl-2013-06-24c.pdf][c.pdf]]). Check out my [[http://coq.little-lisper.org][/Coq Website/]] for additional sample code.
+- <2013-05-07 Tue> [[./pc/index.html][This is my page on /parsing combinators/]]. Please note that this is work-in-progress, and will take some time to document fully. Still, you should have enough material here to get you started.
+- Code for mapping over [[file:cross.scm][cross products]]. 
+- Code demonstrating the [[file:duff-device.c][Duff Device]]. 
+- [[ws-file:threaded.scm][Threaded code embedded in Scheme]]. 
+- The input stream package ([[ws-file:input-streams.scm][sources]], [[ws-file:input-streams-examples.scm][examples]])
+- Fixed-point combinators in the SML ([[ws-file:y.sml][sources]])
+- Elementary Church numeral arithmetic in Scheme ([[ws-file:church-numeral-arithmetic.scm][source]], [[ws-file:church-numeral-arithmetic-examples.scm][examples]])
+- A parser for the lambda-calculus, in SML/NJ ([[ws-file:lambda-calculus-parser.sml][source]], [[ws-file:lambda-calculus-parser.txt][instructions]])
+- [[ws-file:toy-interpreter-for-scheme.sml][A toy interpreter for Scheme (in SML)]]
+* Coursework
+- [[ws-file:2014-apl-midterm.pdf][The takehome midterm]]
+- The takehome final is available [[https://dl.dropboxusercontent.com/u/15888960/apl-final.zip][here]] (due: /TBA/)
+* Languages used in the course
+** [[./coq.html][Coq]]
+** Scheme
+
+Scheme is the main programming language for the first part of the
+course. It is a semi-functional, late-binding, dynamically-typed,
+interactive programming language. It is the most suitable language for
+working with the untyped lambda calculus. For this course, I'm going
+to ask you to work with [[http://www.scheme.com/][Petite Chez Scheme]], which is avaiable for free
+on most common platforms. You are welcome to try out other Scheme
+systems (there are even a couple for the iPhone! 
+#+begin_html
+&#9786;
+#+end_html
+), but for the purpose of the assignments, please make sure your code
+runs on Chez. [[./proglang/scheme.html][Click here to go to my Scheme page]].
+
+** ML
+
+ML is the second language we shall be using the the first part of the
+course. It is a semi-functional, early-binding, statically-typed
+interactive programming language. We shall be using it in our
+discussions on types, and perhaps in other places as well. [[./proglang/ml.html][Click here
+to go to my ML page]].
+
+** Smalltalk
+** Forth
+** Erlang
+* Literature
+- /Books on Scheme/
+- [[./proglang/ml.html#books-on-ml][/Books on ML/]]
+- /Books on Erlang/
+- The Lambda Calculus: Its Syntax and Semantics
+- Threaded Interpretive Languages: Their Design and Implementation
+- To Mock a Mockingbird
+- [[ws-file:lambda-calculus-tutorial.pdf][My tutorial on the lambda-calculus]]
+- [[ws-file:tutorial-on-monads.pdf][My tutorial on monads]]
+* Take-home final
+
+The takehome final is available [[https://dl.dropboxusercontent.com/u/15888960/apl-final.zip][here]] (due: /TBA/)
+
+* Attendance policy
+
+*Attendance is mandatory in this course.* I realize there are often circumstances that are beyond control that may require you to skip a meeting, so you may skip two meetings during the semester without penalty. Also, we will only start to take attendance after the second week of class. Afterwards, if you need to skip a meeting for some reasonably justifiable reason (\rlm{}מילואים\lrm, illness), please contact me. Otherwise, there is a 2% penlanty to your final grade for each class you miss: If you miss /n/ days, your final grade will be multiplied by 0.98^{/n - 2/}
+
+
+
+* How your grade is computed
+
+The coursework shall consist of a brief assignment that will serve as a take-home midterm, and a take-home
+final. Their weights are as follows:
+
+- Problem set (midterm take-home) -- 20%
+- Take-home final -- 80%
+
