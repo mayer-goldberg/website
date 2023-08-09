@@ -13,7 +13,7 @@ I serve as the undergraduate advisor and head of teaching committee for years 2-
 | Name                      | Mayer Goldberg                                            |
 | Email                     | [[mailto:gmayer@little-lisper.org][gmayer@little-lisper.org]]                                  |
 | Office                    | Building 37 (Alon, {{{rtl(אלון)}}}), room 106, mailbox 44 |
-| Office hours (semester א) | Mondays, 19:00--21:00                                     |
+| Office hours (summer)     | Mondays, 17:00--19:00                                     |
 | Telephones                | Voice 08-647-7873, FAX 08-647-7650                        |
 
 * General guidelines

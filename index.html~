@@ -3,13 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-08-10 Thu 02:15 -->
+<!-- 2023-08-10 Thu 02:13 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Teaching Committee</title>
+<title>Mayer Goldberg's Homepage (&#x202e;מֵאִיר גּוֹלְדְּבֵּרְג&#x202c;)</title>
 <meta name="generator" content="Org mode" />
-<meta name="author" content="Mayer Goldberg" />
-<meta name="keywords" content="Mayer Goldberg, Teaching Committee, Department of Computer Science, Ben-Gurion University, israel" />
+<meta name="author" content="Mayer Goldberg (@@html:&amp;#x202e;@@מֵאִיר גּוֹלְדְּבֵּרְג@@html:&amp;#x202c;@@)" />
+<meta name="keywords" content="Mayer Goldberg, Department of Computer Science, Ben-Gurion University, lambda calculus, combinatory logic, pi-calculus, functional programming, coq, proof assistant, nuprl, object-oriented programming, Scheme, ML, Erlang, Lua, Smalltalk, continuations, interpreters, compilers, decompilation, compilation, code obfuscation, programming languages, semantics, threaded code, forth, latin, israel, israeli police, lying cops, israeli police lying" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -230,111 +230,132 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Teaching Committee</h1>
+<h1 class="title">Mayer Goldberg's Homepage (&#x202e;מֵאִיר גּוֹלְדְּבֵּרְג&#x202c;)</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org2418ec6">1. Contact Information</a></li>
+<li><a href="#org3730a87">2. Research</a></li>
+<li><a href="#orgbbba372">3. Teaching</a></li>
+<li><a href="#org60832ac">4. Departmental duties</a></li>
+<li><a href="#org20aeb77">5. Personal Interests</a></li>
+<li><a href="#orge2370d9">6. <i>This website has a seriously drab look, that was outdated already back in the 1990's&#x2026;!</i></a></li>
+</ul>
+</div>
+</div>
+<blockquote>
+<p>
+Everybody seems to understand that astronomers do astronomy because
+astronomy is interesting. Why don't they understand that I do computer
+science because computer science is interesting? And that I'd do it
+regardless of whether or not it made money for anybody? 
+</p>
 
-<div id="outline-container-org3a0ed39" class="outline-2">
-<h2 id="org3a0ed39"><span class="section-number-2">1</span> Synopsis</h2>
+<p>
+&#x2014; <i>Donald E. Knuth</i>
+</p>
+</blockquote>
+
+<div id="outline-container-org2418ec6" class="outline-2">
+<h2 id="org2418ec6"><span class="section-number-2">1</span> Contact Information</h2>
 <div class="outline-text-2" id="text-1">
-<p>
-I serve as the undergraduate advisor and head of teaching committee for years 2&#x2013;4 (&#x202e;יועץ לתואר ראשון, ויו"ר ועדת הוראה לשנים ב–ד&#x202c;) at the <a href="//www.cs.bgu.ac.il/"><i>Department of Computer Science</i></a> at <a href="http://www.bgu.ac.il/"><i>Ben-Gurion University</i></a>. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-orga6fa460" class="outline-2">
-<h2 id="orga6fa460"><span class="section-number-2">2</span> How to contact me</h2>
-<div class="outline-text-2" id="text-2">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<tbody>
-<tr>
-<td class="org-left">Name</td>
-<td class="org-left">Mayer Goldberg</td>
-</tr>
-
-<tr>
-<td class="org-left">Email</td>
-<td class="org-left"><a href="mailto:gmayer@little-lisper.org">gmayer@little-lisper.org</a></td>
-</tr>
-
-<tr>
-<td class="org-left">Office</td>
-<td class="org-left">Building 37 (Alon, &#x202e;אלון&#x202c;), room 106, mailbox 44</td>
-</tr>
-
-<tr>
-<td class="org-left">Office hours (summer)</td>
-<td class="org-left">Mondays, 17:00&#x2013;19:00</td>
-</tr>
-
-<tr>
-<td class="org-left">Telephones</td>
-<td class="org-left">Voice 08-647-7873, FAX 08-647-7650</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div id="outline-container-orgbfd869b" class="outline-2">
-<h2 id="orgbfd869b"><span class="section-number-2">3</span> General guidelines</h2>
-<div class="outline-text-2" id="text-3">
-<p>
-Please understand that:
-</p>
 <ul class="org-ul">
-<li>No decisions are made &ldquo;on the spot&rdquo;, regardless of what you tell me</li>
-<li>All decisions are taken offline, after deliberation with other members of the department and the relevant faculty (either Natural Sciences of Engineering, depending on what program you are in), with all relevant documentation at hand, and in particular, with your academic transcript before us</li>
-<li>You are welcome to come to my office hours, or to send me an email, but please keep in mind that on most academic matters, I shall probably direct you to the <a href="https://cs-sr.cs.bgu.ac.il/"><i>Student Request Form</i> (&#x202e;מערכת פניות הסטודנטים&#x202c;)</a></li>
+<li><b>Email:</b> <a href="mailto:gmayer@little-lisper.org">gmayer@little-lisper.org</a>. All email, from all other accounts,
+gets forwarded to this account.</li>
+<li><b>Office:</b> Building 37 (Alon, &#x202e;אלון&#x202c;) room 106, mailbox 44</li>
+<li><b>Office hours</b> (for the <b>Summer Semester, 2023</b>, currently <b>only</b> on <a href="https://zoom.us/"><i>Zoom</i></a> only:
+<ul class="org-ul">
+<li>For the <a href="./tc.html"><i>Teaching Committee</i> (&#x202e;ועדת הוראה, שנים ב–ד&#x202c;)</a>: Mondays, 17-19</li>
+</ul></li>
+<li><b>Telephones:</b> Voice (+972)(0)8-647-7873, FAX (+972)(0)8-647-7650</li>
+<li><b>Professional mailing address:</b> <a href="mailto:gmayer@little-lisper.org">Mayer Goldberg</a>, <a href="http://www.cs.bgu.ac.il/">Department of Computer
+Science</a>, <a href="http://www.bgu.ac.il/">Ben Gurion University</a>, PO Box 653, Be'er Sheva 84105,
+Israel.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org56b4b60" class="outline-2">
-<h2 id="org56b4b60"><span class="section-number-2">4</span> Issues that come up frequently</h2>
+<div id="outline-container-org3730a87" class="outline-2">
+<h2 id="org3730a87"><span class="section-number-2">2</span> Research</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org21e4b44" class="outline-3">
+<h3 id="org21e4b44"><span class="section-number-3">2.1</span> Research Interests</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>The Lambda Calculus &amp; Combinatory Logic</li>
+<li>Programming Languages
+<ul class="org-ul">
+<li>Interpretation &amp; Compilation</li>
+<li>Functional Programming</li>
+<li>Continuations &amp; Control</li>
+<li>Object-Oriented Programming</li>
+<li>Computational Reflection</li>
+<li>Threaded Computation</li>
+</ul></li>
+<li>Automated theorem proving (<a href="./coq.html">Coq</a>, <a href="http://www.nuprl.org/">NuPRL</a>, etc)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbbba372" class="outline-2">
+<h2 id="orgbbba372"><span class="section-number-2">3</span> Teaching</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><i>Introduction to Compiler Construction</i>, Fall 2023</li>
+<li><i>Introduction to the Lambda Calculus &amp; Combinatory Logic</i>, Spring 2024</li>
+<li><a href="./tutorials.html">My tutorials</a></li>
+<li><a href="./special.html">My policies on extensions, exemptions &amp; special requests</a></li>
+<li><a href="./projects.html">Undergraduate projects I am offering (&#x202e;פרוייקטים לתואר ראשון&#x202c;)</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org60832ac" class="outline-2">
+<h2 id="org60832ac"><span class="section-number-2">4</span> Departmental duties</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
-<li>If you <b>seek authorization for a course</b>, or <b>&#x202e;מועד מיוחד&#x202c; in a course you took</b>, please go to the <a href="https://cs-sr.cs.bgu.ac.il/">Student Request Form (&#x202e;מערכת פניות הסטודנטים&#x202c;)</a>, and fill and submit the appropriate form. You should support &amp; substantiate any claims you make with appropriate documentation, and include those with your form. There is no need to speak with me in advance.</li>
-<li>If you are continuing your studies at our department, you have already been admitted, and <b>would like to get an exemption (&#x200f;פטור&#x200e;) from various courses in your program</b>, on the strength of courses you took elsewhere, as part of another program, then you need to do the following:
+<li><a href="./tc.html"><i>Teaching Committee</i></a> for years 2&#x2013;4 (&#x202e;ועדת הוראה, שנים ב–ד&#x202c;)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org20aeb77" class="outline-2">
+<h2 id="org20aeb77"><span class="section-number-2">5</span> Personal Interests</h2>
+<div class="outline-text-2" id="text-5">
 <ul class="org-ul">
-<li>Download the a request &#x200f;להכרה בקורסים&#x200e; from the website of the Faculty of Natural Sciences.</li>
-<li>Fill in the form, listing the courses you took on the strength of which you are asking for the exemption, the syllabus for each such course, and the courses from which you are asking for an exemption.</li>
-<li>Submit the form, including the syllabi, to the undergraduate secretariat.</li>
-</ul></li>
-<li>If you are unhappy about the grade you received in a course, you need to take this matter with your instructor. Unless your instructor is in blatant, obvious violation of the regulations of the university &amp; faculty, we cannot interfere with the grading policies in your courses</li>
-<li>If you are falling behind in your courses, please contact  <a href="http://in.bgu.ac.il/Dekanat/Pages/default.aspx">&#x202e;דיקנאט הסטודנטים&#x202c;</a>, and join &#x202e;התוכנית למניעת נשירה&#x202c;. From what we hear, their program is effective in helping students get back on track.</li>
-<li>If you suffer from disabilities that hamper your academic work (be they learning disabilities, physical, psychological, etc), please contact &#x202e;המדור לקידום סטודנטים&#x202c; at the <a href="http://in.bgu.ac.il/Dekanat/Pages/default.aspx">&#x202e;דיקנאט הסטודנטים&#x202c;</a>. They have a wide range of programs to help you make the most of your academic experience at BGU
+<li><a href="./proglang/proglang.html">Learning interesting programming languages</a></li>
+<li><a href="./personal/books.html">Books</a></li>
+<li>Languages
 <ul class="org-ul">
-<li>Keep in mind that assessment of medical or learning disabilities takes time to complete, and many of the benefits to which you may be entitled will be predicated on the results of this assessment</li>
-<li>If you know you are going to require their help, please start the process as soon as possible</li>
-<li>Only &#x202e;דיקנאט הסטודנטים&#x202c; is authorized to grant &#x202e;התאמות&#x202c; for your exams!</li>
+<li><a href="./personal/arabic.html">Arabic</a></li>
+<li><a href="./personal/latin.html">Latin</a></li>
 </ul></li>
-<li>Information concerning &#x202e;מועדים מיוחדים&#x202c;:
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge2370d9" class="outline-2">
+<h2 id="orge2370d9"><span class="section-number-2">6</span> <i>This website has a seriously drab look, that was outdated already back in the 1990's&#x2026;!</i></h2>
+<div class="outline-text-2" id="text-6">
 <ul class="org-ul">
-<li>&#x202e;מועדים מיוחדים&#x202c; are granted for the conditions specified in &#x202e;תקנון הבחינות&#x202c;. Exceptions to &#x202e;תקנון הבחינות&#x202c; <i>will only be entertained</i> in situations that <i>greatly resemble</i> the conditions specified in &#x202e;תקנון הבחינות&#x202c;</li>
-<li>If you've taken <i>both</i> &#x202e;מועד א'&#x202c; and &#x202e;מועד ב'&#x202c; in a course, then <i>under no circumstances</i> will you receive &#x202e;מועד ג'&#x202c;</li>
-<li>The authority to grant &#x202e;מועדים מיוחדים&#x202c; lies solely with the teaching committee, and not with the instructor of the course
-<ul class="org-ul">
-<li>Decisions on &#x202e;מועדים מיוחדים&#x202c; are made on the merits of the case, and not on the request or recommendation of the instructor</li>
-</ul></li>
-</ul></li>
+<li>While the look <i>is</i> drab, mainly because I know very little about graphical design</li>
+<li>The website is generated from org-mode in GNU Emacs</li>
+<li>Org-mode is powerful, and I've added support in GNU Emacs for typing in languages, so the combination of left-to-right language and &#x202e;שָׂפוֹת שֶׁנִּכְתָּבוֹת מִיָּמִין לִשְׂמֹאל, או كِتَابَتْهَا مِن الْيَمِين إلَى الْيَسَار&#x202c; is accomplished simply and accurately</li>
+<li>The website is currently (as of 2021) being updated rapidly, and more material is added weekly</li>
 </ul>
 
 <p>
-For all other matters, please fill in the <a href="https://cs-sr.cs.bgu.ac.il/"><i>Student Request Form</i> (&#x202e;מערכת פניות הסטודנטים&#x202c;)</a>
+So please give the website a second look&#x2026; &#9786;
 </p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Mayer Goldberg</p>
-<p class="date">Created: 2023-08-10 Thu 02:15</p>
+<p class="author">Author: Mayer Goldberg (&#x202e;מֵאִיר גּוֹלְדְּבֵּרְג&#x202c;)</p>
+<p class="date">Created: 2023-08-10 Thu 02:13</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
