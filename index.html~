@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-04 Sun 01:51 -->
+<!-- 2021-04-04 Sun 01:52 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Mayer Goldberg's Homepage (&#x202e;מֵאִיר גּוֹלְדְּבֵּרְג&#x202c;)</title>
@@ -248,13 +248,13 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org589dea3">1. Contact Information</a></li>
-<li><a href="#orga9b40c0">2. Research</a></li>
-<li><a href="#org3e12189">3. Teaching</a></li>
-<li><a href="#org8b96246">4. Departmental duties</a></li>
-<li><a href="#orgf588eb8">5. Personal Interests</a></li>
-<li><a href="#org339b133">6. <i>This website has a seriously drab look, that was outdated already back in the 1990's&#x2026;!</i></a></li>
-<li><a href="#org6957fab">7. <i>This website is seriously out-of-date&#x2026;!</i></a></li>
+<li><a href="#org56dfb29">1. Contact Information</a></li>
+<li><a href="#org8bb8a3c">2. Research</a></li>
+<li><a href="#org5483131">3. Teaching</a></li>
+<li><a href="#org0f42154">4. Departmental duties</a></li>
+<li><a href="#org73041e8">5. Personal Interests</a></li>
+<li><a href="#org2d2942c">6. <i>This website has a seriously drab look, that was outdated already back in the 1990's&#x2026;!</i></a></li>
+<li><a href="#orgbbc5afa">7. <i>This website is seriously out-of-date&#x2026;!</i></a></li>
 </ul>
 </div>
 </div>
@@ -271,8 +271,8 @@ regardless of whether or not it made money for anybody?
 </p>
 </blockquote>
 
-<div id="outline-container-org589dea3" class="outline-2">
-<h2 id="org589dea3"><span class="section-number-2">1</span> Contact Information</h2>
+<div id="outline-container-org56dfb29" class="outline-2">
+<h2 id="org56dfb29"><span class="section-number-2">1</span> Contact Information</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li><b>Email:</b> <a href="mailto:gmayer@little-lisper.org">gmayer@little-lisper.org</a>. All email, from all other accounts,
@@ -292,12 +292,12 @@ Israel.</li>
 </div>
 </div>
 
-<div id="outline-container-orga9b40c0" class="outline-2">
-<h2 id="orga9b40c0"><span class="section-number-2">2</span> Research</h2>
+<div id="outline-container-org8bb8a3c" class="outline-2">
+<h2 id="org8bb8a3c"><span class="section-number-2">2</span> Research</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org92b208a" class="outline-3">
-<h3 id="org92b208a"><span class="section-number-3">2.1</span> Research Interests</h3>
+<div id="outline-container-org9ce1ae4" class="outline-3">
+<h3 id="org9ce1ae4"><span class="section-number-3">2.1</span> Research Interests</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>The Lambda Calculus</li>
@@ -314,19 +314,19 @@ Israel.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org58f0020" class="outline-3">
-<h3 id="org58f0020"><span class="section-number-3">2.2</span> Research Students</h3>
+<div id="outline-container-orgcf3f366" class="outline-3">
+<h3 id="orgcf3f366"><span class="section-number-3">2.2</span> Research Students</h3>
 <div class="outline-text-3" id="text-2-2">
 </div>
 <ol class="org-ol">
-<li><a id="orge208123"></a>Present research students<br />
+<li><a id="org964958b"></a>Present research students<br />
 <div class="outline-text-4" id="text-2-2-1">
 <ul class="org-ul">
 <li>Lior Zur-Lotan (MSc, 2021)</li>
 </ul>
 </div>
 </li>
-<li><a id="org173003c"></a>Past research students<br />
+<li><a id="org4a67cf1"></a>Past research students<br />
 <div class="outline-text-4" id="text-2-2-2">
 <ul class="org-ul">
 <li>Valery Frolov (MSc, 2012)</li>
@@ -344,8 +344,8 @@ Israel.</li>
 </div>
 </div>
 
-<div id="outline-container-org3e12189" class="outline-2">
-<h2 id="org3e12189"><span class="section-number-2">3</span> Teaching</h2>
+<div id="outline-container-org5483131" class="outline-2">
+<h2 id="org5483131"><span class="section-number-2">3</span> Teaching</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li><i>Introduction to Functional Programming</i>, Spring 2021</li>
@@ -357,8 +357,8 @@ Israel.</li>
 </div>
 </div>
 
-<div id="outline-container-org8b96246" class="outline-2">
-<h2 id="org8b96246"><span class="section-number-2">4</span> Departmental duties</h2>
+<div id="outline-container-org0f42154" class="outline-2">
+<h2 id="org0f42154"><span class="section-number-2">4</span> Departmental duties</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li><a href="./tc.html"><i>Teaching Committee</i></a> for years 2&#x2013;4 (&#x202e;ועדת הוראה, שנים ב–ד&#x202c;)</li>
@@ -366,8 +366,8 @@ Israel.</li>
 </div>
 </div>
 
-<div id="outline-container-orgf588eb8" class="outline-2">
-<h2 id="orgf588eb8"><span class="section-number-2">5</span> Personal Interests</h2>
+<div id="outline-container-org73041e8" class="outline-2">
+<h2 id="org73041e8"><span class="section-number-2">5</span> Personal Interests</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li><a href="./proglang/proglang.html">Learning interesting programming languages</a></li>
@@ -381,8 +381,8 @@ Israel.</li>
 </div>
 </div>
 
-<div id="outline-container-org339b133" class="outline-2">
-<h2 id="org339b133"><span class="section-number-2">6</span> <i>This website has a seriously drab look, that was outdated already back in the 1990's&#x2026;!</i></h2>
+<div id="outline-container-org2d2942c" class="outline-2">
+<h2 id="org2d2942c"><span class="section-number-2">6</span> <i>This website has a seriously drab look, that was outdated already back in the 1990's&#x2026;!</i></h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li>While the look <i>is</i> drab, mainly because I know very little about graphical design</li>
@@ -397,8 +397,8 @@ So please give the website a second look&#x2026; &#9786;
 </div>
 </div>
 
-<div id="outline-container-org6957fab" class="outline-2">
-<h2 id="org6957fab"><span class="section-number-2">7</span> <i>This website is seriously out-of-date&#x2026;!</i></h2>
+<div id="outline-container-orgbbc5afa" class="outline-2">
+<h2 id="orgbbc5afa"><span class="section-number-2">7</span> <i>This website is seriously out-of-date&#x2026;!</i></h2>
 <div class="outline-text-2" id="text-7">
 <p>
 My apologies!
@@ -412,7 +412,7 @@ As of around 2014 and until very recently, I was having difficulties updating an
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Mayer Goldberg (&#x202e;מֵאִיר גּוֹלְדְּבֵּרְג&#x202c;)</p>
-<p class="date">Created: 2021-04-04 Sun 01:51</p>
+<p class="date">Created: 2021-04-04 Sun 01:52</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
