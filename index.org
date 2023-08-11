@@ -41,19 +41,9 @@ regardless of whether or not it made money for anybody?
 * Teaching
 - /Introduction to Compiler Construction/, Fall 2023
 - /Introduction to the Lambda Calculus & Combinatory Logic/, Spring 2024
-- [[./tutorials.html][My tutorials]]
-- [[./special.html][My policies on extensions, exemptions & special requests]]
-- [[./projects.html][Undergraduate projects I am offering ({{{rtl(פרוייקטים לתואר ראשון)}}})]]
 
 * Departmental duties
 - [[./tc.html][/Teaching Committee/]] for years 2--4 ({{{rtl(ועדת הוראה\, שנים ב–ד)}}})
-
-* Personal Interests
-- [[./proglang/proglang.html][Learning interesting programming languages]]
-- [[./personal/books.html][Books]]
-- Languages
-  - [[./personal/arabic.html][Arabic]]
-  - [[./personal/latin.html][Latin]]
 
 * /This website has a seriously drab look, that was outdated already back in the 1990's...!/
 
