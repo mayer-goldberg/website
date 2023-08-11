@@ -43,7 +43,7 @@ regardless of whether or not it made money for anybody?
 - /Introduction to the Lambda Calculus & Combinatory Logic/, Spring 2024
 
 * Departmental duties
-- [[./tc.html][/Teaching Committee/]] for years 2--4 ({{{rtl(ועדת הוראה\, שנים ב–ד)}}})
+- [[./tc.html][/The Unergraduate Teaching Committee/]] for years 2--4 ({{{rtl(ועדת הוראה\, שנים ב–ד)}}})
 
 * /This website has a seriously drab look, that was outdated already back in the 1990's...!/
 
