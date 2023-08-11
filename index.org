@@ -50,7 +50,7 @@ regardless of whether or not it made money for anybody?
 - While the look /is/ drab, mainly because I know very little about graphical design
 - The website is generated from org-mode in GNU Emacs
 - Org-mode is powerful, and I've added support in GNU Emacs for typing in languages, so the combination of left-to-right language and {{{rtl(שָׂפוֹת שֶׁנִּכְתָּבוֹת מִיָּמִין לִשְׂמֹאל\, או كِتَابَتْهَا مِن الْيَمِين إلَى الْيَسَار)}}} is accomplished simply and accurately
-- The website is currently (as of 2021) being updated rapidly, and more material is added weekly
+- The website is currently (as of 2023) being updated rapidly, and more material is added weekly
 
 So please give the website a second look... \smiley
 
