@@ -235,26 +235,26 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgb0fce97">1. Colloquial Levantine Arabic (&#x202e;ערבית מדוברת של המזרח הקרוב (סוריה הגדולה)&#x202c;, &#x202e;عامية شامي&#x202c;)</a></li>
-<li><a href="#org7418b9c">2. Modern Standard Arabic (<i>in planning</i>)</a></li>
+<li><a href="#org6a9b90c">1. Colloquial Levantine Arabic (&#x202e;ערבית מדוברת של המזרח הקרוב (סוריה הגדולה)&#x202c;, &#x202e;عامية شامي&#x202c;)</a></li>
+<li><a href="#org9a2e5bf">2. Modern Standard Arabic (<i>in planning</i>)</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgb0fce97" class="outline-2">
-<h2 id="orgb0fce97"><span class="section-number-2">1</span> Colloquial Levantine Arabic (&#x202e;ערבית מדוברת של המזרח הקרוב (סוריה הגדולה)&#x202c;, &#x202e;عامية شامي&#x202c;)</h2>
+<div id="outline-container-org6a9b90c" class="outline-2">
+<h2 id="org6a9b90c"><span class="section-number-2">1</span> Colloquial Levantine Arabic (&#x202e;ערבית מדוברת של המזרח הקרוב (סוריה הגדולה)&#x202c;, &#x202e;عامية شامي&#x202c;)</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Colloquial Levantine Arabic is a collection of closely-related dialects in use in what used to be called <i>the Greater Syria</i>, or Sham &#x202e;شام&#x202c;. This area includes Lebanon, Syria, Jordan, Israel, the West Bank, Gaza Strip. Historically, it also includes Iraq, although Colloquial Iraqi is a very different dialect, strongly influenced by Persian and Turkish. While I'm picking up some phonetics, and vocabulary from other dialects, the Levantine dialect is currently my main focus when learning Colloquial Arabic.
 </p>
 </div>
 
-<div id="outline-container-org3f29cbb" class="outline-3">
-<h3 id="org3f29cbb"><span class="section-number-3">1.1</span> Timeline</h3>
+<div id="outline-container-org9c5c104" class="outline-3">
+<h3 id="org9c5c104"><span class="section-number-3">1.1</span> Timeline</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
 <ol class="org-ol">
-<li><a id="org685ca89"></a><span class="timestamp-wrapper"><span class="timestamp">&lt;2023-09-21 Thu&gt;</span></span><br />
+<li><a id="org00a32bd"></a><span class="timestamp-wrapper"><span class="timestamp">&lt;2023-09-21 Thu&gt;</span></span><br />
 <div class="outline-text-4" id="text-1-1-1">
 <p>
 My cardfile now stands at 4261 cards. I've added some 230+ cards since the start of the month. This is actually kind of disappointing. I was hoping for more like 1000+ cards, but that didn't happen. I need to step up the pace befor e the semester commences.
@@ -269,7 +269,7 @@ I've created my own customized Arabic keyboard input-method for GNU Emacs. I lov
 </p>
 
 <p>
-I've come to realize that I'm mispronouncing words, confusing the &#x202e;ح، خ&#x202c;, &#x202e;ت، ط&#x202c;, which are conflated in Hebrew, and &#x202e;ذ، ظ&#x202c;, which are not present in Hebrew, as well as dropping long vowels. This is as dangerous a prospect in Arabic as are dropping tone marks in Chinese or Vietnamese. There's a big difference between &#x202e;حارة&#x202c; (<i>neighbourhood</i>), &#x202e;خرا&#x202c; (<i>shit</i>), although in some neighbourhoods people are less prone to pick up after their dogs&#x2026; And then there is &#x202e;حارّة&#x202c; (which is the feminine adjective <i>spicy hot</i>). To remedy this problem, I'm writing out the cards for each lesson. This takes longer, and means I'm not studying as many cards, but on the other hand, studying seems to be more effective.
+I've come to realize that I'm mispronouncing words, confusing the &#x202e;ح، خ&#x202c;, &#x202e;ت، ط&#x202c;, which are conflated in Hebrew, and &#x202e;ذ، ظ&#x202c;, which are not present in Hebrew, as well as dropping long vowels. This is as dangerous a prospect in Arabic as are dropping tone marks in Chinese or Vietnamese. There's a big difference between &#x202e;حارة&#x202c; (<i>neighbourhood</i>), &#x202e;خرا&#x202c; (<i>shit</i>), although in some neighbourhoods people are less inclined to pick up after their dogs&#x2026; And then there is &#x202e;حارّة&#x202c; (which is the feminine adjective <i>spicy hot</i>). To remedy this problem, I'm writing out the cards for each lesson. This takes longer, and means I'm not studying as many cards, but on the other hand, studying seems to be more effective.
 </p>
 </div>
 </li>
@@ -277,8 +277,8 @@ I've come to realize that I'm mispronouncing words, confusing the &#x202e;ح، �
 </div>
 </div>
 
-<div id="outline-container-org7418b9c" class="outline-2">
-<h2 id="org7418b9c"><span class="section-number-2">2</span> Modern Standard Arabic (<i>in planning</i>)</h2>
+<div id="outline-container-org9a2e5bf" class="outline-2">
+<h2 id="org9a2e5bf"><span class="section-number-2">2</span> Modern Standard Arabic (<i>in planning</i>)</h2>
 </div>
 </div>
 <div id="postamble" class="status">
