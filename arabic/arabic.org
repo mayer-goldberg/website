@@ -7,4 +7,6 @@
 
 * Colloquial Levantine Arabic ({{{rtl{ערבית מדוברת של המזרח הקרוב}}}}, {{{rtl{عامية شامي}}}})
 
+Colloquial Levantine Arabic is a collection of dialects in use in what used to be called /the Greater Syria/, or Sham {{{rtl{شام}}}}. This area includes Lebanon, Syria, Jordan, Israel, the West Bank, Gaza Strip. Historically, it also includes Iraq, although Colloquial Iraqi is a very different dialect
+
 * Modern Standard Arabic (/in planning/)
