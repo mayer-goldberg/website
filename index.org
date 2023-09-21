@@ -3,7 +3,7 @@
 #+email: gmayer@little-lisper.org
 #+options: creator:nil, toc:1
 #+options: h:2
-#+keywords: Mayer Goldberg, Department of Computer Science, Ben-Gurion University, lambda calculus, combinatory logic, pi-calculus, functional programming, coq, proof assistant, nuprl, object-oriented programming, Scheme, ML, Erlang, Lua, Smalltalk, continuations, interpreters, compilers, decompilation, compilation, code obfuscation, programming languages, semantics, threaded code, forth, latin, israel, israeli police, lying cops, israeli police lying
+#+keywords: Mayer Goldberg, Department of Computer Science, Ben-Gurion University, lambda calculus, combinatory logic, pi-calculus, functional programming, coq, proof assistant, nuprl, object-oriented programming, Scheme, ML, Erlang, Lua, Smalltalk, continuations, interpreters, compilers, decompilation, compilation, code obfuscation, programming languages, semantics, threaded code, forth, latin, israel
 
 #+begin_quote
 Everybody seems to understand that astronomers do astronomy because
@@ -44,7 +44,8 @@ regardless of whether or not it made money for anybody?
 
 * Departmental duties
 - [[./tc.html][/The Unergraduate Teaching Committee/]] for years 2--4 ({{{rtl(ועדת הוראה\, שנים ב–ד)}}})
-
+* Personal interests
+- [[./languages.html][Learning languages]]
 * /This website has a seriously drab look, that was outdated already back in the 1990's...!/
 
 - While the look /is/ drab, mainly because I know very little about graphical design
