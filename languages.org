@@ -15,8 +15,11 @@
 - Coptic
 - Syriac
 - Yiddish
+- Vietnamese
 
 * Languages I've learnt in the past
+- Russian
+- Mandarin Chinese
 - Latin
 - Greek
 - German
