@@ -5,8 +5,8 @@
 #+options: h:2
 #+keywords: Mayer Goldberg, Department of Computer Science, Ben-Gurion University, learning languages, arabic
 
-* Colloquial Levantine Arabic ({{{rtl{ערבית מדוברת של המזרח הקרוב}}}}, {{{rtl{عامية شامي}}}})
+* Colloquial Levantine Arabic ({{{rtl(ערבית מדוברת של המזרח הקרוב (סוריה הגדולה))}}}, {{{rtl(عامية شامي)}}})
 
-Colloquial Levantine Arabic is a collection of closely-related dialects in use in what used to be called /the Greater Syria/, or Sham {{{rtl{شام}}}}. This area includes Lebanon, Syria, Jordan, Israel, the West Bank, Gaza Strip. Historically, it also includes Iraq, although Colloquial Iraqi is a very different dialect, strongly influenced by Persian and Turkish. While I'm picking up some phonetics, and vocabulary from other dialects, the Levantine dialect is currently my main focus when learning Colloquial Arabic.
+Colloquial Levantine Arabic is a collection of closely-related dialects in use in what used to be called /the Greater Syria/, or Sham {{{rtl(شام)}}}. This area includes Lebanon, Syria, Jordan, Israel, the West Bank, Gaza Strip. Historically, it also includes Iraq, although Colloquial Iraqi is a very different dialect, strongly influenced by Persian and Turkish. While I'm picking up some phonetics, and vocabulary from other dialects, the Levantine dialect is currently my main focus when learning Colloquial Arabic.
 
 * Modern Standard Arabic (/in planning/)
