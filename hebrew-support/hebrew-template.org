@@ -1,0 +1,13 @@
+#+title: {{{rtl(דוגמא לעברית)}}}
+#+author: ‪\rle{}מֵאִיר גּוֹלְדְבֶּרְג\pdf
+#+options: creator:nil, toc:1
+#+keywords: Mayer Goldberg, מאיר גולדברג
+#+html_head: <link rel="stylesheet" type="text/css" href="http://www.little-lisper.org/hebrew-support/gmayer-org-mode-web.css" />
+
+#+begin_html
+<script src="gmayer-org-mode-web.js"></script>
+#+end_html
+
+* דוגמא
+
+וזו דוגמא לטכסט בעברית
