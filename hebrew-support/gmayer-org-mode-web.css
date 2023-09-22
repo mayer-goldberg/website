@@ -23,12 +23,11 @@ p {
 }
 
 .arabic-head {
-    font-family: 'Aref Ruqaa';
-    font-style: normal;
+    font-family: Aref Ruqaa, sans-serif;
 }
 
 .arabic-text {
-    font-family: 'Amiri';
+    font-family: Amiri, serif;
 }
 
 .ltr {
