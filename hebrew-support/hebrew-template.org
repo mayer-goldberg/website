@@ -3,7 +3,6 @@
 #+options: creator:nil, toc:1
 #+keywords: Mayer Goldberg, מאיר גולדברג
 #+html_head: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew">
-#+html_head: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Secular+One">
 #+html_head: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=David+Libre">
 #+html_head: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa">
 #+html_head: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic">
