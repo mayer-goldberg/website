@@ -236,19 +236,14 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org1c57b55">1. דוגמא</a></li>
+<li><a href="#orge5227bd">1. דוגמא</a></li>
 </ul>
 </div>
 </div>
-<div class="html">
-<p>
-&lt;script src="<a href="http://www.little-lisper.org/website/hebrew-support/gmayer-org-mode-web.js">http://www.little-lisper.org/website/hebrew-support/gmayer-org-mode-web.js</a>"&gt;&lt;/script&gt;
-</p>
+<script src="http://www.little-lisper.org/website/hebrew-support/gmayer-org-mode-web.js"></script>
 
-</div>
-
-<div id="outline-container-org1c57b55" class="outline-2">
-<h2 id="org1c57b55"><span class="section-number-2">1</span> דוגמא</h2>
+<div id="outline-container-orge5227bd" class="outline-2">
+<h2 id="orge5227bd"><span class="section-number-2">1</span> דוגמא</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 וזו דוגמא לטכסט בעברית

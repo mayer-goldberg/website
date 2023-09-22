@@ -2,10 +2,10 @@
 #+author: ‪\rle{}מֵאִיר גּוֹלְדְבֶּרְג\pdf
 #+options: creator:nil, toc:1
 #+keywords: Mayer Goldberg, מאיר גולדברג
-#+html_head: <link rel="stylesheet" type="text/css" href="http://www.little-lisper.org/website/hebrew-support/gmayer-org-mode-web.css" />
+#+html_head: <link rel="stylesheet" type="text/css" href="https://mayer-goldberg.github.io/website/hebrew-support/gmayer-org-mode-web.css" />
 
 #+begin_export html
-<script src="http://www.little-lisper.org/website/hebrew-support/gmayer-org-mode-web.js"></script>
+<script src="https://mayer-goldberg.github.io/website/hebrew-support/gmayer-org-mode-web.js"></script>
 #+end_export
 
 * דוגמא
