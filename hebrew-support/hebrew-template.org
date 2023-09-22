@@ -15,7 +15,7 @@
 וזו דוגמא לטכסט בעברית. האם ניתן להכניס شوي عربيّة؟
 
 #+begin_export html
-<p.arabic>
+<p class="arabic">
 بسم الله الرحمن الرحيم
-</p.arabic>
+</p>
 #+end_export
