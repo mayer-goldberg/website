@@ -13,7 +13,7 @@
 
 * דוגמא
 
-וזו דוגמא לטכסט בעברית. האם ניתן להכניס @@html:<span="arabic">شوي عربيّة؟</span>@@
+וזו דוגמא לטכסט בעברית. האם ניתן להכניס @@html:<span class="arabic">شوي عربيّة؟</span>@@
 
 #+begin_export html
 <p class="arabic">
