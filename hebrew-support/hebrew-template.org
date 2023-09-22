@@ -1,5 +1,5 @@
 #+title: {{{rtl(דוגמא לעברית)}}}
-#+author: ‪\rle{}מֵאִיר גּוֹלְדְבֶּרְג\pdf
+#+author: ‪{{{rtl(מֵאִיר גּוֹלְדְבֶּרְג)}}}
 #+options: creator:nil, toc:1
 #+keywords: Mayer Goldberg, מאיר גולדברג
 #+html_head: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=David+Libre">
@@ -12,9 +12,3 @@
 * דוגמא
 
 וזו דוגמא לטכסט בעברית. האם ניתן להכניס شوي عربيّة؟
-
-#+begin_export html
-<span style="font-family: David Libre;">
-שלום רב שובך צפורה נחמדת
-</span>
-#+end_export
