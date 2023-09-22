@@ -3,17 +3,17 @@ body, p, table, tr, td {
 }
 
 h1 {
-    font-family: 'Noto Sans Hebrew', sans-serif;
+    font-family: sans-serif;
     font-size: 48px;
 }
 
 h2 {
-    font-family: 'Noto Sans Hebrew', sans-serif;
+    font-family: sans-serif;
     font-size: 42px;
 }
 
 h3 {
-    font-family: 'Noto Sans Hebrew', sans-serif;
+    font-family: sans-serif;
     font-size: 36px;
 }
 
