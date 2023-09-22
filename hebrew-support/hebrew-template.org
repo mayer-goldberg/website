@@ -2,7 +2,7 @@
 #+author: ‪\rle{}מֵאִיר גּוֹלְדְבֶּרְג\pdf
 #+options: creator:nil, toc:1
 #+keywords: Mayer Goldberg, מאיר גולדברג
-#+html_head: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=David">
+#+html_head: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=David+Libre">
 #+html_head: <link rel="stylesheet" type="text/css" href="https://mayer-goldberg.github.io/website/hebrew-support/gmayer-org-mode-web.css" />
 
 #+begin_export html
