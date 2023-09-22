@@ -2,6 +2,21 @@ body, p, table, tr, td {
   direction:rtl!important;
 }
 
+h1 {
+    font-family: 'Noto Sans Hebrew';
+    font-size: 48px;
+}
+
+h2 {
+    font-family: 'Noto Sans Hebrew';
+    font-size: 42px;
+}
+
+h3 {
+    font-family: 'Noto Sans Hebrew';
+    font-size: 36px;
+}
+
 p {
     font-family: 'David Libre';
     font-size: 28px;
