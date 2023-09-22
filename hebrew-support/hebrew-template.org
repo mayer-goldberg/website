@@ -14,10 +14,10 @@
 
 * דוגמא
 
-וזו דוגמא לטכסט בעברית. האם ניתן להכניס @@html:<span class="arabic-text">شوي عربيّة؟</span>@@ 
+וזו דוגמא לטכסט בעברית. האם ניתן להכניס @@html:<span class="naskh">شوي عربيّة؟</span>@@ וגם @@html:<span class="ruqaa">شوي عربيّة؟</span>@@ 
 
 #+begin_export html
-<p class="arabic-head" style="font-size: 48px;">
+<p class="ruqaa" style="font-size: 48px;">
 بسم الله الرحمن الرحيم
 </p>
 #+end_export
