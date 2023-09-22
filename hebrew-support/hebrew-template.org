@@ -14,7 +14,7 @@
 
 * דוגמא
 
-וזו דוגמא לטכסט בעברית. האם ניתן להכניס @@html:<span class="arabic">شوي عربيّة؟</span>@@ ומה קורה כאן: @@html:<span style="font-family: 'Dana Yad'; font-size: 60">שלום!</span>@@
+וזו דוגמא לטכסט בעברית. האם ניתן להכניס @@html:<span class="arabic-text">شوي عربيّة؟</span>@@ ומה קורה כאן: @@html:<span style="font-family: 'Dana Yad'; font-size: 60">שלום!</span>@@
 
 #+begin_export html
 <p class="arabic-head" style="font-size: 48px;">
