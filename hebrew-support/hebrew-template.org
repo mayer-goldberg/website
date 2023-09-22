@@ -12,3 +12,9 @@
 * דוגמא
 
 וזו דוגמא לטכסט בעברית. האם ניתן להכניס شوي عربيّة؟
+
+#+begin_export html
+<span style="font-family: David Libre;">
+שלום רב שובך צפורה נחמדת
+</span>
+#+end_export

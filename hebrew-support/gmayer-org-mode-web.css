@@ -2,6 +2,10 @@ body, p, table, tr, td {
   direction:rtl!important;
 }
 
+p {
+    font-family: David Libre;
+}
+
 .ltr {
   direction:ltr!important;
   text-align:left!important;
