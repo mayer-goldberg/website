@@ -4,12 +4,11 @@ body, p, table, tr, td {
 
 p {
     font-family: 'David Libre';
-    font-size: 24px;
+    font-size: 28px;
 }
 
-p.arabic {
+.arabic {
     font-family: 'Noto Naskh Arabic';
-    font-size: 28px;
 }
 
 .ltr {
@@ -17,7 +16,7 @@ p.arabic {
   text-align:left!important;
 }
 
-#rle {
+.rle {
   direction:rtl!important;
   unicode-bidi:embed!important;
 }
