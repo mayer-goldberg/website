@@ -5,6 +5,7 @@
 #+html_head: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew">
 #+html_head: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Secular+One">
 #+html_head: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=David+Libre">
+#+html_head: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa">
 #+html_head: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic">
 #+html_head: <link rel="stylesheet" type="text/css" href="https://mayer-goldberg.github.io/website/hebrew-support/gmayer-org-mode-web.css" />
 
@@ -17,7 +18,7 @@
 וזו דוגמא לטכסט בעברית. האם ניתן להכניס @@html:<span class="arabic">شوي عربيّة؟</span>@@ ומה קורה כאן: @@html:<span style="font-family: 'Dana Yad'; font-size: 60">שלום!</span>@@
 
 #+begin_export html
-<p class="arabic">
+<p class="arabic-head" style="font-size: 48px;">
 بسم الله الرحمن الرحيم
 </p>
 #+end_export

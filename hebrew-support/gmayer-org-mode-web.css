@@ -22,7 +22,11 @@ p {
     font-size: 28px;
 }
 
-.arabic {
+.arabic-head {
+    font-family: 'Aref Ruqaa';
+}
+
+.arabic-text {
     font-family: 'Noto Naskh Arabic';
 }
 
