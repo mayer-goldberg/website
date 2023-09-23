@@ -53,6 +53,7 @@ p {
     position: relative;
 }
 .shaddeh::before {
+    font-family: 'Noto Naskh Arabic', serif;
     content: 'ﹼ';
     position: absolute;
     top: -0.3em;
