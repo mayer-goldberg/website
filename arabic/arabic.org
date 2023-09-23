@@ -7,6 +7,7 @@
 #+html_head: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=David+Libre">
 #+html_head: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic">
 #+html_head: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa">
+#+html_head: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri">
 #+html_head: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT">
 #+html_head: <link rel="stylesheet" type="text/css" href="https://mayer-goldberg.github.io/website/hebrew-support/gmayer-org-mode-web.css" />
 
@@ -20,19 +21,21 @@
 - [[https://milon.madrasafree.com/][המלון המקוון של *מדרסה* לערבית מדוברת]]. המלון פותח, מומש, ותוחזק על ידי [[https://rothfarb.info/][*רונן רוטפרב*]]. ברבות השנים, רונן העביר את הפרוייקט [[https://madrasafree.com/][לבית הספר *מדרסה* לערבית]], ואלו מתחזקים אותו כעת.
 
 ** תרגומים אינטרלינאריים
-* ערבית מדוברת בניב של המזרח הקרוב (ניב שָׁאמִי, {{{ruqaa(عامية شامي)}}})
+* ערבית מדוברת בניב של המזרח־הקרוב (ניב שָׁאמִי), {{{ruqaa(عامية شامية)}}}
 
-ערבית מדוברת של המזרח הקרוב היא אוסף של להגים המדוברים באיזור שהיסטורית נקרא בשם *סוריה הגדולה*, או שָׁאם ({{{ruqaa(شام)}}}). האיזור כולל את לבנון, סוריה, ירדן, ישראל, הגדה המערבית, ורצועת עזה. מבחינה היסטורית, *סוריה הגדולה* כוללת גם את עיראק, אבל ערבית מדוברת עיראקית שונה מאד משאר הלהגים של *סוריה הגדולה*, וכולל השפעות רבות מפרסית ותורכית, ולכן מקובל שלא לכלול אותו בלהגים של *סוריה הגדולה*, אלא להתייחס אליו כלהג נפרד.
+ערבית מדוברת של המזרח הקרוב היא אוסף של להגים המדוברים באיזור שהיסטורית נקרא בשם *סוריה הגדולה*, או שָׁאם ({{{naskh(شام)}}}). האיזור כולל את לבנון, סוריה, ירדן, ישראל, הגדה המערבית, ורצועת עזה. מבחינה היסטורית, *סוריה הגדולה* כוללת גם את עיראק, אבל ערבית מדוברת עיראקית שונה מאד משאר הלהגים של *סוריה הגדולה*, וכולל השפעות רבות מפרסית ותורכית, ולכן מקובל שלא לכלול אותו בלהגים של *סוריה הגדולה*, אלא להתייחס אליו כלהג נפרד.
 
 ** Timeline
 *** <2023-09-21 Thu> 
 
-My cardfile now stands at 4261 cards. I've added some 230+ cards since the start of the month. This is actually kind of disappointing. I was hoping for more like 1000+ cards, but that didn't happen. I need to step up the pace befor e the semester commences.
+הכרטסת שלי כוללת 4261 כרטיסים. הוספתי 230+ כרטיסים מאז תחילת החודש. זה קצת מאכזב. קיוויתי שאוכל להוסיף מעל לאלף כרטיסים חדשים, ולא קרה. אני צריך להגביר את הקצב לפני תחילת הסמסטר.
 
-Learned to type the short vowels ({{{ruqaa(حَرَكات)}}}) on the standard Arabic keyboard
+יצרתי מקלדת וירטואלית לערבית עבור העורך שלי, אימקס. אני מאד אוהב את המקלדת הזאת משום שהיא מבוססת על מקלדת ה־{{{latin(Sholes\, QWERTY)}}} הסטנדרטית לאנגלית, שאני כבר מכיר היטב. היא תומכת היטב בניקוד, והרחבות של האלף־בית הערבי ({{{naskh(پ، ڤ، گ)}}}), ומנגישה סימנים מיוניקוד ערבי שבדרך כלל אינם נתמכים על ידי המקלדת הסטנדרטית, ולמרות כל זה, קל לכתוב בה מהר ומדוייק. הבעיה היא שהמקלדת הזאת לא נתמכת לא על ידי הטלפון שלי ולא על ידי הלפטופ עצמו, אלא קיימת אך ורק מתוך אימקס, כך שכשאני עובד על הלפטופ, התרגלתי לעשות /{{{latin(copy-and-paste)}}}/ {{{qparen(١٢٣٤)}}}
 
-I've created my own customized Arabic keyboard input-method for GNU Emacs. I love my input-method because it is based on the standard QWERTY-layout, is very logical, and I can use it to type all sorts of weird stuff, including photetic extensions to Arabic ({{{ruqaa(پ، ڤ، گ)}}}) that are unavailable on standard Arabic keyboards, but that are necessary for loanwords and dialects. However, my input-method is only available from within GNU Emacs, so in effect, I am typing on *two* Arabic keyboards: The relatively standard one that comes with my linux computers and Android cellular phones, and the input-method I created for Emacs. If I'm ever going to type really quickly in Arabic, I'm going to have to abandon my beloved layout and focus on the standard layout, possibly with some special extensions for Emacs...
+למדתי להקליד את התנועות הקצרות (ניקוד, {{{naskh(حَرَكات)}}}) במקלדת הערבית הסטנדרטית. 
 
-I've come to realize that I'm mispronouncing words, confusing the {{{ruqaa(ح، خ)}}}, and {{{ruqaa(ت، ط)}}}, which are conflated in Hebrew, and {{{ruqaa(ذ، ظ)}}}, which are not present in Hebrew, as well as dropping long vowels. This is as dangerous a prospect in Arabic as are dropping tone marks in Chinese or Vietnamese. There's a big difference between {{{ruqaa(حارة)}}} (/neighbourhood/), {{{ruqaa(خرا)}}} (/shit/), although in some neighbourhoods people are less inclined to pick up after their dogs... And then there is {{{ruqaa(حارّة)}}} (which is the feminine adjective /spicy hot/). To remedy this problem, I'm writing out the cards for each lesson. This takes longer, and means I'm not studying as many cards, but on the other hand, studying seems to be more effective.
+I've created my own customized Arabic keyboard input-method for GNU Emacs. I love my input-method because it is based on the standard QWERTY-layout, is very logical, and I can use it to type all sorts of weird stuff, including photetic extensions to Arabic  that are unavailable on standard Arabic keyboards, but that are necessary for loanwords and dialects. However, my input-method is only available from within GNU Emacs, so in effect, I am typing on *two* Arabic keyboards: The relatively standard one that comes with my linux computers and Android cellular phones, and the input-method I created for Emacs. If I'm ever going to type really quickly in Arabic, I'm going to have to abandon my beloved layout and focus on the standard layout, possibly with some special extensions for Emacs...
 
-* Modern Standard Arabic (/in planning/)
+I've come to realize that I'm mispronouncing words, confusing the {{{naskh(ح، خ)}}}, and {{{naskh(ت، ط)}}}, which are conflated in Hebrew, and {{{naskh(ذ، ظ)}}}, which are not present in Hebrew, as well as dropping long vowels. This is as dangerous a prospect in Arabic as are dropping tone marks in Chinese or Vietnamese. There's a big difference between {{{naskh(حارة)}}} (/neighbourhood/), {{{naskh(خرا)}}} (/shit/), although in some neighbourhoods people are less inclined to pick up after their dogs... And then there is {{{naskh(حارّة)}}} (which is the feminine adjective /spicy hot/). To remedy this problem, I'm writing out the cards for each lesson. This takes longer, and means I'm not studying as many cards, but on the other hand, studying seems to be more effective.
+
+* {{{hebrew(ערבית ספרותית)}}}, {{{latin(MSA)}}}, {{{ruqaa(فصحة)}}}

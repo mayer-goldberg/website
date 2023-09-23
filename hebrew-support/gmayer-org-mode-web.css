@@ -25,6 +25,10 @@ p {
     direction: rtl;
 }
 
+.hebrew {
+    direction: rtl;
+}
+
 .ruqaa {
     font-family: 'Aref Ruqaa', sans-serif;
     direction: rtl;
@@ -36,6 +40,11 @@ p {
 }
 
 .russian {
+    font-family: 'Old Standard TT', serif;
+    direction: ltr;
+}
+
+.latin {
     font-family: 'Old Standard TT', serif;
     direction: ltr;
 }
