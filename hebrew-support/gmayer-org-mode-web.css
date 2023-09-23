@@ -63,10 +63,10 @@ p {
     position: relative;
 }
 .marboutah::before {
-    content: '̈';
+    content: 'ֵ';
     position: absolute;
-    top: -0.1em;
-    left: 0.3em;
+    top: -0.8em;
+    left: 0.08em;
 }
 
 .ltr {
