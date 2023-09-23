@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-09-23 Sat 14:54 -->
+<!-- 2023-09-23 Sat 19:18 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title><span class='hebrew'>לימוד ערבית</span></title>
@@ -241,64 +241,88 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8919ebe">1. משאבים</a></li>
-<li><a href="#org4f665b5">2. ערבית מדוברת בניב של המזרח־הקרוב (ניב שָׁאמִי), <span class='ruqaa'>عامية شامية</span></a></li>
-<li><a href="#org8c38a77">3. <span class='hebrew'>ערבית ספרותית</span>, <span class='latin'>MSA</span>, <span class='ruqaa'>فصحة</span></a></li>
+<li><a href="#orgbecfe85">1. משאבים</a></li>
+<li><a href="#orgf3cb111">2. ערבית מדוברת בניב של המזרח־הקרוב (ניב שָׁאמִי), <span class='ruqaa'>عامية شامية</span></a></li>
+<li><a href="#org41b453d">3. <span class='hebrew'>ערבית ספרותית</span>, <span class='latin'>MSA</span>, <span class='ruqaa'>فصحة</span></a></li>
 </ul>
 </div>
 </div>
 <script src="https://mayer-goldberg.github.io/website/hebrew-support/gmayer-org-mode-web.js"></script>
 
-<div id="outline-container-org8919ebe" class="outline-2">
-<h2 id="org8919ebe"><span class="section-number-2">1</span> משאבים</h2>
+<div id="outline-container-orgbecfe85" class="outline-2">
+<h2 id="orgbecfe85"><span class="section-number-2">1</span> משאבים</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgd2f7605" class="outline-3">
-<h3 id="orgd2f7605"><span class="section-number-3">1.1</span> ספרים</h3>
-</div>
-<div id="outline-container-org545abf2" class="outline-3">
-<h3 id="org545abf2"><span class="section-number-3">1.2</span> מלונים מקוונים</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-orgaeb390b" class="outline-3">
+<h3 id="orgaeb390b"><span class="section-number-3">1.1</span> ספרים</h3>
+<div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
-<li><a href="https://milon.madrasafree.com/">המלון המקוון של <b>מדרסה</b> לערבית מדוברת</a>. המלון פותח, מומש, ותוחזק על ידי <a href="https://rothfarb.info/"><b>רונן רוטפרב</b></a>. ברבות השנים, רונן העביר את הפרוייקט <a href="https://madrasafree.com/">לבית הספר <b>מדרסה</b> לערבית</a>, ואלו מתחזקים אותו כעת.</li>
+<li>הספרים של יוחנן אליחי
+<ul class="org-ul">
+<li>מה אני פחות אוהב בספרים של אליחי
+<ul class="org-ul">
+<li>אני פחות מתחבר לתעתיק שם, בעיקר משום שהוא מתעקש לבטא בתעתיק את השינויים הפונטיים שקורים בין מלים (כמו מושג הסנדהי, בסנסקריט), וזהיש כבר נקודה שממנה קשה לזהות מה המלים, וזה מאד מאט את הקריאה</li>
+<li>התעתיק הספציפי שאליחי משתמש בו כולל דברים שלא קיימים לא במקלדת ולא בפונטים רגילים. למשל הוא ישים את השדّה מעל לאותיות, ישים את הנקודותים של התא־מרבוטה̈ גם מעל האות <b>ה</b> וגם מעל לאות <b>ת</b> — שזה נוח בכתב, אבל סיוט בדפוס! ויש לו עוד כל מיני תוספות שאי אפשר לתמוך בהם מבלי להתאים פונט מיוחד ולתכנת תמיכה במקלדת…</li>
+<li>מלכתחילה מאד התלהבתי מהטיעונים של אליחי בעד התעתיק שלו ונגד השימוש באותיות ערביות לרישום ערבית מדוברת. כיום אני מתרשם מהם הרבה פחות. החברים הערבים שלי לא מתקשים להשתמש באותיות הערביות ובתנועות הסטנדרטיות על מנת לכתוב בערבית מדוברת. ההתעסקות באלף־בית הערבי מועיל, ומאפשר לי לבנות כתב יד, להתרגל לקריאה ולכתיבה מהירים, להתרגל להקלדה, ויוצרים בסיס טוב ללימוד ערבית ספרותית בהמשך. אני בהחלט מעדיף כיום את השימוש באותיות ערביות עם ההרחבות הידועות הלקוחות מפרסית, על מנת לתמוך במלים מלועזית, בלהג העיראקי, וכו'.</li>
+</ul></li>
+<li>מה אני אוהב בספרים של אליחי
+<ul class="org-ul">
+<li>הספרים מפורטים מאד. אליחי היה לקסיקוגרף לפני ולפנים, וכלל אינפורמציה דקדוקית, אינפורמציה על להגים מקומיים, המוני דוגמאות לשימושים של מלים ולתופעות דקדוקיות, וכמובן לוח פעלים לערבית מדוברת. המלונים של אליחי ממש לא דומים לרוב המלונים שאפשר לקנות בארץ, שהם רשימות מלים הכתובות בשתי עמודות: אחת בעברית, והשניה בשפה אחרת, ללא כל אינפורמציה דקדוקית או אחרת.</li>
+</ul></li>
+<li>רשימת הספרים
+<ul class="org-ul">
+<li><a href="https://minerva-books.com/cart/">המלון העברי־ערבי</a>: ספר נפלא. הכריכה רכה, הדפוס קצת מיושן ופחות קריא, ואוצר המלים גם הספיק להתיישן טיפה. עדיין אי אפשר ללא הספר הזה!</li>
+<li><a href="https://minerva-books.com/product/arabic-hebrew-complete-dictionary/">המלון הערבי־עברי</a>: ספר נפלא. כריכה קשה, הדפוס מודרני, הרבה יותר קריא וברור. מלון שימושי מאד.</li>
+<li>החוברות <a href="https://minerva-books.com/product/%D7%9C%D7%93%D7%91%D7%A8-%D7%A2%D7%A8%D7%91%D7%99%D7%AA-%D7%A7%D7%95%D7%A8%D7%A1-%D7%9C%D7%9C%D7%99%D7%9E%D7%95%D7%93-%D7%A2%D7%A6%D7%9E%D7%99/">לדבר ערבית</a>: החוברות קריאות מאד. אבל אני מעדיף ספרי לימוד קצת יותר פורמאליים, כלומר לא רק עם דיאלוגים ורשימות מלים, אלא עם קצת יותר הסברים דקדוקיים.</li>
+</ul></li>
+</ul></li>
+<li>המלון האטימולוגי לערבית מדוברת ולעברית מאת <b>אברהם שטאל</b> (כריכה קשה, שני כרכים): זה המלון השימושי ביותר שיש לי לערבית מדוברת. מפורט מאד, כולל המוני מלים ודוגמאות. כבר לא בדפוס, אבל אפשר עדיין למצוא אותו בחנויות לספרים משומשים. אין בו את כל העושר שיש במילונים של אליחי, ובכל זאת, יש לו אוצר מלים עדכני וגדול מאד.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org0d32cd5" class="outline-3">
-<h3 id="org0d32cd5"><span class="section-number-3">1.3</span> תרגומים אינטרלינאריים</h3>
+<div id="outline-container-orgb521eb4" class="outline-3">
+<h3 id="orgb521eb4"><span class="section-number-3">1.2</span> מלונים מקוונים</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li><a href="https://milon.madrasafree.com/">המלון המקוון של <b>מדרסה</b> לערבית מדוברת</a>. המלון פותח, מומש, ותוחזק על ידי <a href="https://rothfarb.info/"><b>רונן רוטפרב</b></a>. לאחר שנים שבהן ניהל את הפרוייקט לבדו, רונן העביר את הפרוייקט <a href="https://madrasafree.com/">לבית הספר <b>מדרסה</b> לערבית</a>, ואלו מתחזקים אותו כעת.</li>
+<li><a href="https://www.livingarabic.com/en">פרוייקט <i><span class='latin'>Living Arabic</span></i>, <span class='naskh'>لُغَتُنَا</span></a>, על־ידי <a href="https://www.patreon.com/user?u=80648765"><b>חוסאם אבוזאהר</b></a>. הפרוייקט הזה כולל ערבית ספרותית, וגם להגים שונים של ערבית מדוברת. הפרוייקט חי, מתפתח, וכל הזמן נוספים לו חומרים חדשים. המלון כולל דוגמאות רבות לשימוש במלים בלהגים השונים.</li>
+</ul>
 </div>
 </div>
-<div id="outline-container-org4f665b5" class="outline-2">
-<h2 id="org4f665b5"><span class="section-number-2">2</span> ערבית מדוברת בניב של המזרח־הקרוב (ניב שָׁאמִי), <span class='ruqaa'>عامية شامية</span></h2>
+
+<div id="outline-container-org6b1fb6c" class="outline-3">
+<h3 id="org6b1fb6c"><span class="section-number-3">1.3</span> תרגומים אינטרלינאריים</h3>
+</div>
+</div>
+<div id="outline-container-orgf3cb111" class="outline-2">
+<h2 id="orgf3cb111"><span class="section-number-2">2</span> ערבית מדוברת בניב של המזרח־הקרוב (ניב שָׁאמִי), <span class='ruqaa'>عامية شامية</span></h2>
 <div class="outline-text-2" id="text-2">
 <p>
 ערבית מדוברת של המזרח הקרוב היא אוסף של להגים המדוברים באיזור שהיסטורית נקרא בשם <b>סוריה הגדולה</b>, או שָׁאם (<span class='naskh'>شام</span>). האיזור כולל את לבנון, סוריה, ירדן, ישראל, הגדה המערבית, ורצועת עזה. מבחינה היסטורית, <b>סוריה הגדולה</b> כוללת גם את עיראק, אבל ערבית מדוברת עיראקית שונה מאד משאר הלהגים של <b>סוריה הגדולה</b>, וכולל השפעות רבות מפרסית ותורכית, ולכן מקובל שלא לכלול אותו בלהגים של <b>סוריה הגדולה</b>, אלא להתייחס אליו כלהג נפרד.
 </p>
 </div>
 
-<div id="outline-container-org864af9a" class="outline-3">
-<h3 id="org864af9a"><span class="section-number-3">2.1</span> Timeline</h3>
+<div id="outline-container-orgc899a93" class="outline-3">
+<h3 id="orgc899a93"><span class="section-number-3">2.1</span> Timeline</h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
 <ol class="org-ol">
-<li><a id="orgd6195a7"></a><span class="timestamp-wrapper"><span class="timestamp">&lt;2023-09-21 Thu&gt;</span></span><br />
+<li><a id="org750db5d"></a><span class="timestamp-wrapper"><span class="timestamp">&lt;2023-09-21 Thu&gt;</span></span><br />
 <div class="outline-text-4" id="text-2-1-1">
 <p>
 הכרטסת שלי כוללת 4261 כרטיסים. הוספתי 230+ כרטיסים מאז תחילת החודש. זה קצת מאכזב. קיוויתי שאוכל להוסיף מעל לאלף כרטיסים חדשים, ולא קרה. אני צריך להגביר את הקצב לפני תחילת הסמסטר.
 </p>
 
 <p>
-יצרתי מקלדת וירטואלית לערבית עבור העורך שלי, אימקס. אני מאד אוהב את המקלדת הזאת משום שהיא מבוססת על מקלדת ה־<span class='latin'>Sholes, QWERTY</span> הסטנדרטית לאנגלית, שאני כבר מכיר היטב. היא תומכת היטב בניקוד, והרחבות של האלף־בית הערבי (<span class='naskh'>پ، ڤ، گ</span>), ומנגישה סימנים מיוניקוד ערבי שבדרך כלל אינם נתמכים על ידי המקלדת הסטנדרטית, ולמרות כל זה, קל לכתוב בה מהר ומדוייק. הבעיה היא שהמקלדת הזאת לא נתמכת לא על ידי הטלפון שלי ולא על ידי הלפטופ עצמו, אלא קיימת אך ורק מתוך אימקס, כך שכשאני עובד על הלפטופ, התרגלתי לעשות <i><span class='latin'>copy-and-paste</span></i> <span class='naskh'><span style='font-face: Amiri; '>&#xfd3f;</span>١٢٣٤<span style='font-face: Amiri; '>#xfd3e;</span></span>
+יצרתי מקלדת וירטואלית לערבית עבור העורך שלי, אימקס. אני מאד אוהב את המקלדת הזאת משום שהיא מבוססת על מקלדת ה־<span class='latin'>Sholes, QWERTY</span> הסטנדרטית לאנגלית, שאני כבר מכיר היטב. היא תומכת היטב בניקוד, כולל בדברים "אקזוטיים" יותר כמו סימני ההפסקות בקריאה בקוראן, הארכת אותיות תוך שימוש ב־<span class='naskh'>تَطْويـــــــل</span>, וכו', והרחבות של האלף־בית הערבי (<span class='naskh'>پ، ڤ، گ</span>), ומנגישה סימנים מיוניקוד ערבי שבדרך כלל אינם נתמכים על ידי המקלדת הסטנדרטית, ולמרות כל זה, קל לכתוב בה מהר ומדוייק. הבעיה היא שהמקלדת הזאת לא נתמכת לא על ידי הטלפון שלי ולא על ידי הלפטופ עצמו, אלא קיימת אך ורק מתוך אימקס, כך שכשאני עובד על הלפטופ, התרגלתי לעשות <i><span class='latin'>copy-and-paste</span></i> לוואצאפ או לאתרים שונים או ב־<span class='latin'>shell</span>. אז כעת אני מקליד בשתי מקלדות ערביות שונות: הסטנדרטית [יחסית] שקיימת בלינוקס ובאנדרואיד, וזו שאני פיתחתי, שהיא נוחה מאד, שיש לה עקומת־למידה קטנה מאד ושקל להקליד בה מהר, אבל שזמינה רק באימקס… ובגלל שאני מקליד בשתי מקלדות, קשה לי לפתח מהירות ולצמצם טעויות… ולכן בצער רב אני מתחיל לרדת מהמקלדת המדהימה שפיתחתי, ומאמץ [בקור?] את המקלדת הסטנדרטית בערבית.
 </p>
 
 <p>
 למדתי להקליד את התנועות הקצרות (ניקוד, <span class='naskh'>حَرَكات</span>) במקלדת הערבית הסטנדרטית. 
 </p>
 
-<p>
-I've created my own customized Arabic keyboard input-method for GNU Emacs. I love my input-method because it is based on the standard QWERTY-layout, is very logical, and I can use it to type all sorts of weird stuff, including photetic extensions to Arabic  that are unavailable on standard Arabic keyboards, but that are necessary for loanwords and dialects. However, my input-method is only available from within GNU Emacs, so in effect, I am typing on <b>two</b> Arabic keyboards: The relatively standard one that comes with my linux computers and Android cellular phones, and the input-method I created for Emacs. If I'm ever going to type really quickly in Arabic, I'm going to have to abandon my beloved layout and focus on the standard layout, possibly with some special extensions for Emacs&#x2026;
-</p>
+
 
 <p>
 I've come to realize that I'm mispronouncing words, confusing the <span class='naskh'>ح، خ</span>, and <span class='naskh'>ت، ط</span>, which are conflated in Hebrew, and <span class='naskh'>ذ، ظ</span>, which are not present in Hebrew, as well as dropping long vowels. This is as dangerous a prospect in Arabic as are dropping tone marks in Chinese or Vietnamese. There's a big difference between <span class='naskh'>حارة</span> (<i>neighbourhood</i>), <span class='naskh'>خرا</span> (<i>shit</i>), although in some neighbourhoods people are less inclined to pick up after their dogs&#x2026; And then there is <span class='naskh'>حارّة</span> (which is the feminine adjective <i>spicy hot</i>). To remedy this problem, I'm writing out the cards for each lesson. This takes longer, and means I'm not studying as many cards, but on the other hand, studying seems to be more effective.
@@ -309,13 +333,13 @@ I've come to realize that I'm mispronouncing words, confusing the <span class='n
 </div>
 </div>
 
-<div id="outline-container-org8c38a77" class="outline-2">
-<h2 id="org8c38a77"><span class="section-number-2">3</span> <span class='hebrew'>ערבית ספרותית</span>, <span class='latin'>MSA</span>, <span class='ruqaa'>فصحة</span></h2>
+<div id="outline-container-org41b453d" class="outline-2">
+<h2 id="org41b453d"><span class="section-number-2">3</span> <span class='hebrew'>ערבית ספרותית</span>, <span class='latin'>MSA</span>, <span class='ruqaa'>فصحة</span></h2>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Mayer Goldberg (<span class='hebrew'>מֵאִיר גּוֹלְדְּבֵּרְג</span>)</p>
-<p class="date">Created: 2023-09-23 Sat 14:54</p>
+<p class="date">Created: 2023-09-23 Sat 19:18</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
