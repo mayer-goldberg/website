@@ -1,7 +1,7 @@
 body, p, table, tr, td, ol, ul, li {
-  direction:rtl!important;
-  font-family: 'David Libre';
-  direction: rtl;
+    direction:rtl!important;
+    font-family: 'David Libre';
+    direction: rtl;
 }
 
 h1 {
@@ -49,31 +49,51 @@ p {
     direction: ltr;
 }
 
+.shaddeh {
+    position: relative;
+}
+.shaddeh::before {
+    content: 'ﹼ';
+    position: absolute;
+    top: -0.1em;
+    left: 0.05em;
+}
+
+.marbouta {
+    position: relative;
+}
+.marbouta::before {
+    content: '̈';
+    position: absolute;
+    top: -0.1em;
+    left: 0.2em;
+}
+
 .ltr {
-  direction:ltr!important;
-  text-align:left!important;
+    direction:ltr!important;
+    text-align:left!important;
 }
 
 .rle {
-  direction:rtl!important;
-  unicode-bidi:embed!important;
+    direction:rtl!important;
+    unicode-bidi:embed!important;
 }
 
 .lre {
-  direction:ltr!important;
-  unicode-bidi:embed!important;
+    direction:ltr!important;
+    unicode-bidi:embed!important;
 }
 
 .status {
-  text-align:left;
-  direction:ltr;
+    text-align:left;
+    direction:ltr;
 }
 
 body {
-  font-family: sans-serif;
+    font-family: sans-serif;
 }
 
 table, tr, td {
-  text-align: right!important;
+    text-align: right!important;
 }
 
