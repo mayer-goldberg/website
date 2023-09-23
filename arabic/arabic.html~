@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-09-23 Sat 20:50 -->
+<!-- 2023-09-23 Sat 20:53 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title><span class='hebrew'>לימוד ערבית</span></title>
@@ -241,20 +241,20 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgfbe5997">1. משאבים</a></li>
-<li><a href="#org1d0b7bf">2. ערבית מדוברת בניב של המזרח־הקרוב (ניב שָׁאמִי), <span class='ruqaa'>عامية شامية</span></a></li>
-<li><a href="#orga633521">3. <span class='hebrew'>ערבית ספרותית</span>, <span class='latin'>MSA</span>, <span class='ruqaa'>فصحة</span></a></li>
+<li><a href="#org65a5d4d">1. משאבים</a></li>
+<li><a href="#org33591cb">2. ערבית מדוברת בניב של המזרח־הקרוב (ניב שָׁאמִי), <span class='ruqaa'>عامية شامية</span></a></li>
+<li><a href="#org04bb3d4">3. <span class='hebrew'>ערבית ספרותית</span>, <span class='latin'>MSA</span>, <span class='ruqaa'>فصحة</span></a></li>
 </ul>
 </div>
 </div>
 <script src="https://mayer-goldberg.github.io/website/hebrew-support/gmayer-org-mode-web.js"></script>
 
-<div id="outline-container-orgfbe5997" class="outline-2">
-<h2 id="orgfbe5997"><span class="section-number-2">1</span> משאבים</h2>
+<div id="outline-container-org65a5d4d" class="outline-2">
+<h2 id="org65a5d4d"><span class="section-number-2">1</span> משאבים</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org2872e09" class="outline-3">
-<h3 id="org2872e09"><span class="section-number-3">1.1</span> ספרים</h3>
+<div id="outline-container-org7680276" class="outline-3">
+<h3 id="org7680276"><span class="section-number-3">1.1</span> ספרים</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>הספרים של יוחנן אליחי
@@ -281,8 +281,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgcec1168" class="outline-3">
-<h3 id="orgcec1168"><span class="section-number-3">1.2</span> מלונים מקוונים</h3>
+<div id="outline-container-orgf294050" class="outline-3">
+<h3 id="orgf294050"><span class="section-number-3">1.2</span> מלונים מקוונים</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
 <li><a href="https://milon.madrasafree.com/">המלון המקוון של <b>מדרסה</b> לערבית מדוברת</a>. המלון פותח, מומש, ותוחזק על ידי <a href="https://rothfarb.info/"><b>רונן רוטפרב</b></a>. לאחר שנים שבהן ניהל את הפרוייקט לבדו, רונן העביר את הפרוייקט <a href="https://madrasafree.com/">לבית הספר <b>מדרסה</b> לערבית</a>, ואלו מתחזקים אותו כעת.</li>
@@ -291,24 +291,24 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgb07708c" class="outline-3">
-<h3 id="orgb07708c"><span class="section-number-3">1.3</span> תרגומים אינטרלינאריים</h3>
+<div id="outline-container-org6acad3d" class="outline-3">
+<h3 id="org6acad3d"><span class="section-number-3">1.3</span> תרגומים אינטרלינאריים</h3>
 </div>
 </div>
-<div id="outline-container-org1d0b7bf" class="outline-2">
-<h2 id="org1d0b7bf"><span class="section-number-2">2</span> ערבית מדוברת בניב של המזרח־הקרוב (ניב שָׁאמִי), <span class='ruqaa'>عامية شامية</span></h2>
+<div id="outline-container-org33591cb" class="outline-2">
+<h2 id="org33591cb"><span class="section-number-2">2</span> ערבית מדוברת בניב של המזרח־הקרוב (ניב שָׁאמִי), <span class='ruqaa'>عامية شامية</span></h2>
 <div class="outline-text-2" id="text-2">
 <p>
 ערבית מדוברת של המזרח הקרוב היא אוסף של להגים המדוברים באיזור שהיסטורית נקרא בשם <b>סוריה הגדולה</b>, או שָׁאם (<span class='naskh'>شام</span>). האיזור כולל את לבנון, סוריה, ירדן, ישראל, הגדה המערבית, ורצועת עזה. מבחינה היסטורית, <b>סוריה הגדולה</b> כוללת גם את עיראק, אבל ערבית מדוברת עיראקית שונה מאד משאר הלהגים של <b>סוריה הגדולה</b>, וכולל השפעות רבות מפרסית ותורכית, ולכן מקובל שלא לכלול אותו בלהגים של <b>סוריה הגדולה</b>, אלא להתייחס אליו כלהג נפרד.
 </p>
 </div>
 
-<div id="outline-container-org03c4e2f" class="outline-3">
-<h3 id="org03c4e2f"><span class="section-number-3">2.1</span> Timeline</h3>
+<div id="outline-container-org755f61d" class="outline-3">
+<h3 id="org755f61d"><span class="section-number-3">2.1</span> Timeline</h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
 <ol class="org-ol">
-<li><a id="org9bb9d95"></a><span class="timestamp-wrapper"><span class="timestamp">&lt;2023-09-21 Thu&gt;</span></span><br />
+<li><a id="org232b15f"></a><span class="timestamp-wrapper"><span class="timestamp">&lt;2023-09-21 Thu&gt;</span></span><br />
 <div class="outline-text-4" id="text-2-1-1">
 <p>
 הכרטסת שלי כוללת 4261 כרטיסים. הוספתי 230+ כרטיסים מאז תחילת החודש. זה קצת מאכזב. קיוויתי שאוכל להוסיף מעל לאלף כרטיסים חדשים, ולא קרה. אני צריך להגביר את הקצב לפני תחילת הסמסטר.
@@ -327,13 +327,13 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orga633521" class="outline-2">
-<h2 id="orga633521"><span class="section-number-2">3</span> <span class='hebrew'>ערבית ספרותית</span>, <span class='latin'>MSA</span>, <span class='ruqaa'>فصحة</span></h2>
+<div id="outline-container-org04bb3d4" class="outline-2">
+<h2 id="org04bb3d4"><span class="section-number-2">3</span> <span class='hebrew'>ערבית ספרותית</span>, <span class='latin'>MSA</span>, <span class='ruqaa'>فصحة</span></h2>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Mayer Goldberg (<span class='hebrew'>מֵאִיר גּוֹלְדְּבֵּרְג</span>)</p>
-<p class="date">Created: 2023-09-23 Sat 20:50</p>
+<p class="date">Created: 2023-09-23 Sat 20:53</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
