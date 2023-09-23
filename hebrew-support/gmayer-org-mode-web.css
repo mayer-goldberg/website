@@ -1,5 +1,7 @@
-body, p, table, tr, td {
+body, p, table, tr, td, ol, ul, li {
   direction:rtl!important;
+  font-family: 'David Libre';
+  direction: rtl;
 }
 
 h1 {
@@ -20,14 +22,22 @@ h3 {
 p {
     font-family: 'David Libre';
     font-size: 28px;
+    direction: rtl;
 }
 
 .ruqaa {
     font-family: 'Aref Ruqaa', sans-serif;
+    direction: rtl;
 }
 
 .naskh {
     font-family: 'Noto Naskh Arabic', serif;
+    direction: rtl;
+}
+
+.russian {
+    font-family: 'Old Standard TT', serif;
+    direction: ltr;
 }
 
 .ltr {
