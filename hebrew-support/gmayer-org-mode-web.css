@@ -53,11 +53,11 @@ p {
     position: relative;
 }
 .shaddeh::before {
-    content: 'ω';
+    font-family: 'Noto Naskh Arabic', serif;
+    content: 'ﹼ';
     position: absolute;
     top: -0.3em;
     left: 0.05em;
-    color: 'red';
 }
 
 .marboutah {
@@ -67,7 +67,7 @@ p {
     content: 'ֵ';
     position: absolute;
     top: -0.8em;
-    left: 0.15em;
+    left: 0.2em;
 }
 
 .ltr {
