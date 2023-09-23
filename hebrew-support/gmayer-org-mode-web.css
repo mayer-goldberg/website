@@ -54,7 +54,7 @@ p {
 }
 .shaddeh::before {
     font-family: 'Noto Naskh Arabic', serif;
-    content: 'ﹼ';
+    content: 'ω';
     position: absolute;
     top: -0.3em;
     left: 0.05em;
