@@ -19,7 +19,7 @@ regardless of whether or not it made money for anybody?
 - *Email:* [[mailto:gmayer@little-lisper.org][gmayer@little-lisper.org]]. All email, from all other accounts,
   gets forwarded to this account.
 - *Office:* Building 37 (Alon, {{{rtl(אלון)}}}) room 106, mailbox 44
-- *Office hours* (for the *Summer Semester, 2024*, currently *only* on [[https://us02web.zoom.us/j/87582638669?pwd=SVFVOFdvYlQ0enkyZ0s5NEM0ODNYQT09][Zoom/]] only:
+- *Office hours* (for the *Summer Semester, 2024*, currently *only* on [[https://us02web.zoom.us/j/87582638669?pwd=SVFVOFdvYlQ0enkyZ0s5NEM0ODNYQT09][Zoom]] only:
   - For the [[./tc.html][/Teaching Committee/ ({{{rtl(ועדת הוראה\, שנים ב–ד)}}})]]: Mondays, 13-15
 - *Telephones:* Voice (+972)(0)8-647-7873, FAX (+972)(0)8-647-7650
 - *Professional mailing address:* [[mailto:gmayer@little-lisper.org][Mayer Goldberg]], [[http://www.cs.bgu.ac.il/][Department of Computer
