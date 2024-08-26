@@ -1,0 +1,10 @@
+#+title: Programming Languages
+#+author: Mayer Goldberg ({{{rtl(מֵאִיר גּוֹלְדְּבֵּרְג)}}})
+#+email: gmayer@little-lisper.org
+#+options: creator:nil, toc:1
+#+options: h:2
+#+keywords: Mayer Goldberg, Department of Computer Science, Ben-Gurion University, lambda calculus, combinatory logic, pi-calculus, functional programming, coq, proof assistant, nuprl, object-oriented programming, Scheme, ML, Erlang, Lua, Smalltalk, continuations, interpreters, compilers, decompilation, compilation, code obfuscation, programming languages, semantics, threaded code, forth, latin, israel
+
+* High-level programming languages
+* Fun assembly languages
+** ARM Assembly
