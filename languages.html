@@ -3,15 +3,15 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-09-22 Fri 00:29 -->
+<!-- 2025-06-23 Mon 15:22 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Learning Languages</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="Mayer Goldberg (@@html:&amp;#x202e;@@מֵאִיר גּוֹלְדְּבֵּרְג@@html:&amp;#x202c;@@)" />
 <meta name="keywords" content="Mayer Goldberg, Department of Computer Science, Ben-Gurion University, learning languages, polyglot" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -32,8 +32,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -41,22 +42,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -162,6 +163,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -178,77 +192,31 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Learning Languages</h1>
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgbfbb1d4">1. How I learn languages</a></li>
-<li><a href="#org4b0ecc4">2. Languages I'm currently learning</a></li>
-<li><a href="#org121bce4">3. Languages I plan on learning</a></li>
-<li><a href="#orge66c6f9">4. Languages I've learnt in the past</a></li>
+<li><a href="#orge4e6d95">1. How I learn languages</a></li>
+<li><a href="#orgff417ea">2. Languages I'm currently learning</a></li>
+<li><a href="#org361aa34">3. Languages I wish on learning</a></li>
+<li><a href="#org958ce51">4. Languages I've learnt in the past</a></li>
+<li><a href="#org0f4d394">5. Interlinear Translations I Prepared</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgbfbb1d4" class="outline-2">
-<h2 id="orgbfbb1d4"><span class="section-number-2">1</span> How I learn languages</h2>
+<div id="outline-container-orge4e6d95" class="outline-2">
+<h2 id="orge4e6d95"><span class="section-number-2">1.</span> How I learn languages</h2>
 </div>
 
-<div id="outline-container-org4b0ecc4" class="outline-2">
-<h2 id="org4b0ecc4"><span class="section-number-2">2</span> Languages I'm currently learning</h2>
+<div id="outline-container-orgff417ea" class="outline-2">
+<h2 id="orgff417ea"><span class="section-number-2">2.</span> Languages I'm currently learning</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li><a href="./arabic/arabic.html">Arabic</a></li>
@@ -256,8 +224,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org121bce4" class="outline-2">
-<h2 id="org121bce4"><span class="section-number-2">3</span> Languages I plan on learning</h2>
+<div id="outline-container-org361aa34" class="outline-2">
+<h2 id="org361aa34"><span class="section-number-2">3.</span> Languages I wish on learning</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>Turkish</li>
@@ -269,26 +237,34 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orge66c6f9" class="outline-2">
-<h2 id="orge66c6f9"><span class="section-number-2">4</span> Languages I've learnt in the past</h2>
+<div id="outline-container-org958ce51" class="outline-2">
+<h2 id="org958ce51"><span class="section-number-2">4.</span> Languages I've learnt in the past</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li>Russian: I've taken two years of Russian as an undergraduate. By the end of my second year, I could speak, read, and write reasonably well for a beginner. The problem is that this was in the US, back in 1987, and it was not easy to find people with whom to converse in Russian&#x2026; I forgot much of my Russian, though I can still manage simple conversations. I do plan on returning to Russian some day.</li>
 <li>Mandarin Chinese: One summer I studied some Mandarin Chinese in the hope of sitting in on the course at Ben-Gurion university. I practiced the better part of a summer break, and by the end of the break, I was able to engage in simple, short conversations with Chinese speakers [I found on the internet]. But when the Fall semester was about to start, the students declared a strike, and classes were postponed for several weeks. By the time the strike was over I'd had enough on my plate and coulnd't find the time to study.</li>
 <li>Latin: I took one semester of Latin, and have kept on studying on my own. I don't study it presently, but I do read a bit Latin every now and then.</li>
 <li>Greek</li>
-<li>German</li>
+<li>German: I took one semester of German.</li>
 <li>Hindi</li>
 <li>Sanskrit</li>
 <li>Tibetan</li>
 </ul>
 </div>
 </div>
+<div id="outline-container-org0f4d394" class="outline-2">
+<h2 id="org0f4d394"><span class="section-number-2">5.</span> Interlinear Translations I Prepared</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li><a href="./psalter.html">A quadrilingual Psalter</a></li>
+</ul>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Mayer Goldberg (&#x202e;מֵאִיר גּוֹלְדְּבֵּרְג&#x202c;)</p>
-<p class="date">Created: 2023-09-22 Fri 00:29</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="date">Created: 2025-06-23 Mon 15:22</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>

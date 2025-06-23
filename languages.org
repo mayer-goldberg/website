@@ -26,3 +26,5 @@
 - Hindi
 - Sanskrit
 - Tibetan
+* Interlinear Translations I Prepared
+- [[./psalter.html][A quadrilingual Psalter]]

@@ -1,0 +1,20 @@
+#+title: My Quadrilingual Psalter
+#+author: Mayer Goldberg ({{{rtl(מֵאִיר גּוֹלְדְּבֵּרְג)}}})
+#+email: gmayer@little-lisper.org
+#+options: creator:nil, toc:1
+#+options: h:2
+#+keywords: Mayer Goldberg, Department of Computer Science, Ben-Gurion University, learning languages, polyglot
+
+A Psalter is a physical copy of the /Book of Psalms/ ({{{rtl(ספר תהילים)}}}). Quadrilingual means that the text is given in 4 languages simultaneously. In this case:
+- Hebrew (Masoratic version, {{{rtl(נוסח המסורה)}}})
+- English (KJV)
+- Greek (LXX, {{{rtl(תרגום השבעים)}}}, in the Greek Orthodox, Patriarchal edition)
+- Latin (Vulgata Clementiana)
+
+The translation is interlinear, at the verse-level. Each verse is given in 4 parallel columns in all 4 languages. These are *not* exact translations of each other: The LXX and the Masoratic text deviate from each other in many places. Nevertheless, the translation has several useful purposes:
+- You can use it to compare the LXX and the Masoratic versions
+- You can use it to practice Koine Greek, Latin, and Hebrew
+
+[[./psalterium.pdf][The Quadrilingual Psalter in A4 PDF]]
+
+If you find any errors, please [[mailto:gmayer@little-lisper.org][drop me a line!]].
