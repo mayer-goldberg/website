@@ -3,15 +3,15 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-08-11 Fri 17:17 -->
+<!-- 2025-08-12 Tue 09:09 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Teaching Committee</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="Mayer Goldberg" />
 <meta name="keywords" content="Mayer Goldberg, Teaching Committee, Department of Computer Science, Ben-Gurion University, israel" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -32,8 +32,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -41,22 +42,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -162,6 +163,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -178,71 +192,35 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Teaching Committee</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org2d0560f">1. Synopsis</a></li>
+<li><a href="#org3dea710">2. How to contact me</a></li>
+<li><a href="#org808376a">3. General guidelines</a></li>
+<li><a href="#org90ecf2a">4. Issues that come up frequently</a></li>
+</ul>
+</div>
+</div>
 
-<div id="outline-container-org562a8c4" class="outline-2">
-<h2 id="org562a8c4"><span class="section-number-2">1</span> Synopsis</h2>
+<div id="outline-container-org2d0560f" class="outline-2">
+<h2 id="org2d0560f"><span class="section-number-2">1.</span> Synopsis</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-I serve as the undergraduate advisor and head of teaching committee for years 2&#x2013;4 (&#x202e;יועץ לתואר ראשון, ויו"ר ועדת הוראה לשנים ב–ד&#x202c;) at the <a href="//www.cs.bgu.ac.il/"><i>Department of Computer Science</i></a> at <a href="http://www.bgu.ac.il/"><i>Ben-Gurion University</i></a>. 
+I serve on the teaching committee as the freshman undergraduate advisor (&#x202e;חבר ועדת הוראה ויועץ לתואר ראשון&#x202c;) at the <a href="//www.cs.bgu.ac.il/"><i>Department of Computer Science</i></a> at <a href="http://www.bgu.ac.il/"><i>Ben-Gurion University</i></a>. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgbf525f8" class="outline-2">
-<h2 id="orgbf525f8"><span class="section-number-2">2</span> How to contact me</h2>
+<div id="outline-container-org3dea710" class="outline-2">
+<h2 id="org3dea710"><span class="section-number-2">2.</span> How to contact me</h2>
 <div class="outline-text-2" id="text-2">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -269,7 +247,7 @@ I serve as the undergraduate advisor and head of teaching committee for years 2&
 </tr>
 
 <tr>
-<td class="org-left">Office hours (summer)</td>
+<td class="org-left">Office hours (fall)</td>
 <td class="org-left">Mondays, 17:00&#x2013;19:00</td>
 </tr>
 
@@ -282,8 +260,8 @@ I serve as the undergraduate advisor and head of teaching committee for years 2&
 </div>
 </div>
 
-<div id="outline-container-org4d684fa" class="outline-2">
-<h2 id="org4d684fa"><span class="section-number-2">3</span> General guidelines</h2>
+<div id="outline-container-org808376a" class="outline-2">
+<h2 id="org808376a"><span class="section-number-2">3.</span> General guidelines</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Please understand that:
@@ -296,14 +274,14 @@ Please understand that:
 </div>
 </div>
 
-<div id="outline-container-orgdfa02d4" class="outline-2">
-<h2 id="orgdfa02d4"><span class="section-number-2">4</span> Issues that come up frequently</h2>
+<div id="outline-container-org90ecf2a" class="outline-2">
+<h2 id="org90ecf2a"><span class="section-number-2">4.</span> Issues that come up frequently</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li>If you <b>seek authorization for a course</b>, or <b>&#x202e;מועד מיוחד&#x202c; in a course you took</b>, please go to the <a href="https://cs-sr.cs.bgu.ac.il/">Student Request Form (&#x202e;מערכת פניות הסטודנטים&#x202c;)</a>, and fill and submit the appropriate form. You should support &amp; substantiate any claims you make with appropriate documentation, and include those with your form. There is no need to speak with me in advance.</li>
-<li>If you are continuing your studies at our department, you have already been admitted, and <b>would like to get an exemption (&#x200f;פטור&#x200e;) from various courses in your program</b>, on the strength of courses you took elsewhere, as part of another program, then you need to do the following:
+<li>If you are continuing your studies at our department, you have already been admitted, and <b>would like to get an exemption (&rlm;פטור&lrm;) from various courses in your program</b>, on the strength of courses you took elsewhere, as part of another program, then you need to do the following:
 <ul class="org-ul">
-<li>Download the a request &#x200f;להכרה בקורסים&#x200e; from the website of the Faculty of Natural Sciences.</li>
+<li>Download the a request &rlm;להכרה בקורסים&lrm; from the website of the Faculty of Natural Sciences.</li>
 <li>Fill in the form, listing the courses you took on the strength of which you are asking for the exemption, the syllabus for each such course, and the courses from which you are asking for an exemption.</li>
 <li>Submit the form, including the syllabi, to the undergraduate secretariat.</li>
 </ul></li>
@@ -334,8 +312,8 @@ For all other matters, please fill in the <a href="https://cs-sr.cs.bgu.ac.il/">
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Mayer Goldberg</p>
-<p class="date">Created: 2023-08-11 Fri 17:17</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="date">Created: 2025-08-12 Tue 09:09</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>

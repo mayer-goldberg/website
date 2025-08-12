@@ -6,15 +6,15 @@
 
 * Synopsis
 
-I serve as the undergraduate advisor and head of teaching committee for years 2--4 ({{{rtl(יועץ לתואר ראשון\, ויו"ר ועדת הוראה לשנים ב–ד)}}}) at the [[Http://www.cs.bgu.ac.il/][/Department of Computer Science/]] at [[http://www.bgu.ac.il/][/Ben-Gurion University/]]. 
+I serve on the teaching committee as the freshman undergraduate advisor ({{{rtl(חבר ועדת הוראה ויועץ לתואר ראשון, שנה א')}}}) at the [[Http://www.cs.bgu.ac.il/][/Department of Computer Science/]] at [[http://www.bgu.ac.il/][/Ben-Gurion University/]]. 
 
 * How to contact me
 
-| Name                      | Mayer Goldberg                                            |
-| Email                     | [[mailto:gmayer@little-lisper.org][gmayer@little-lisper.org]]                                  |
-| Office                    | Building 37 (Alon, {{{rtl(אלון)}}}), room 106, mailbox 44 |
-| Office hours (summer)     | Mondays, 17:00--19:00                                     |
-| Telephones                | Voice 08-647-7873, FAX 08-647-7650                        |
+| Name                | Mayer Goldberg                                          |
+| Email               | [[mailto:gmayer@little-lisper.org][gmayer@little-lisper.org]]                                |
+| Office              | Building 37 (Alon, {{{rtl(אלון)}}}), room 106, mailbox 44 |
+| Office hours (fall) | Mondays, 17:00--19:00                                   |
+| Telephones          | Voice 08-647-7873, FAX 08-647-7650                      |
 
 * General guidelines
 
