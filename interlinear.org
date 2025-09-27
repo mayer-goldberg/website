@@ -7,6 +7,7 @@
 
 * My interlinear translations
 ** Arabic
+- [[./arabic-interlinear-translations/kalimat.pdf][Kalimat, by Nizar Tawfiq Qabbani]]
 - [[./arabic-interlinear-translations/apo-and-the-apostles-baji-wenek.pdf][Baji Wenek, by Apo and the Apostles]]
 - [[./arabic-interlinear-translations/apo-and-the-apostles-lina.pdf][Lina, by Apo and the Apostles]]
 - [[./arabic-interlinear-translations/mashrou-leila-rakset-leilah.pdf][Raksit Leila, by Mashrou Leila]]
