@@ -5,6 +5,8 @@
 #+options: h:2
 #+keywords: Mayer Goldberg, Department of Computer Science, Ben-Gurion University, learning languages, polyglot
 
-
-
+* My interlinear translations
+** Arabic
+- [[~/work/website/arabic-interlinear-translations/al-haiba-theme-song=majbour.pdf][Majbour]]: The theme song from the Lebanese series Al Haiba
+** Latin
 - [[./psalter.html][A quadrilingual Psalter]]
