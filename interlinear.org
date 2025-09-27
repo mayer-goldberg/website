@@ -15,9 +15,8 @@
 - [[./arabic-interlinear-translations/al-haiba-theme-song=majbour.pdf][Majbour]] (the theme song from the Lebanese series /Al Haiba/)
 - [[./arabic-interlinear-translations/al-ein.pdf][Al-Ein Mulayyiten]]
 - [[./arabic-interlinear-translations/kazem-alsaher-baghdad-la-tatalami.pdf][Baghdad La Tat'alami, by /Kazem al-Saher/]]
-** Latin
-- [[./psalter.html][A quadrilingual Psalter]]
 ** Miscellaneous Languages
+- [[./psalter.html][A quadrilingual Psalter]] (Hebrew, English, Latin, Greek)
 - [[./misc-interlinear-translations/nashod.pdf][Nashod]] (Farsi)
 - [[./misc-interlinear-translations/mundeke.pdf][Mundeke Mbere Noyo, by /Afrigo/]] (Luganda)
 - [[./misc-interlinear-translations/konpira-fune-fune.pdf][Konpira Fune Fune]] (Japanese)
