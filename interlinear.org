@@ -7,6 +7,8 @@
 
 * My interlinear translations
 ** Arabic
+- [[./arabic-interlinear-translations/apo-and-the-apostles-baji-wenek.pdf][Baji Wenek, by Apo and the Apostles]]
+- [[./arabic-interlinear-translations/apo-and-the-apostles-lina.pdf][Lina, by Apo and the Apostles]]
 - [[./arabic-interlinear-translations/mashrou-leila-rakset-leilah.pdf][Raksit Leila, by Mashrou Leila]]
 - [[./arabic-interlinear-translations/mashrou-leila-fasateen.pdf][Fasateen, by Mashrou Leila]]
 - [[./arabic-interlinear-translations/al-haiba-theme-song=majbour.pdf][Majbour]]: The theme song from the Lebanese series Al Haiba
