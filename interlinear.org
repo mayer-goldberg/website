@@ -7,11 +7,17 @@
 
 * My interlinear translations
 ** Arabic
-- [[./arabic-interlinear-translations/kalimat.pdf][Kalimat, by Nizar Tawfiq Qabbani]]
-- [[./arabic-interlinear-translations/apo-and-the-apostles-baji-wenek.pdf][Baji Wenek, by Apo and the Apostles]]
-- [[./arabic-interlinear-translations/apo-and-the-apostles-lina.pdf][Lina, by Apo and the Apostles]]
-- [[./arabic-interlinear-translations/mashrou-leila-rakset-leilah.pdf][Raksit Leila, by Mashrou Leila]]
-- [[./arabic-interlinear-translations/mashrou-leila-fasateen.pdf][Fasateen, by Mashrou Leila]]
-- [[./arabic-interlinear-translations/al-haiba-theme-song=majbour.pdf][Majbour]]: The theme song from the Lebanese series Al Haiba
+- [[./arabic-interlinear-translations/kalimat.pdf][Kalimat, by /Nizar Tawfiq Qabbani/]]
+- [[./arabic-interlinear-translations/apo-and-the-apostles-baji-wenek.pdf][Baji Wenek, by /Apo and the Apostles/]]
+- [[./arabic-interlinear-translations/apo-and-the-apostles-lina.pdf][Lina, by /Apo and the Apostles/]]
+- [[./arabic-interlinear-translations/mashrou-leila-rakset-leilah.pdf][Raksit Leila, by /Mashrou Leila/]]
+- [[./arabic-interlinear-translations/mashrou-leila-fasateen.pdf][Fasateen, by /Mashrou Leila/]]
+- [[./arabic-interlinear-translations/al-haiba-theme-song=majbour.pdf][Majbour]] (the theme song from the Lebanese series /Al Haiba/)
+- [[./arabic-interlinear-translations/al-ein.pdf][Al-Ein Mulayyiten]]
+- [[./arabic-interlinear-translations/kazem-alsaher-baghdad-la-tatalami.pdf][Baghdad La Tat'alami, by /Kazem al-Saher/]]
 ** Latin
 - [[./psalter.html][A quadrilingual Psalter]]
+** Miscellaneous Languages
+- [[./misc-interlinear-translations/nashod.pdf][Nashod]] (Farsi)
+- [[./misc-interlinear-translations/mundeke.pdf][Mundeke Mbere Noyo, by /Afrigo/]] (Luganda)
+- [[./misc-interlinear-translations/konpira-fune-fune.pdf][Konpira Fune Fune]] (Japanese)
