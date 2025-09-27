@@ -21,3 +21,5 @@
 - [[./misc-interlinear-translations/nashod.pdf][Nashod]] (Farsi)
 - [[./misc-interlinear-translations/mundeke.pdf][Mundeke Mbere Noyo, by /Afrigo/]] (Luganda)
 - [[./misc-interlinear-translations/konpira-fune-fune.pdf][Konpira Fune Fune]] (Japanese)
+- [[./misc-interlinear-translations/i-dit-korte-liv.pdf][I Dit Korte Liv]] (Danish)
+
