@@ -17,6 +17,7 @@
 - [[./arabic-interlinear-translations/kazem-alsaher-baghdad-la-tatalami.pdf][Baghdad La Tat'alami, by /Kazem al-Saher/]]
 ** Miscellaneous Languages
 - [[./psalter.html][A quadrilingual Psalter]] (Hebrew, English, Latin, Greek)
+- [[./misc-interlinear-translations/bulla-ki-jana.pdf][Bullah Ki Jana Main Kaun]] (Punjabi (Gurmukhi & Shahmukhi), English, Hebrew)
 - [[./misc-interlinear-translations/nashod.pdf][Nashod]] (Farsi)
 - [[./misc-interlinear-translations/mundeke.pdf][Mundeke Mbere Noyo, by /Afrigo/]] (Luganda)
 - [[./misc-interlinear-translations/konpira-fune-fune.pdf][Konpira Fune Fune]] (Japanese)
