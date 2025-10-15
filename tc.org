@@ -1,12 +1,12 @@
 #+title: Teaching Committee
-#+author: Mayer Goldberg
+#+author: Mayer Goldberg ({{{rtl(מֵאִיר גּוֹלְדְּבֵּרְג)}}})
 #+email: gmayer@little-lisper.org
 #+options: creator:nil, toc:nil
 #+keywords: Mayer Goldberg, Teaching Committee, Department of Computer Science, Ben-Gurion University, israel
 
 * Synopsis
 
-I serve on the teaching committee as the freshman undergraduate advisor ({{{rtl(חבר ועדת הוראה ויועץ לתואר ראשון, שנה א')}}}) at the [[Http://www.cs.bgu.ac.il/][/Department of Computer Science/]] at [[http://www.bgu.ac.il/][/Ben-Gurion University/]]. 
+I serve on the teaching committee as the freshman undergraduate advisor ({{{rtl(חבר ועדת הוראה ויועץ לימודים לתואר ראשון\, שנה א')}}}) at the [[Http://www.cs.bgu.ac.il/][/Department of Computer Science/]] at [[http://www.bgu.ac.il/][/Ben-Gurion University/]]. 
 
 * How to contact me
 
