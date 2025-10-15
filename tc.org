@@ -10,15 +10,22 @@ I serve on the teaching committee as the freshman undergraduate advisor ({{{rtl(
 
 * How to contact me
 
-| Name                | Mayer Goldberg                                          |
-| Email               | [[mailto:gmayer@little-lisper.org][gmayer@little-lisper.org]]                                |
-| Office              | Building 37 (Alon, {{{rtl(אלון)}}}), room 106, mailbox 44 |
-| Office hours (fall) | Mondays, 17:00--19:00                                   |
-| Telephones          | Voice 08-647-7873, FAX 08-647-7650                      |
+| Name         | Mayer Goldberg                                          |
+| Email        | [[mailto:gmayer@little-lisper.org][gmayer@little-lisper.org]]                                |
+| Office       | Building 37 (Alon, {{{rtl(אלון)}}}), room 106, mailbox 44 |
+| Office hours | Mondays, 14:00--16:00                                   |
+| Zoom link    | [[https://us02web.zoom.us/j/86309317409?pwd=jHoMQ3Ec3xE35eLLPF5tuagZl7Swsm.1][Appointments are by Zoom only!]]                          |
+| Telephones   | Voice 08-647-7873, FAX 08-647-7650                      |
 
 * General guidelines
 
 Please understand that:
+- I am in charge of the *Freshman-class only* ({{{rtl(שנה א')}}}), and only two programs: *Computer Science* ({{{rtl(התוכנית החד־חוגית במדעי המחשב)}}}), and *Software Engineering* ({{{rtl(התוכנית להנדסת תוכנה)}}}):
+  - Students in the *bioinformatics* ({{{rtl(ביואינפורמטיקה)}}}) program should contact [[https://www.cs.bgu.ac.il/~keasar/][Prof Chen Keasar]]
+  - Sophomores, Juniors, and Seniors ({{{rtl(שנים ב' והלאה)}}}) should contact [[https://www.cs.bgu.ac.il/~neimano/][Prof Ofer Neimann]]
+  - Students of other programs: double-major, dual programs, etc, should contact [[https://www.cs.bgu.ac.il/~asharf/][Prof Andrei Sharf]]
+  - Reservists ({{{rtl(משרתי המילואים)}}}), and students who were affected by the current war ({{{rtl(ניצולים, מפונים, נפגעים, ובני משפחותיהם)}}}), should contact [[https://omriazencot.com/][Dr Omri Azencot]]
+- All appointments are by [[https://us02web.zoom.us/j/86309317409?pwd=jHoMQ3Ec3xE35eLLPF5tuagZl7Swsm.1][Zoom]] only!
 - No decisions are made {{{quote(on the spot)}}}, regardless of what you tell me
 - All decisions are taken offline, after deliberation with other members of the department and the relevant faculty (either Natural Sciences of Engineering, depending on what program you are in), with all relevant documentation at hand, and in particular, with your academic transcript before us
 - You are welcome to come to my office hours, or to send me an email, but please keep in mind that on most academic matters, I shall probably direct you to the [[https://cs-sr.cs.bgu.ac.il/][/Student Request Form/ ({{{rtl(מערכת פניות הסטודנטים)}}})]]
