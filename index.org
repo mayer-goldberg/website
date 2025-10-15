@@ -43,7 +43,7 @@ regardless of whether or not it made money for anybody?
 - /Introduction to the Lambda Calculus & Combinatory Logic/, Spring 2025
 
 * Departmental duties
-- [[./tc.html][/The Unergraduate Teaching Committee/]] for years 2--4 ({{{rtl(ועדת הוראה\, שנים ב–ד)}}})
+- [[./tc.html][/The Unergraduate Teaching Committee/]] for the freshman year ({{{rtl(ועדת הוראה\, שנה א')}}})
 * Personal interests
 - [[./languages.html][Learning languages]]
 - [[./prog-langs.html][Learning programming languages]]
