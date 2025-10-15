@@ -21,7 +21,7 @@ I serve on the teaching committee as the freshman undergraduate advisor ({{{rtl(
 
 Please understand that:
 - I am in charge of the *Freshman-class only* ({{{rtl(שנה א')}}}), and only two programs: *Computer Science* ({{{rtl(התוכנית החד־חוגית במדעי המחשב)}}}), and *Software Engineering* ({{{rtl(התוכנית להנדסת תוכנה)}}}):
-  - Students in the *bioinformatics* ({{{rtl(ביואינפורמטיקה)}}}) program should contact [[https://www.cs.bgu.ac.il/~keasar/][Prof Chen Keasar]]
+  - Students in the *bioinformatics* ({{{rtl(ביואינפורמטיקה)}}}) program should contact [[https://www.cs.bgu.ac.il/~keasar/][Prof Chen Keasar {{{rtl(פרופ' חן קיסר)}}}]]
   - Sophomores, Juniors, and Seniors ({{{rtl(שנים ב' והלאה)}}}) should contact [[https://www.cs.bgu.ac.il/~neimano/][Prof Ofer Neimann]]
   - Students of other programs: double-major, dual programs, etc, should contact [[https://www.cs.bgu.ac.il/~asharf/][Prof Andrei Sharf]]
   - Reservists ({{{rtl(משרתי המילואים)}}}), and students who were affected by the current war ({{{rtl(ניצולים, מפונים, נפגעים, ובני משפחותיהם)}}}), should contact [[https://omriazencot.com/][Dr Omri Azencot]]
