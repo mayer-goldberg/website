@@ -39,8 +39,7 @@ regardless of whether or not it made money for anybody?
 - Automated theorem proving ([[./coq.html][Coq]], [[http://www.nuprl.org/][NuPRL]], etc)
 
 * Teaching
-- /Introduction to Compiler Construction/, Fall 2024
-- /Introduction to the Lambda Calculus & Combinatory Logic/, Spring 2025
+- /Introduction to Compiler Construction/, Fall 2025
 
 * Departmental duties
 - [[./tc.html][/The Unergraduate Teaching Committee/]] for the freshman year ({{{rtl(ועדת הוראה\, שנה א')}}})
@@ -49,10 +48,9 @@ regardless of whether or not it made money for anybody?
 - [[./prog-langs.html][Learning programming languages]]
 - Calculators & various [historical] computing devices
 * /This website has a seriously drab look, that was outdated already back in the 1990's...!/
-
 - While the look /is/ drab, mainly because I know very little about graphical design
 - The website is generated from org-mode in GNU Emacs
-- Org-mode is powerful, and I've added support in GNU Emacs for typing in languages, so the combination of left-to-right language and {{{rtl(שָׂפוֹת שֶׁנִּכְתָּבוֹת מִיָּמִין לִשְׂמֹאל\, או كِتَابَتْهَا مِن الْيَمِين إلَى الْيَسَار)}}} is accomplished simply and accurately
+- Org-mode is powerful, and I've added support in GNU Emacs for typing in languages many languages (संस्कृतभाषा नूनम् रुचिरा भाषा अस्ति ।), so the combination of left-to-right language and {{{rtl(שָׂפוֹת שֶׁנִּכְתָּבוֹת מִיָּמִין לִשְׂמֹאל\, או كِتَابَتْهَا مِن الْيَمِين إلَى الْيَسَار)}}} is accomplished simply and accurately
 - The website is currently (as of 2025) being updated rapidly, and more material is added weekly
 
 So please give the website a second look... \smiley
