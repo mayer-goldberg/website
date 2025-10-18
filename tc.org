@@ -13,7 +13,7 @@ I serve on the teaching committee as the freshman undergraduate advisor ({{{rtl(
 | Name         | Mayer Goldberg                                          |
 | Email        | [[mailto:gmayer@little-lisper.org][gmayer@little-lisper.org]]                                |
 | Office       | Building 37 (Alon, {{{rtl(אלון)}}}), room 106, mailbox 44 |
-| Office hours | Mondays, 14:00--16:00                                   |
+| Office hours | Mondays, 14:00--16:00 *(beginning October 27)*          |
 | Zoom link    | [[https://us02web.zoom.us/j/86309317409?pwd=jHoMQ3Ec3xE35eLLPF5tuagZl7Swsm.1][Appointments are by Zoom only!]]                          |
 | Telephones   | Voice 08-647-7873, FAX 08-647-7650                      |
 
