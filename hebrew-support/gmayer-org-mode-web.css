@@ -26,6 +26,16 @@ li, ul, p, table, tr, td {
     direction: rtl;  
 }
 
+ul li::marker {
+  content: "◀ ";
+  color: blue;
+}
+
+ul ul li::marker {
+  content: "☜ ";
+  color: orange;
+}
+
 .hebrew {
     direction: rtl;
 }
