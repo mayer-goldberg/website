@@ -1,54 +1,41 @@
-#+title: Teaching Committee
-#+author: Mayer Goldberg ({{{rtl(מֵאִיר גּוֹלְדְּבֵּרְג)}}})
-#+email: gmayer@little-lisper.org
-#+options: creator:nil, toc:nil
-#+keywords: Mayer Goldberg, Teaching Committee, Department of Computer Science, Ben-Gurion University, israel
+#+title: {{{rtl(ועדת הוראה\, שנה א')}}}
+#+author: ‪{{{rtl(מֵאִיר גּוֹלְדְבֶּרְג)}}}
+#+options: creator:nil, toc:1
+#+keywords: מאיר גולדברג, ועדת הוראה, שנה א', המחלקה למדעי המחשב, מדמ"ח
+#+keywords: התוכנית להנדסת תוכנה, אוניברסיטת בן־גוריון, באר שבע 
+#+html_head: <link rel="stylesheet" type="text/css" href="hebrew-support/gmayer-org-mode-web.css" />
 
-* Synopsis
+#+begin_export html
+<script src="hebrew-support/gmayer-org-mode-web.js"></script>
+#+end_export
 
-I serve on the teaching committee as the freshman undergraduate advisor ({{{rtl(חבר ועדת הוראה ויועץ לימודים לתואר ראשון\, שנה א')}}}) at the [[Http://www.cs.bgu.ac.il/][/Department of Computer Science/]] at [[http://www.bgu.ac.il/][/Ben-Gurion University/]]. 
+* תקציר
+* למי לפנות
+ועדת הוראה כוללת חברי סגל שונים, וכל אחד מטפל בנושאים שונים. על מנת לזרז את הטיפול בפניה שלכם ולא להטריד אנשים שלא יכולים לסייע לכם, אנא ודאו שאתם פונים לאנשים הנכונים:
+- אם אתם מילואימניקים, אם שרתתם בכוחות הביטחון במלחמה האחרונה, אם אתם נפגעים או מפונים או מטפלים בבני משפחה מקרבה ראשונה שהם נפגעים או מפונים, פנו בבקשה ל[[https://omriazencot.com/][עמרי אייזנקוט]]
+- אם אתם תלמידי שנה א', בתוכנית החד־חוגית למדמ"ח או בתוכנית להנדסת תוכנה, פנו בבקשה ל[[mailto:gmayer@little-lisper.org][מאיר גולדברג]] (אלי)
+- אם אתם תלמידי שנה ב' או שנה מאוחרת יותר, בתוכנית החד־חוגית למדמ"ח או בתוכנית להנדסת תוכנה, פנו בבקשה ל[[https://www.cs.bgu.ac.il/~neimano/][עופר ניימן]]
+- אם אתם תלמידי התוכנית לביואינפורמטיקה, פנו בבקשה ל[[https://www.cs.bgu.ac.il/~keasar/][חן קיסר]]
+- אם אתם תלמידי תוכניות משולבות, דו־חוגיות, תוכניות עם התמחות מיוחדת (לדוגמא, משחקי מחשב), פנו ל[[https://www.cs.bgu.ac.il/~asharf/][אנדרי שרף]]
 
-* How to contact me
+* יצירת קשר
 
-| Name         | Mayer Goldberg                                          |
-| Email        | [[mailto:gmayer@little-lisper.org][gmayer@little-lisper.org]]                                |
-| Office       | Building 37 (Alon, {{{rtl(אלון)}}}), room 106, mailbox 44 |
-| Office hours | Mondays, 14:00--16:00 *(beginning October 27)*          |
-| Zoom link    | [[https://us02web.zoom.us/j/86309317409?pwd=jHoMQ3Ec3xE35eLLPF5tuagZl7Swsm.1][Appointments are by Zoom only!]]                          |
-| Telephones   | Voice 08-647-7873, FAX 08-647-7650                      |
+| שם      | מֵאִיר גּוֹלְדְבֶּרְג                              |
+| דוא"ל    | [[mailto:gmayer@little-lisper.org][gmayer@little-lisper.org]]               |
+| משרד     | בניין 37 (אלון), חדר 106, תבת דואר 44        |
+| שעות קבלה | ימי ב', 14:00–16:00 (מ־27 באוקטובר, 2025)  |
+| קישור לזום | [[https://us02web.zoom.us/j/86309317409?pwd=jHoMQ3Ec3xE35eLLPF5tuagZl7Swsm.1][שעות הקבלה בזום בלבד!]]                      |
+| טלפון     | 055-6603392 (וואצאפ), 08-647-7873 (משרד) |
 
-* General guidelines
-
-Please understand that:
-- I am in charge of the *Freshman-class only* ({{{rtl(שנה א')}}}), and only two programs: *Computer Science* ({{{rtl(התוכנית החד־חוגית במדעי המחשב)}}}), and *Software Engineering* ({{{rtl(התוכנית להנדסת תוכנה)}}}):
-  - Students in the *bioinformatics* ({{{rtl(ביואינפורמטיקה)}}}) program should contact [[https://www.cs.bgu.ac.il/~keasar/][Prof Chen Keasar ({{{rtl(פרופ' חן קיסר)}}})]]
-  - Sophomores, Juniors, and Seniors ({{{rtl(שנים ב' והלאה)}}}) should contact [[https://www.cs.bgu.ac.il/~neimano/][Prof Ofer Neimann ({{{rtl(פרופ' עופר ניימן)}}})]]
-  - Students of other programs: double-major, dual programs, etc, should contact [[https://www.cs.bgu.ac.il/~asharf/][Prof Andrei Sharf {{{rtl(פרופ' אנדריי שרף)}}}]]
-  - Reservists ({{{rtl(משרתי המילואים)}}}), and students who were affected by the current war ({{{rtl(משרתים אחרים בכוחות הביטחון\, ניצולים\, מפונים\, נפגעים\, ובני משפחותיהם)}}}), should contact [[https://omriazencot.com/][Dr Omri Azencot ({{{rtl(דר' עמרי אייזנקוט)}}})]]
-- All appointments are by [[https://us02web.zoom.us/j/86309317409?pwd=jHoMQ3Ec3xE35eLLPF5tuagZl7Swsm.1][Zoom]] only!
-- No decisions are made {{{quote(on the spot)}}}, regardless of what you tell me
-- All decisions are taken offline, after deliberation with other members of the department and the relevant faculty (either Natural Sciences of Engineering, depending on what program you are in), with all relevant documentation at hand, and in particular, with your academic transcript before us
-- You are welcome to come to my office hours, or to send me an email, but please keep in mind that on most academic matters, I shall probably direct you to the [[https://cs-sr.cs.bgu.ac.il/][/Student Request Form/ ({{{rtl(מערכת פניות הסטודנטים)}}})]]
-
-* Issues that come up frequently
-
-- If you *seek authorization for a course*, or *{{{rtl(מועד מיוחד)}}} in a course you took*, please go to the [[https://cs-sr.cs.bgu.ac.il/][Student Request Form ({{{rtl(מערכת פניות הסטודנטים)}}})]], and fill and submit the appropriate form. You should support & substantiate any claims you make with appropriate documentation, and include those with your form. There is no need to speak with me in advance. 
-- If you are continuing your studies at our department, you have already been admitted, and *would like to get an exemption (\rlm{}פטור\lrm{}) from various courses in your program*, on the strength of courses you took elsewhere, as part of another program, then you need to do the following:
-  - Download the a request \rlm{}להכרה בקורסים\lrm{} from the website of the Faculty of Natural Sciences.
-  - Fill in the form, listing the courses you took on the strength of which you are asking for the exemption, the syllabus for each such course, and the courses from which you are asking for an exemption.
-  - Submit the form, including the syllabi, to the undergraduate secretariat.
-- If you are unhappy about the grade you received in a course, you need to take this matter with your instructor. Unless your instructor is in blatant, obvious violation of the regulations of the university & faculty, we cannot interfere with the grading policies in your courses
-- If you are falling behind in your courses, please contact  [[http://in.bgu.ac.il/Dekanat/Pages/default.aspx][{{{rtl(דיקנאט הסטודנטים)}}}]], and join {{{rtl(התוכנית למניעת נשירה)}}}. From what we hear, their program is effective in helping students get back on track.
-- If you suffer from disabilities that hamper your academic work (be they learning disabilities, physical, psychological, etc), please contact {{{rtl(המדור לקידום סטודנטים)}}} at the [[http://in.bgu.ac.il/Dekanat/Pages/default.aspx][{{{rtl(דיקנאט הסטודנטים)}}}]]. They have a wide range of programs to help you make the most of your academic experience at BGU
-  - Keep in mind that assessment of medical or learning disabilities takes time to complete, and many of the benefits to which you may be entitled will be predicated on the results of this assessment
-  - If you know you are going to require their help, please start the process as soon as possible
-  - Only {{{rtl(דיקנאט הסטודנטים)}}} is authorized to grant {{{rtl(התאמות)}}} for your exams!
-- Information concerning {{{rtl(מועדים מיוחדים)}}}:
-  - {{{rtl(מועדים מיוחדים)}}} are granted for the conditions specified in {{{rtl(תקנון הבחינות)}}}. Exceptions to {{{rtl(תקנון הבחינות)}}} /will only be entertained/ in situations that /greatly resemble/ the conditions specified in {{{rtl(תקנון הבחינות)}}}
-  - If you've taken /both/ {{{rtl(מועד א')}}} and {{{rtl(מועד ב')}}} in a course, then /under no circumstances/ will you receive {{{rtl(מועד ג')}}}
-  - The authority to grant {{{rtl(מועדים מיוחדים)}}} lies solely with the teaching committee, and not with the instructor of the course
-    - Decisions on {{{rtl(מועדים מיוחדים)}}} are made on the merits of the case, and not on the request or recommendation of the instructor
-
-For all other matters, please fill in the [[https://cs-sr.cs.bgu.ac.il/][/Student Request Form/ ({{{rtl(מערכת פניות הסטודנטים)}}})]]
-
-
+* נהלים
+- שעות הקבלה לועדת הוראה הן בזום בלבד! במקרים חריגים ניתן לקבוע שעות קבלה מיוחדות, אבל *אין שעות קבלה פרונטליות לועדת הוראה*
+- מיד בתום שעות הקבלה בזום, יש לי שעות קבלה עבור הקורס שאני מלמד (עקרונות הקומפילציה). *שעות הקבלה לקורסים שלי הם פרונטליים*
+- אם אתם מבקשים מועד מיוחד, חשוב שתפנו אלי באמצעות [[https://cs-sr.cs.bgu.ac.il/][מערכת הפניות לוועדת הוראה]]
+  - גורמים שונים מטפלים בבקשות למועדים מיוחדים (המחלקה, הפקולטה, מדור בחינות, ולפעמים גם דיקנט הסטודנטים)
+  - נציג ועדת הוראה (אני) הוא *רק חוליה אחת* בטיפול בבקשה שלכם
+  - פניה דרך [[https://cs-sr.cs.bgu.ac.il/][מערכת הפניות לוועדת הוראה]] מבטיחה שכל הגורמים הרלוונטיים יטפלו בפניה שלכם, לפי הסדר
+  - אם בכל זאת תפנו אלי באופן אישי, אני אפנה אתכם ל[[https://cs-sr.cs.bgu.ac.il/][מערכת הפניות לוועדת הוראה]], כדי להבטיח שהטיפול יהיה נכון
+- בכל נושא אחר, הדרך המועדפת לפנות אלי היא ב[[mailto:gmayer@little-lisper.org][דוא"ל]], *בצירוף שם מלא, מספר תעודת זהות, מספר טלפון, וכל המסמכים והראיות המבססים את טענותיכם*
+- אתם יכולים לפנות למספר הטלפון הסלולארי שלי בוואצאפ, בכל שעה משעות היום. הטלפון "על שקט", ואני אענה לכם כשאתפנה. בכל מקרה, *נא לציין שם מלא ומספר תעודת זהות*
+- החלטות מתקבלות לאחר שיקול דעת, בדיקת הנסיבות והראיות, והתייעצות עם אנשים נוספים, כולל חברים אחרים בועדת הוראה וגורמים שונים בהנהלת המחלקה. שום החלטה לא תתקבל "במקום", באופן פרונטלי או בשעות הקבלה, ללא קשר למה שתאמרו
+- 

@@ -19,10 +19,11 @@ h3 {
     font-size: 36px;
 }
 
-p {
+li, ul, p, table, tr, td {
     font-family: 'David Libre';
     font-size: 28px;
-    direction: rtl;
+    line-height: 1.6;
+    direction: rtl;  
 }
 
 .hebrew {
