@@ -3,15 +3,15 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-08-26 Mon 21:02 -->
+<!-- 2026-04-09 Thu 01:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title><span class='hebrew'>לימוד ערבית</span></title>
-<meta name="generator" content="Org mode" />
+<title>@@html:&lt;span class='hebrew'&gt;@@לימוד ערבית@@html:&lt;/span&gt;@@</title>
 <meta name="author" content="Mayer Goldberg (@@html:&lt;span class='hebrew'&gt;@@מֵאִיר גּוֹלְדְּבֵּרְג@@html:&lt;/span&gt;@@)" />
 <meta name="keywords" content="Mayer Goldberg, Department of Computer Science, Ben-Gurion University, learning languages, arabic" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -32,8 +32,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -41,22 +42,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -162,6 +163,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -178,8 +192,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=David+Libre">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic">
@@ -187,75 +200,45 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT">
 <link rel="stylesheet" type="text/css" href="https://mayer-goldberg.github.io/website/hebrew-support/gmayer-org-mode-web.css" />
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title"><span class='hebrew'>לימוד ערבית</span></h1>
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org64f1e88">1. משאבים</a></li>
-<li><a href="#orgd229442">2. הכתב הערבי</a></li>
-<li><a href="#org08c6382">3. ערבית מדוברת בניב של המזרח־הקרוב (ניב שָׁאמִי), <span class='ruqaa'>عامية شامية</span></a></li>
-<li><a href="#org836ea4f">4. ערבית ספרותית, <span class='latin'>MSA</span>, <span class='ruqaa'>فصحة</span></a></li>
+<li><a href="#org4e4f21c">1. משאבים</a>
+<ul>
+<li><a href="#orgd8ff726">1.1. ספרים</a></li>
+<li><a href="#orgcf15f21">1.2. מלונים מקוונים</a></li>
+<li><a href="#orgbd838aa">1.3. תרגומים אינטרלינאריים</a></li>
+</ul>
+</li>
+<li><a href="#org46fac1c">2. הכתב הערבי</a>
+<ul>
+<li><a href="#org1c0769f">2.1. הסדר המלוני</a></li>
+<li><a href="#orgd067524">2.2. הקלדה עיוורת</a></li>
+<li><a href="#orgd0a0c1c">2.3. כתיבה תמה</a></li>
+</ul>
+</li>
+<li><a href="#orga06af05">3. ערבית מדוברת בניב של המזרח־הקרוב (ניב שָׁאמִי), <span class='ruqaa'>عامية شامية</span></a>
+<ul>
+<li><a href="#orgc203b74">3.1. Timeline</a></li>
+</ul>
+</li>
+<li><a href="#orgbdb9e37">4. ערבית ספרותית, <span class='latin'>MSA</span>, <span class='ruqaa'>فصحة</span></a></li>
 </ul>
 </div>
 </div>
 <script src="https://mayer-goldberg.github.io/website/hebrew-support/gmayer-org-mode-web.js"></script>
 
-<div id="outline-container-org64f1e88" class="outline-2">
-<h2 id="org64f1e88"><span class="section-number-2">1</span> משאבים</h2>
+<div id="outline-container-org4e4f21c" class="outline-2">
+<h2 id="org4e4f21c"><span class="section-number-2">1.</span> משאבים</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org98952c1" class="outline-3">
-<h3 id="org98952c1"><span class="section-number-3">1.1</span> ספרים</h3>
+<div id="outline-container-orgd8ff726" class="outline-3">
+<h3 id="orgd8ff726"><span class="section-number-3">1.1.</span> ספרים</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>הספרים של יוחנן אליחי
@@ -274,7 +257,7 @@ for the JavaScript code in this tag.
 <ul class="org-ul">
 <li><a href="https://minerva-books.com/cart/">המלון העברי־ערבי</a>: ספר נפלא. הכריכה רכה, הדפוס קצת מיושן ופחות קריא, ואוצר המלים גם הספיק להתיישן טיפה. עדיין אי אפשר ללא הספר הזה!</li>
 <li><a href="https://minerva-books.com/product/arabic-hebrew-complete-dictionary/">המלון הערבי־עברי</a>: ספר נפלא. כריכה קשה, הדפוס מודרני, הרבה יותר קריא וברור. מלון שימושי מאד.</li>
-<li>החוברות <a href="https://minerva-books.com/product/%D7%9C%D7%93%D7%91%D7%A8-%D7%A2%D7%A8%D7%91%D7%99%D7%AA-%D7%A7%D7%95%D7%A8%D7%A1-%D7%9C%D7%9C%D7%99%D7%9E%D7%95%D7%93-%D7%A2%D7%A6%D7%9E%D7%99/">לדבר ערבית</a>: החוברות קריאות מאד. אבל אני מעדיף ספרי לימוד קצת יותר פורמאליים, כלומר לא רק עם דיאלוגים ורשימות מלים, אלא עם קצת יותר הסברים דקדוקיים.</li>
+<li>החוברות <a href="https://minerva-books.com/product/%d7%9c%d7%93%d7%91%d7%a8-%d7%a2%d7%a8%d7%91%d7%99%d7%aa-%d7%a7%d7%95%d7%a8%d7%a1-%d7%9c%d7%9c%d7%99%d7%9e%d7%95%d7%93-%d7%a2%d7%a6%d7%9e%d7%99/">לדבר ערבית</a>: החוברות קריאות מאד. אבל אני מעדיף ספרי לימוד קצת יותר פורמאליים, כלומר לא רק עם דיאלוגים ורשימות מלים, אלא עם קצת יותר הסברים דקדוקיים.</li>
 </ul></li>
 </ul></li>
 <li>המלון האטימולוגי לערבית מדוברת ולעברית מאת <b>אברהם שטאל</b> (כריכה קשה, שני כרכים): זה המלון השימושי ביותר שיש לי לערבית מדוברת. מפורט מאד, כולל המוני מלים ודוגמאות. כבר לא בדפוס, אבל אפשר עדיין למצוא אותו בחנויות לספרים משומשים. אין בו את כל העושר שיש במילונים של אליחי, שנותן הרבה מלים נרדפות, ובכל זאת, יש לו הוא מכסה תחומים שאליחי לא נכנס אליהם, ואוצר המלים עדכני יותר וגדול מאד.</li>
@@ -283,8 +266,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org2acdccc" class="outline-3">
-<h3 id="org2acdccc"><span class="section-number-3">1.2</span> מלונים מקוונים</h3>
+<div id="outline-container-orgcf15f21" class="outline-3">
+<h3 id="orgcf15f21"><span class="section-number-3">1.2.</span> מלונים מקוונים</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
 <li><a href="https://milon.madrasafree.com/">המלון המקוון של <b>מדרסה</b> לערבית מדוברת</a>. המלון פותח, מומש, ותוחזק על ידי <a href="https://rothfarb.info/"><b>רונן רוטפרב</b></a>. לאחר שנים שבהן ניהל את הפרוייקט לבדו, רונן העביר את הפרוייקט <a href="https://madrasafree.com/">לבית הספר <b>מדרסה</b> לערבית</a>, ואלו מתחזקים אותו כעת.</li>
@@ -292,38 +275,38 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-org1933ad7" class="outline-3">
-<h3 id="org1933ad7"><span class="section-number-3">1.3</span> תרגומים אינטרלינאריים</h3>
+<div id="outline-container-orgbd838aa" class="outline-3">
+<h3 id="orgbd838aa"><span class="section-number-3">1.3.</span> תרגומים אינטרלינאריים</h3>
 </div>
 </div>
-<div id="outline-container-orgd229442" class="outline-2">
-<h2 id="orgd229442"><span class="section-number-2">2</span> הכתב הערבי</h2>
+<div id="outline-container-org46fac1c" class="outline-2">
+<h2 id="org46fac1c"><span class="section-number-2">2.</span> הכתב הערבי</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org583f3d1" class="outline-3">
-<h3 id="org583f3d1"><span class="section-number-3">2.1</span> הסדר המלוני</h3>
+<div id="outline-container-org1c0769f" class="outline-3">
+<h3 id="org1c0769f"><span class="section-number-3">2.1.</span> הסדר המלוני</h3>
 </div>
-<div id="outline-container-orga1574a3" class="outline-3">
-<h3 id="orga1574a3"><span class="section-number-3">2.2</span> הקלדה עיוורת</h3>
+<div id="outline-container-orgd067524" class="outline-3">
+<h3 id="orgd067524"><span class="section-number-3">2.2.</span> הקלדה עיוורת</h3>
 </div>
-<div id="outline-container-orgbc21a62" class="outline-3">
-<h3 id="orgbc21a62"><span class="section-number-3">2.3</span> כתיבה תמה</h3>
+<div id="outline-container-orgd0a0c1c" class="outline-3">
+<h3 id="orgd0a0c1c"><span class="section-number-3">2.3.</span> כתיבה תמה</h3>
 </div>
 </div>
-<div id="outline-container-org08c6382" class="outline-2">
-<h2 id="org08c6382"><span class="section-number-2">3</span> ערבית מדוברת בניב של המזרח־הקרוב (ניב שָׁאמִי), <span class='ruqaa'>عامية شامية</span></h2>
+<div id="outline-container-orga06af05" class="outline-2">
+<h2 id="orga06af05"><span class="section-number-2">3.</span> ערבית מדוברת בניב של המזרח־הקרוב (ניב שָׁאמִי), <span class='ruqaa'>عامية شامية</span></h2>
 <div class="outline-text-2" id="text-3">
 <p>
 ערבית מדוברת של המזרח הקרוב היא אוסף של להגים המדוברים באיזור שהיסטורית נקרא בשם <b>סוריה הגדולה</b>, או שָׁאם (<span class='naskh'>شام</span>). האיזור כולל את לבנון, סוריה, ירדן, ישראל, הגדה המערבית, ורצועת עזה. מבחינה היסטורית, <b>סוריה הגדולה</b> כוללת גם את עיראק, אבל ערבית מדוברת עיראקית שונה מאד משאר הלהגים של <b>סוריה הגדולה</b>, וכולל השפעות רבות מפרסית ותורכית, ולכן מקובל שלא לכלול אותו בלהגים של <b>סוריה הגדולה</b>, אלא להתייחס אליו כלהג נפרד.
 </p>
 </div>
 
-<div id="outline-container-org41f12a7" class="outline-3">
-<h3 id="org41f12a7"><span class="section-number-3">3.1</span> Timeline</h3>
+<div id="outline-container-orgc203b74" class="outline-3">
+<h3 id="orgc203b74"><span class="section-number-3">3.1.</span> Timeline</h3>
 <div class="outline-text-3" id="text-3-1">
 </div>
 <ol class="org-ol">
-<li><a id="org23f1252"></a><span class="timestamp-wrapper"><span class="timestamp">&lt;2024-08-26 Mon&gt;</span></span><br />
+<li><a id="orgf068d41"></a><span class="timestamp-wrapper"><span class="timestamp">&lt;2024-08-26 Mon&gt;</span></span><br />
 <div class="outline-text-4" id="text-3-1-1">
 <p>
 איך קונים ספרים בערבית? 
@@ -333,12 +316,12 @@ for the JavaScript code in this tag.
 <li>בחנויות מסויימות של סטימצקי וצומת ספרים ניתן למצוא כמה מדפי ספרים בערבית… אבל מי שמגיע עם רשימות מוכנות צריך מקורות טובים יותר.</li>
 <li>יש חנויות ספרים בישובים מעורבים או ערביים (חיפה, נצרת, אום אלפאחם, וכו').</li>
 <li>יש חנויות ספרים מקוונות שמתמחות בספרים מכל העולם הערבי. יכול להיות מסובך לעבוד איתן, משום שרבות מהן לא תשלחנה ספרים ארצה. יש חברות ישראליות שנותנות לכם כתובת בארה"ב או באירופה, ואתם יכולים לרכוש ספרים ולשלוח אותם לכתובת שנתנו לכם… משם כבר תשלמו לחברה ישראלית להביא את הספרים ארצה. היתה לי חוויה קשה עם חברה כזו: ספרים מסוריה ומלבנון, שלקח להם חודש להגיע לארה"ב, לקח לחברה ישראלית שלושה וחצי חודשים (!) להביא ארצה, וזה בזמן שישראל מפציצה לעיתים תכופות את שדה התעופה של דמשק, ומשבשת את הקליטה של לווייני ה־GPS במזרח התיכון, על מנת שבמקום שכל הדרכים תובלנה לרומא, הן תובלנה, לפחות באפליקציות הניווט, לנמל התעופה על־שם רפיק אל־חרירי בביירות… הזמן והעלויות של חבילות ספרים באופן הזה לא הופכות את האופציה לאטרקטיבית.</li>
-<li>חנויות בגדה (חברון, שכם, וכו'). אם יש לכם חברים ערבים שנוסעים לערים בגדה, אפשר לבקש שיביאו לכם. הם מביאים המוני ספרים מכל העולם הערבי, דרך ירדן. מחירי הספרים זולים מאד.</li>
+<li>חנויות בגדה (חברון, שכם, וכו'). אם יש לכם חברים ערבים שנוסעים לערים בגדה, אפשר לבקש שיביאו לכם. הם מביאים המוני ספרים מכל העולם הערבי, דרך ירדן ומצרים. מחירי הספרים זולים מאד.</li>
 </ul>
 </div>
 </li>
 
-<li><a id="orgcbfdefb"></a><span class="timestamp-wrapper"><span class="timestamp">&lt;2023-09-27 Wed&gt;</span></span><br />
+<li><a id="org29da3af"></a><span class="timestamp-wrapper"><span class="timestamp">&lt;2023-09-27 Wed&gt;</span></span><br />
 <div class="outline-text-4" id="text-3-1-2">
 <p>
 כדי להבין את האמרה הלבנונית הבאה, צריך לעשות סדר במונחים של קבוצות דתיות שונות:
@@ -367,7 +350,7 @@ for the JavaScript code in this tag.
 </div>
 </li>
 
-<li><a id="orgff91d7c"></a><span class="timestamp-wrapper"><span class="timestamp">&lt;2023-09-25 Mon&gt;</span></span><br />
+<li><a id="orgae570df"></a><span class="timestamp-wrapper"><span class="timestamp">&lt;2023-09-25 Mon&gt;</span></span><br />
 <div class="outline-text-4" id="text-3-1-3">
 <p>
 שברתי את הראש מדוע המלה <span class='naskh'>حامل</span>, שפירושה "אשה בהריון" היא מלה זכרית ומקבלת שמות תואר בזכר. חיטטתי במלונים עד שקלטתי שזו גם המלה ל־"נשא", במובן של נשא של מחלה… ולכן כותבים <span class='naskh'>حامل جديد</span> ולא <span class='naskh'>حامل جديدة</span>…
@@ -375,7 +358,7 @@ for the JavaScript code in this tag.
 </div>
 </li>
 
-<li><a id="orge879646"></a><span class="timestamp-wrapper"><span class="timestamp">&lt;2023-09-23 Sat&gt;</span></span><br />
+<li><a id="org6c5c7eb"></a><span class="timestamp-wrapper"><span class="timestamp">&lt;2023-09-23 Sat&gt;</span></span><br />
 <div class="outline-text-4" id="text-3-1-4">
 <p>
 ממשיך ללמוד כרטיסים. לא הוספתי חדשים, אבל שיניתי את אופן הלימוד שלי: כעת כל פעם ש־"הצד השני" של הכרטיס הוא בערבית, אני רושם את המלה באותיות ערביות ומשווה. זו עבודה רבה יותר אבל יש לה יתרונות חשובים:
@@ -397,7 +380,7 @@ for the JavaScript code in this tag.
 </div>
 </li>
 
-<li><a id="org00c16ea"></a><span class="timestamp-wrapper"><span class="timestamp">&lt;2023-09-21 Thu&gt;</span></span><br />
+<li><a id="orgdf6cd17"></a><span class="timestamp-wrapper"><span class="timestamp">&lt;2023-09-21 Thu&gt;</span></span><br />
 <div class="outline-text-4" id="text-3-1-5">
 <p>
 הכרטסת שלי כוללת 4261 כרטיסים. הוספתי 230+ כרטיסים מאז תחילת החודש. זה קצת מאכזב. קיוויתי שאוכל להוסיף מעל לאלף כרטיסים חדשים, ולא קרה. אני צריך להגביר את הקצב לפני תחילת הסמסטר.
@@ -416,14 +399,14 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org836ea4f" class="outline-2">
-<h2 id="org836ea4f"><span class="section-number-2">4</span> ערבית ספרותית, <span class='latin'>MSA</span>, <span class='ruqaa'>فصحة</span></h2>
+<div id="outline-container-orgbdb9e37" class="outline-2">
+<h2 id="orgbdb9e37"><span class="section-number-2">4.</span> ערבית ספרותית, <span class='latin'>MSA</span>, <span class='ruqaa'>فصحة</span></h2>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Mayer Goldberg (<span class='hebrew'>מֵאִיר גּוֹלְדְּבֵּרְג</span>)</p>
-<p class="date">Created: 2024-08-26 Mon 21:02</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="date">Created: 2026-04-09 Thu 01:27</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>
