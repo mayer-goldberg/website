@@ -7,6 +7,8 @@
 
 * My interlinear translations
 ** Arabic
+- [[./arabic-interlinear-translations/ave-maria-arabic.pdfave-maria-arabic.pdf][/Ave Maria/ (Catholic prayer)]]
+- [[./arabic-interlinear-translations/pater-noster-arabic.pdf][/Pater Noster/ (Catholic prayer)]]
 - [[./arabic-interlinear-translations/batmana-ansak.pdf][Batmana Ansak, by /Aziz al-Shafi'i/, and performed by /Sherine/]] ([[https://www.youtube.com/watch?v=xYsUSIuRhr0][on YouTube]])
 - [[./arabic-interlinear-translations/kalimat.pdf][Kalimat, by /Nizar Tawfiq Qabbani/]]
 - [[./arabic-interlinear-translations/apo-and-the-apostles-baji-wenek.pdf][Baji Wenek, by /Apo and the Apostles/]]
