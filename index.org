@@ -22,9 +22,7 @@ regardless of whether or not it made money for anybody?
 - *Office hours* (for the *Spring Semester, 2026* ({{{rtl(סמסטר ב', תשפ"ו)}}}), currently *only* on [[https://us02web.zoom.us/j/86309317409?pwd=jHoMQ3Ec3xE35eLLPF5tuagZl7Swsm.1][Zoom]]:
   - For the [[./tc.html][/Teaching Committee/ ({{{rtl(ועדת הוראה\, אחראי על שנה א')}}})]]: Thursdays, 17-19
 - *Telephones:* Voice (+972)(0)8-647-7873, FAX (+972)(0)8-647-7650
-- *Professional mailing address:* [[mailto:gmayer@little-lisper.org][Mayer Goldberg]], [[http://www.cs.bgu.ac.il/][Department of Computer
-  Science]], [[http://www.bgu.ac.il/][Ben Gurion University]], PO Box 653, Be'er Sheva 84105,
-  Israel. 
+- *Professional mailing address:* [[mailto:gmayer@little-lisper.org][Mayer Goldberg]], Dr Mayer Goldberg, Institute for the Theory of Computing, The Faculty of Computer and Information Science, Ben-Gurion University, PO Box 653, Beer Sheva 8410501, Israel
 
 * Research
 ** Research Interests
