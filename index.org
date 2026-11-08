@@ -38,6 +38,7 @@ regardless of whether or not it made money for anybody?
 - Automated theorem proving ([[./coq.html][Coq]], [[http://www.nuprl.org/][NuPRL]], etc)
 
 * Teaching
+- /Introduction to Compiler Construction/, Fall 2026
 - /Introduction to Computer Architecture/, Spring 2026
 - /Introduction to Compiler Construction/, Fall 2025
 

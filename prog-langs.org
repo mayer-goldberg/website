@@ -6,5 +6,7 @@
 #+keywords: Mayer Goldberg, Department of Computer Science, Ben-Gurion University, lambda calculus, combinatory logic, pi-calculus, functional programming, coq, proof assistant, nuprl, object-oriented programming, Scheme, ML, Erlang, Lua, Smalltalk, continuations, interpreters, compilers, decompilation, compilation, code obfuscation, programming languages, semantics, threaded code, forth, latin, israel
 
 * High-level programming languages
+** APL
+- My own [[https://github.com/mayer-goldberg/adin-apl][Adin APL system on github]]: For Linux, Windows (via WSL), and Android telephones and tablets!
 * Fun assembly languages
 ** ARM Assembly
